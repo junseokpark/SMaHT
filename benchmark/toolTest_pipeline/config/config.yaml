@@ -1,0 +1,17 @@
+samples: config/samples.tsv
+
+ref:
+  # ensembl species name
+  species: homo_sapiens
+  # ensembl release
+  release: 98
+  # genome build
+  build: GRCh38
+  
+  
+processing:
+  remove-duplicates: true
+  
+params:
+  picard:
+    MarkDuplicates: "REMOVE_DUPLICATES=true"

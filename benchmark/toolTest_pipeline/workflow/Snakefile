@@ -1,0 +1,50 @@
+## Snakemake for Benchmark pipeline
+## Writer: Junseok Park
+
+from os.path import join
+
+
+## Input File Configuration
+SAMPLES, *_ = GS.glob_wildcards(GS_PREFIX + '/'+SAMPLE_DIR_PREFIX+'/{sample}.bam')
+
+
+report: "../report/workflow.rst"
+
+## Config file and sample sheets 
+configfile: "config/config.yml"
+
+
+## Resource Configuration for Slurms
+
+## Rule for all
+
+rule all:
+    input:
+        expand(SAMPLE_DIR_PREFIX+"/{sample}.bam", sample=SAMPLES),
+
+
+rule xTEA_mosaic:
+    input:
+        bam=""
+    output:
+        bam=""
+    singularity:
+        "docker://"
+    log:
+        file="logs/xTEA_mosaic/{sample}.log"
+    script:
+        "some script for singularity"
+        
+##
+
+rule RetroSom_v2:
+    input:
+        bam=""
+    output:
+        bam=""
+    singularity:
+        "docker://"
+    log:
+        file="logs/xTEA_mosaic/{sample}.log"
+    script:
+        "some script for singularity"
