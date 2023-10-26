@@ -2,7 +2,7 @@
 
 
 BASE_DIRECTORY=/n/data1/bch/genetics/lee
-REF_DIRECTORY=${BASE_DIRECTORY}/reference/hg38
+REF_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/refs
 WORK_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/results/xTea_mosaic
 
 ## omitted --fakeroot
@@ -19,7 +19,7 @@ python /n/data1/bch/genetics/lee/tools/xTea-mosaic/gnrt_pipeline_local_v38.py \
          -p ${WORK_DIRECTORY}/ \
          -o submit_jobs.sh \
          -l ${REF_DIRECTORY}/rep_lib_annotation/ \
-         -r ${REF_DIRECTORY}/Homo_sapiens_assembly38.fasta \
+         -r ${REF_DIRECTORY}/hg38/Homo_sapiens_assembly38.fasta \
          -g ${REF_DIRECTORY}/pangenomics/chm13.draft_v2.0.gene_annotation.gff3 \
          --xtea ${BASE_DIRECTORY}/tools/xTea-mosaic/xtea/ \
          -f 5907 \
