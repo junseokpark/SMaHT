@@ -4,6 +4,7 @@
 BASE_DIRECTORY=/n/data1/bch/genetics/lee
 REF_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/refs
 WORK_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/results/xTea_mosaic
+CONFIG_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/benchmark/toolTest_pipeline/config
 
 ## omitted --fakeroot
 singularity shell \
@@ -12,9 +13,9 @@ singularity shell \
     -B /n/no_backup2/bch/lee/data/:/n/no_backup2/bch/lee/data/ \
     /n/app/singularity/containers/jp394/xtea-mosaic.sif
 
-python /n/data1/bch/genetics/lee/tools/xTea-mosaic/gnrt_pipeline_local_v38.py \
-         -M -U -i ../config/xtea_sample_id.txt \
-         -b ../config/xtea_bam_list.txt \
+python /n/data1/bch/genetics/lee/tools/xTea-mosaic/xtea/gnrt_pipeline_local_v38.py \
+         -M -U -i ${CONFIG_DIRECTORY}/xtea_sample_id.txt \
+         -b ${CONFIG_DIRECTORY}/xtea_bam_list.txt \
          -x null \
          -p ${WORK_DIRECTORY}/ \
          -o submit_jobs.sh \
