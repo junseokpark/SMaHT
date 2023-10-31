@@ -19,6 +19,9 @@
 ## ipython notebook local files
 .ipynb_checkpoints
 
+## swp file
+**.sh.swp
+
 # OS X stuff
 *.DS_Store
 
