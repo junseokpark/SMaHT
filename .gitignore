@@ -3,6 +3,10 @@
 **/data/GIAB/
 **/data/mixedDataRetroSom
 
+# ignore reference directories
+**/refs/
+**/refs/hg38
+
 ## ignore tool directories
 **/tools/
 **/tools/RetroSomV1/
