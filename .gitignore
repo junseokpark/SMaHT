@@ -25,6 +25,18 @@
 # OS X stuff
 *.DS_Store
 
+## ignore slurm output
+*.o
+*.la
+*.lo
+*.orig
+*.rej
+.*.swp
+.*.swo
+.deps
+.libs
+*.out
+
 _temp_extension
 junit.xml
 [uU]ntitled*
