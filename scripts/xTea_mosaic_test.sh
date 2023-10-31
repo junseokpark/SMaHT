@@ -13,6 +13,11 @@ singularity shell \
     -B /n/no_backup2/bch/lee/data/:/n/no_backup2/bch/lee/data/ \
     /n/app/singularity/containers/jp394/xtea-mosaic.sif
 
+
+## xTEA-germline
+
+
+## xTEA-mosaic
 python /n/data1/bch/genetics/lee/tools/xTea-mosaic/xtea/gnrt_pipeline_local_v38.py \
          -M -U -i ${CONFIG_DIRECTORY}/xtea_sample_id.txt \
          -b ${CONFIG_DIRECTORY}/xtea_bam_list.txt \
@@ -26,6 +31,7 @@ python /n/data1/bch/genetics/lee/tools/xTea-mosaic/xtea/gnrt_pipeline_local_v38.
          -f 5907 \
          -y 3 \
          --slurm -t 10-12:00 -q short -n 8 -m 96 \
-         --nclip 2 --cr 0 --nd 1 --nfclip 1 --nfdisc 1 
+         --nclip 2 --cr 0 --nd 1 --nfclip 1 --nfdisc 1 \
+         --blacklist ${REF_DIRECTORY}/gnomAD/2.1/gnomad_v2.1_sv.sites.bed
         #  \
         #  --blacklist /home/germline_insertions.bed 
