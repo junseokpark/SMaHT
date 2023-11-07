@@ -1,5 +1,5 @@
 [![PyPI](https://img.shields.io/pypi/v/snakefmt)](https://pypi.org/project/snakefmt/)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snakefmt)]
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snakefmt)
 [![Docker](https://img.shields.io/badge/Docker-Community_20.10.11-2496ED?style=flat&logo=docker)](https://docs.docker.com/engine/release-notes/20.10/)
 
 # SMaHT DAC Aleelab
