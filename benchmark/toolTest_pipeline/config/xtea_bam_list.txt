@@ -1,1 +1,1 @@
-TITR_1  /n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x/TITR_1.recal.sorted.bam
+CONT_15  /n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x/CONT_15.recal.sorted.bam
