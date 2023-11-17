@@ -137,7 +137,7 @@ function run_xTea_mosaic {
 
     local command="python ${xTea_PATH}/gnrt_pipeline_local_v38.py \
          -M -U -i \"${CONFIG_DIRECTORY}/xtea_sample_id.txt\" \
-         -b \"${RESULT_DIRECTORY}/xtea_bam_list.txt\" \
+         -b \"${CONFIG_DIRECTORY}/xtea_bam_list.txt\" \
          -x null \
          -p \"${WORKING_DIRECTORY}\" \
          -o submit_jobs.sh \
