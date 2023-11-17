@@ -1,23 +1,23 @@
 #!/bin/bash
 
-#SBATCH -c 8
-#SBATCH -t 4-12:00
-#SBATCH --mem=64G
-#SBATCH -p medium
-#SBATCH -J job-CONT_15
-#SBATCH -o CONT_15_%j.out
+#SBATCH -c [SLURM_CORE]
+#SBATCH -t [SLURM_TIME]
+#SBATCH --mem=[SLURM_MEMORY]
+#SBATCH -p [SLURM_PARTITION]
+#SBATCH -J xTea-[SAMPLE_ID]
+#SBATCH -o [RESULT_DIR]/[SAMPLE_ID]/[SAMPLE_ID]_%j.out
 #SBATCH --mail-type=NONE
 #SBATCH --mail-user=junseok.park@childrens.harvard.edu
 
 BASE_DIRECTORY=/n/data1/bch/genetics/lee
 REF_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/refs
-WORK_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/results/xTea_mosaic_Simul50x
+WORK_DIRECTORY=[RESULT_DIR]
 CONFIG_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/benchmark/toolTest_pipeline/config
 
 declare -A batch_scripts
 
-batch_scripts[alu]="CONT_15/Alu/run_xTEA_pipeline.sh"
-batch_scripts[L1]="CONT_15/L1/run_xTEA_pipeline.sh"
+batch_scripts[alu]="[SAMPLE_ID]/Alu/run_xTEA_pipeline.sh"
+batch_scripts[L1]="[SAMPLE_ID]/L1/run_xTEA_pipeline.sh"
 
 #BATCH_SCRIPT="/n/data1/bch/genetics/lee/projects/SMaHT/results/xTea_mosaic/TITR_1/L1/run_xTEA_pipeline.sh"
 #BATCH_SCRIPT="/n/data1/bch/genetics/lee/projects/SMaHT/results/xTea_mosaic/TITR_1/Alu/run_xTEA_pipeline.sh"
@@ -27,8 +27,7 @@ do
   echo "Processing '$key'"
   #echo ${WORK_DIRECTORY}/${batch_scripts[$key]}
   #ls -alF ${WORK_DIRECTORY}/${batch_scripts[$key]}
-
-  #exit
+   #exit
 
   chmod +x ${WORK_DIRECTORY}/${batch_scripts[$key]}
 

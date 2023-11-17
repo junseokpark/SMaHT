@@ -32,7 +32,7 @@ xtea_path=""
 slurm_partition="medium"
 slurm_time="4-12:00"
 slurm_core="4"
-slurm_memory="16G"
+slurm_memory="16"
 
 while getopts ":hs:s:p:d:e:r:c:x:sp:st:sc:sm:" opt; do
   case $opt in
@@ -122,7 +122,6 @@ function changeStringFromTemplates {
         IFS='=' read -r key value <<< "$pair"
         key=$(echo "$key" | sed 's/\[/\\[/g; s/\]/\\]/g')
 
-        set -x
         sed -i "s#$key#$value#g" ${file_path}
 
     done
@@ -154,7 +153,7 @@ function run_xTea_mosaic {
     echo "Running xTEA-mosaic with the following command:"
     echo "$command"
 
-    # eval "$command"
+    eval "$command"
 }
 
 
@@ -192,21 +191,22 @@ changeStringFromTemplates sample_id_and_file[0] ${CONFIG_DIRECTORY}/xtea_sample_
 run_xTea_mosaic ${xtea_path} ${CONFIG_DIRECTORY} ${RESULT_DIRECTORY}/${SAMPLE_ID} ${REF_DIRECTORY}
 
 # move generated script to destination directory
-#mv ./submit_jobs.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
+mv ./submit_jobs.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
 
-rm -rf sbatch_job.sh
-cp sbatch_job.sh.template sbatch_job.sh
+CURRENT_PWD=$(realpath .)
+rm -rf ${CURRENT_PWD}/sbatch_job.sh
+cp ${CURRENT_PWD}/sbatch_job.sh.template ${CURRENT_PWD}sbatch_job.sh
 
 slurm_configs=(
-    "[SLURM_CORE]=${SAMPLE_ID}" 
-    "[SLURM_TIME]=${SAMPLE_ID}" 
-    "[SLURM_MEMORY]=${SAMPLE_ID}" 
-    "[SLURM_PARTITION]=${SAMPLE_ID}"
+    "[SLURM_CORE]=${slurm_core}" 
+    "[SLURM_TIME]=${slurm_time}" 
+    "[SLURM_MEMORY]=${slurm_memory}G" 
+    "[SLURM_PARTITION]=${slurm_partition}"
     "[SAMPLE_ID]=${SAMPLE_ID}"
     "[RESULT_DIR]=${RESULT_DIRECTORY}" 
  
 )
 
-changeStringFromTemplates slurm_configs[@] sbatch_job.sh
+changeStringFromTemplates slurm_configs[@] ${CURRENT_PWD}/sbatch_job.sh
 mv ./sbatch_job.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
-# sbatch ${RESULT_DIRECTORY}/${SAMPLE_ID}/sbatch_job.sh
+sbatch ${RESULT_DIRECTORY}/${SAMPLE_ID}/sbatch_job.sh
