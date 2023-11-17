@@ -1,2 +1,1 @@
-CONT_7  /n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x/CONT_7.sorted.bam
-
+CONT_7	/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x/CONT_7.sorted.bam
