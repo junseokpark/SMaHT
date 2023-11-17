@@ -191,6 +191,14 @@ changeStringFromTemplates sample_id_and_file[0] ${CONFIG_DIRECTORY}/xtea_sample_
 # run xTea
 run_xTea_mosaic ${xtea_path} ${CONFIG_DIRECTORY} ${RESULT_DIRECTORY}/${SAMPLE_ID} ${REF_DIRECTORY}
 
+# Check if the file exists
+if [ ! -f "./submit_jobs.sh" ]; then
+    echo "Error: submit_jobs.sh file not found."
+    echo "failed to execute xTea"
+    exit 1
+fi
+
+
 # move generated script to destination directory
 mv ./submit_jobs.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
 
