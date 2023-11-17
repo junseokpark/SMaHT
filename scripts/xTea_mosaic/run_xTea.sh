@@ -27,10 +27,12 @@ reference_file_directory=""
 result_directory=""
 config_file_directory=""
 xtea_path=""
-slurm_partition=""
-slurm_time=""
-slurm_core=""
-slurm_memory=""
+
+# default params for slurm job
+slurm_partition="medium"
+slurm_time="4-12:00"
+slurm_core="4"
+slurm_memory="16G"
 
 while getopts ":hs:s:p:d:e:r:c:x:sp:st:sc:sm:" opt; do
   case $opt in
@@ -119,12 +121,9 @@ function changeStringFromTemplates {
     for pair in "${kv_pairs[@]}"; do
         IFS='=' read -r key value <<< "$pair"
         key=$(echo "$key" | sed 's/\[/\\[/g; s/\]/\\]/g')
-        #value=$(echo "$value" | sed 's/\//\\//g') 
 
         set -x
         sed -i "s#$key#$value#g" ${file_path}
-        #echo "$key: $value" >> "$file_path"
-
 
     done
 
@@ -140,7 +139,7 @@ function run_xTea_mosaic {
          -M -U -i \"${CONFIG_DIRECTORY}/xtea_sample_id.txt\" \
          -b \"${RESULT_DIRECTORY}/xtea_bam_list.txt\" \
          -x null \
-         -p \"${WORK_DIRECTORY}/\" \
+         -p \"${RESULT_DIRECTORY}\" \
          -o submit_jobs.sh \
          -l \"${REF_DIRECTORY}/rep_lib_annotation/\" \
          -r \"${REF_DIRECTORY}/hg38/Homo_sapiens_assembly38.fasta\" \
@@ -157,8 +156,6 @@ function run_xTea_mosaic {
 
     # eval "$command"
 }
-
-#set -x
 
 
 REF_DIRECTORY="$reference_file_directory" #${BASE_DIRECTORY}/projects/SMaHT/refs
@@ -192,46 +189,24 @@ changeStringFromTemplates sample_id_and_file[0] ${CONFIG_DIRECTORY}/xtea_sample_
 
 
 # run xTea
-run_xTea_mosaic ${xtea_path} ${CONFIG_DIRECTORY} ${RESULT_DIRECTORY} ${REF_DIRECTORY}
+run_xTea_mosaic ${xtea_path} ${CONFIG_DIRECTORY} ${RESULT_DIRECTORY}/${SAMPLE_ID} ${REF_DIRECTORY}
 
+# move generated script to destination directory
+#mv ./submit_jobs.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
 
-# mv ./submit_jobs.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
+rm -rf sbatch_job.sh
+cp sbatch_job.sh.template sbatch_job.sh
 
+slurm_configs=(
+    "[SLURM_CORE]=${SAMPLE_ID}" 
+    "[SLURM_TIME]=${SAMPLE_ID}" 
+    "[SLURM_MEMORY]=${SAMPLE_ID}" 
+    "[SLURM_PARTITION]=${SAMPLE_ID}"
+    "[SAMPLE_ID]=${SAMPLE_ID}"
+    "[RESULT_DIR]=${RESULT_DIRECTORY}" 
+ 
+)
 
-
-# rm -rf sbatch_job.sh
-# cp sbatch_job.sh.template sbatch_job.sh
-
-# sed -i "s/\[SAMPLE_ID\]/${SAMPLE_ID}/g" sbatch_job.sh
-# sed -i "s#\[RESULT_DIR\]#${RESULT_DIRECTORY}#g" sbatch_job.sh
-# sed -i "s#\[SLURM_CORE\]#${RESULT_DIRECTORY}#g" sbatch_job.sh
-# sed -i "s#\[SLURM_TIME\]#${RESULT_DIRECTORY}#g" sbatch_job.sh
-# sed -i "s#\[SLURM_PARTITION\]#${RESULT_DIRECTORY}#g" sbatch_job.sh
-# sed -i "s#\[SLURM_MEMORY\]#${RESULT_DIRECTORY}#g" sbatch_job.sh
-
-
-# ${slurm_time}
-# ${slurm_partition}
-# ${slurm_core}
-# ${slurm_memory}
-
-
-
-# mv ./sbatch_job.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
+changeStringFromTemplates slurm_configs[@] sbatch_job.sh
+mv ./sbatch_job.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
 # sbatch ${RESULT_DIRECTORY}/${SAMPLE_ID}/sbatch_job.sh
-
-
-# rm -rf ${CONFIG_DIRECTORY}/xtea_bam_list.txt
-# cp ${CONFIG_DIRECTORY}/xtea_bam_list.txt.template ${CONFIG_DIRECTORY}/xtea_bam_list.txt
-
-
-# rm -rf ${CONFIG_DIRECTORY}/xtea_sample_id.txt
-# cp ${CONFIG_DIRECTORY}/xtea_sample_id.txt.template ${CONFIG_DIRECTORY}/xtea_sample_id.txt
-
-
-
-# sed -i "s/${SAMPLE_ID}/${SAMPLE_PATH}/g" ${CONFIG_DIRECTORY}/xtea_bam_list.txt
-# sed -i "s/${SAMPLE_ID}/${SAMPLE_PATH}/g" ${CONFIG_DIRECTORY}/xtea_sample_id.txt
-
-# cat ${CONFIG_DIRECTORY}/xtea_bam_list.txt
-# cat ${CONFIG_DIRECTORY}/xtea_sample_id.txt
