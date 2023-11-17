@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_DIRECTORY=/Users/junseokpark/Dropbox/Development/scripts/smath_dac
+BASE_DIRECTORY="/n/data1/bch/genetics/lee/projects/SMaHT"
 
 ./run_xTea.sh -s CONT_7 \
     -p .sorted.bam \

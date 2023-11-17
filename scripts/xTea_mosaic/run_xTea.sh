@@ -104,7 +104,7 @@ function check_directory() {
 
 # check directories
 for directory in "${directories[@]}"; do
-    check_directory $directory
+    check_directory ${!directory}
 done
 
 
@@ -119,10 +119,10 @@ function changeStringFromTemplates {
     for pair in "${kv_pairs[@]}"; do
         IFS='=' read -r key value <<< "$pair"
         key=$(echo "$key" | sed 's/\[/\\[/g; s/\]/\\]/g')
-        value=$(echo "$value" | sed 's/\//\\//g') 
+        #value=$(echo "$value" | sed 's/\//\\//g') 
 
-        #set -x
-        sed -i "s|${key}|${value}|g" "${file_path}"
+        set -x
+        sed -i "s#$key#$value#g" ${file_path}
         #echo "$key: $value" >> "$file_path"
 
 
@@ -170,6 +170,9 @@ if [ ! -d "${RESULT_DIRECTORY}" ]; then
     mkdir -p ${RESULT_DIRECTORY}
 fi
 
+SAMPLE_ID=${sample_id}
+SAMPLE_FILE=${sample_file_directory}/${sample_id}${sample_ext_prefix}
+
 # Create sample directory if it is not exists
 if [ -d "${RESULT_DIRECTORY}/${SAMPLE_ID}" ]; then
     # Remove the directory and its contents
@@ -177,8 +180,6 @@ if [ -d "${RESULT_DIRECTORY}/${SAMPLE_ID}" ]; then
     echo "Directory '${RESULT_DIRECTORY}/${SAMPLE_ID}' has been removed."
 fi
 
-SAMPLE_ID=${sample_id}
-SAMPLE_FILE=${sample_file_directory}/${sample_id}${sample_ext_prefix}
 
 echo $SAMPLE_FILE
 
