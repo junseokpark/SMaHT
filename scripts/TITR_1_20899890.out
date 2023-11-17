@@ -1,5 +1,0 @@
-Working on mosaic "clip" step!
-Clip cutoff: 2, 2, 0 are used!!!
-Input bam /n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x/TITR_1.recal.sorted.bam is sequenced from illumina platform!
-Clip cutoff is small (<=3), keep all the clipped reads (initial cutoff set as 1)!!!
-Initial minimum clip cutoff is 1

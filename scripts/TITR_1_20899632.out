@@ -1,9 +1,0 @@
-Working on mosaic "clip" step!
-Clip cutoff: 2, 2, 0 are used!!!
-Input bam /n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x/TITR_1.recal.sorted.bam is sequenced from illumina platform!
-Clip cutoff is small (<=3), keep all the clipped reads (initial cutoff set as 1)!!!
-Running command: mkdir -p /n/data1/bch/genetics/lee/projects/SMaHT/results/xTea_mosaic/TITR_1/pub_clip/0/
-
-Running command: mkdir -p /n/data1/bch/genetics/lee/projects/SMaHT/results/xTea_mosaic/TITR_1/Alu/tmp/clip/0/
-
-Initial minimum clip cutoff is 1
