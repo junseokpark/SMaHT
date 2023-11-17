@@ -8,13 +8,6 @@ SAMPLES=("CONT_14" "CONT_15") # "CONT_10" "CONT_11" "CONT_12" "CONT_13" "CONT_14
 # "CONT_3" "CONT_4" "CONT_5" "CONT_6")
 # END_SAMPLE_NO=15
 
-rm -rf ${CONFIG_DIRECTORY}/xtea_bam_list.txt
-cp ${CONFIG_DIRECTORY}/xtea_bam_list.txt.template ${CONFIG_DIRECTORY}/xtea_bam_list.txt
-
-rm -rf ${CONFIG_DIRECTORY}/xtea_sample_id.txt
-cp ${CONFIG_DIRECTORY}/xtea_sample_id.txt.template ${CONFIG_DIRECTORY}/xtea_sample_id.txt
-
-
 #sed -i "s/CONT_[0-9]\+/CONT_14/g" ${CONFIG_DIRECTORY}/xtea_bam_list.txt
 #sed -i "s/CONT_[0-9]\+/CONT_14/g" ${CONFIG_DIRECTORY}/xtea_sample_id.txt
 

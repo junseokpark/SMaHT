@@ -133,12 +133,13 @@ function run_xTea_mosaic {
     local CONFIG_DIRECTORY="$2"
     local RESULT_DIRECTORY="$3"
     local REF_DIRECTORY="$4"
+    WORKING_DIRECTORY=$(dirname ${RESULT_DIRECTORY})
 
     local command="python ${xTea_PATH}/gnrt_pipeline_local_v38.py \
          -M -U -i \"${CONFIG_DIRECTORY}/xtea_sample_id.txt\" \
          -b \"${RESULT_DIRECTORY}/xtea_bam_list.txt\" \
          -x null \
-         -p \"${RESULT_DIRECTORY}\" \
+         -p \"${WORKING_DIRECTORY}\" \
          -o submit_jobs.sh \
          -l \"${REF_DIRECTORY}/rep_lib_annotation/\" \
          -r \"${REF_DIRECTORY}/hg38/Homo_sapiens_assembly38.fasta\" \
