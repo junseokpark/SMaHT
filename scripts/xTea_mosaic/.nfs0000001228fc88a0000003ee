@@ -31,10 +31,10 @@ xtea_path=""
 # default params for slurm job
 slurm_partition="medium"
 slurm_time="4-12:00"
-slurm_core="8"
-slurm_memory="64"
+slurm_core="4"
+slurm_memory="16"
 
-while getopts ":h:s:p:d:e:r:c:x:sp:st:sc:sm:" opt; do
+while getopts ":hs:p:d:e:r:c:x:sp:st:sc:sm:" opt; do
   case $opt in
     h) echo "$usage"
         exit 0
@@ -100,7 +100,7 @@ function check_directory() {
     local dir="$1"
     if [ ! -d "$dir" ]; then
         echo "Error: Directory '$dir' does not exist."
-        exit 1 
+        # exit 1 for test
     fi
 }
 
@@ -155,15 +155,6 @@ function run_xTea_mosaic {
     echo "$command"
 
     eval "$command"
-}
-
-# illumina data 
-function run_xTea {
-    local command="python xtea \
-          -i sample_id.txt \
-          -b illumina_bam_list.txt -x null -p ./path_work_folder/ -o submit_jobs.sh -l /home/rep_lib_annotation/ -r /home/reference/genome.fa -g /home/gene_annotation_file.gff3 --xtea /home/ec2-user/xTea/xtea/ -f 5907 -y 7  --slurm -t 0-12:00 -q short -n 8 -m 25"
-
-
 }
 
 
