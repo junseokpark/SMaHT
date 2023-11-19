@@ -22,6 +22,9 @@
 ## swp file
 **.sh.swp
 
+## nfs files
+.nfs**
+
 # OS X stuff
 *.DS_Store
 

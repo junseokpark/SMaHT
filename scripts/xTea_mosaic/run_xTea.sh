@@ -1,7 +1,7 @@
 #!/bin/bash
 # junseok.park@childrens.harvard.edu
 
-usage="$(basename "$0") [-h] [-s -p -d -e -r -c -x -sp -st -sc -sm] -- program to trim illumina adapters and low sequencing quality tails
+usage="$(basename "$0") [-h] [-s -p -d -e -r -c -x -f -i -a -t -o -m] -- program to trim illumina adapters and low sequencing quality tails
 
 where
     -h show help text
@@ -12,10 +12,12 @@ where
     -r --result_directory result directory 
     -c --config_file_directory configration file directory
     -x --xtea_path bin directory of xTea
-    -sp --slurm_partition slurm partition name
-    -st --slurm_time slurm allocation time
-    -sc --slurm_core slurm number of core
-    -sm --slurm_memory slurm memory allocation
+    -f --xtea_script_file xTea script name to be run
+    -i --platform sequence generation platform (i.e. illumina)
+    -a --slurm_partition slurm partition name
+    -t --slurm_time slurm allocation time
+    -o --slurm_core slurm number of core
+    -m --slurm_memory slurm memory allocation
 
 "
 
@@ -28,13 +30,14 @@ result_directory=""
 config_file_directory=""
 xtea_path=""
 
+platform="illumina"
 # default params for slurm job
 slurm_partition="medium"
 slurm_time="4-12:00"
 slurm_core="8"
 slurm_memory="64"
 
-while getopts ":h:s:p:d:e:r:c:x:sp:st:sc:sm:" opt; do
+while getopts ":h:s:p:d:e:r:c:x:e:i:a:t:o:m:" opt; do
   case $opt in
     h) echo "$usage"
         exit 0
@@ -55,13 +58,17 @@ while getopts ":h:s:p:d:e:r:c:x:sp:st:sc:sm:" opt; do
         ;;
     x) xtea_path="$OPTARG"
         ;;
-    sp) slurm_partition="$OPTARG"
+    f) xtea_script_file="$OPTARG"
         ;;
-    st) slurm_time="$OPTARG"
+    i) platform="$OPTARG"
         ;;
-    sc) slurm_core="$OPTARG"
+    a) slurm_partition="$OPTARG"
         ;;
-    sm) slurm_memory="$OPTARG"
+    t) slurm_time="$OPTARG"
+        ;;
+    o) slurm_core="$OPTARG"
+        ;;
+    m) slurm_memory="$OPTARG"
         ;;
     \?) echo "Invalid option: -$OPTARG"
         exit 1
@@ -128,6 +135,50 @@ function changeStringFromTemplates {
 
 }
 
+function run_xTea {
+    local xTea_PATH="$1"
+    local xTea_scriptName="$2"
+    local CONFIG_DIRECTORY="$3"
+    local RESULT_DIRECTORY="$4"
+    local REF_DIRECTORY="$5"
+    local input_sequence_platform="$6"
+
+    WORKING_DIRECTORY=$(dirname ${RESULT_DIRECTORY})
+
+    local command="python ${xTea_PATH}/${xTea_scriptName} \
+          -i \"${CONFIG_DIRECTORY}/xtea_sample_id.txt\" \
+          -b \"${CONFIG_DIRECTORY}/xtea_bam_list.txt\" \
+          -x null -p \"${WORKING_DIRECTORY}\" \
+          -o submit_jobs.sh \
+          -l \"${REF_DIRECTORY}/rep_lib_annotation/\" \
+          -r \"${REF_DIRECTORY}/hg38/Homo_sapiens_assembly38.fasta\" \
+          -g \"${REF_DIRECTORY}/pangenomics/chm13.draft_v2.0.gene_annotation.gff3\" \
+          --xtea \"${xTea_PATH}\" "
+    
+    if [ "$xTea_scriptName" == "xtea" ]; then
+        # illumina germline only
+        command="$command \
+            -f 5907 -y 7 \
+            --slurm -t ${slurm_time} -q ${slurm_partition} -n ${slurm_core} -m ${slurm_memory}
+            "
+    else
+        command="$command \
+            -f 5907 \
+            -y 3 \
+            --slurm -t ${slurm_time} -q ${slurm_partition} -n ${slurm_core} -m ${slurm_memory} \
+            --nclip 2 --cr 0 --nd 1 --nfclip 1 --nfdisc 1 \
+            --blacklist \"${REF_DIRECTORY}/gnomAD/2.1/gnomad_v2.1_sv.sites.bed\"
+            "
+    fi
+
+    echo "Running xTEA(${xTea_scriptName}) with the following command:"
+    echo "$command"
+
+    eval "$command"
+
+}
+
+
 function run_xTea_mosaic {
     local xTea_PATH="$1"
     local CONFIG_DIRECTORY="$2"
@@ -158,11 +209,31 @@ function run_xTea_mosaic {
 }
 
 # illumina data 
-function run_xTea {
-    local command="python xtea \
-          -i sample_id.txt \
-          -b illumina_bam_list.txt -x null -p ./path_work_folder/ -o submit_jobs.sh -l /home/rep_lib_annotation/ -r /home/reference/genome.fa -g /home/gene_annotation_file.gff3 --xtea /home/ec2-user/xTea/xtea/ -f 5907 -y 7  --slurm -t 0-12:00 -q short -n 8 -m 25"
+function run_xTea_germlin_illumina {
+    local xTea_PATH="$1"
+    local xTea_scriptName="$2"
+    local CONFIG_DIRECTORY="$3"
+    local RESULT_DIRECTORY="$4"
+    local REF_DIRECTORY="$5"
+    WORKING_DIRECTORY=$(dirname ${RESULT_DIRECTORY})
 
+
+    local command="python ${xTea_PATH}/xtea \
+          -i \"${CONFIG_DIRECTORY}/xtea_sample_id.txt\" \
+          -b \"${CONFIG_DIRECTORY}/xtea_bam_list.txt\" \
+          -x null -p \"${WORKING_DIRECTORY}\" \
+          -o submit_jobs.sh \
+          -l \"${REF_DIRECTORY}/rep_lib_annotation/\" \
+          -r \"${REF_DIRECTORY}/hg38/Homo_sapiens_assembly38.fasta\" \
+          -g \"${REF_DIRECTORY}/pangenomics/chm13.draft_v2.0.gene_annotation.gff3\" \
+          --xtea \"${xTea_PATH}\" \
+          -f 5907 -y 7 \
+          --slurm -t ${slurm_time} -q ${slurm_partition} -n ${slurm_core} -m ${slurm_memory}"
+
+    echo "Running xTEA-germline illumina with the following command:"
+    echo "$command"
+
+    eval "$command"
 
 }
 
@@ -198,7 +269,8 @@ changeStringFromTemplates sample_id_and_file[0] ${CONFIG_DIRECTORY}/xtea_sample_
 
 
 # run xTea
-run_xTea_mosaic ${xtea_path} ${CONFIG_DIRECTORY} ${RESULT_DIRECTORY}/${SAMPLE_ID} ${REF_DIRECTORY}
+#run_xTea_mosaic ${xtea_path} ${CONFIG_DIRECTORY} ${RESULT_DIRECTORY}/${SAMPLE_ID} ${REF_DIRECTORY}
+run_xTea ${xtea_path} ${xtea_script_file} ${CONFIG_DIRECTORY} ${RESULT_DIRECTORY}/${SAMPLE_ID} ${REF_DIRECTORY}
 
 # Check if the file exists
 if [ ! -f "./submit_jobs.sh" ]; then
