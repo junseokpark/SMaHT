@@ -1,6 +1,7 @@
 #!/bin/bash
 
-TARGET_DIR="/n/data1/bch/genetics/lee/projects/SMaHT/results/xTea/mosaic"
+#TARGET_DIR="/n/data1/bch/genetics/lee/projects/SMaHT/results/xTea/mosaic"
+TARGET_DIR="/n/data1/bch/genetics/lee/projects/SMaHT/results/xTea/germline"
 
 # Check if the target directory exists
 if [ -d "$TARGET_DIR" ]; then

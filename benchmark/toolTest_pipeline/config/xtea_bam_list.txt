@@ -1,1 +1,1 @@
-TITR_15	/n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x/TITR_15.recal.sorted.bam
+HG002	/n/data1/bch/genetics/lee/data/GIAB/Ultralong_OxfordNanopore/guppy-V3.2.4_2020-01-22/HG002_GRCh38_ONT-UL_GIAB_20200122.phased
