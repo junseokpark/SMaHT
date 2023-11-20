@@ -28,4 +28,4 @@ BASE_DIRECTORY="/n/data1/bch/genetics/lee/projects/SMaHT"
     -r ${BASE_DIRECTORY}/results/xTea/longread_germline \
     -c ${BASE_DIRECTORY}/benchmark/toolTest_pipeline/config \
     -x /n/data1/bch/genetics/lee/tools/xTea-longread/xtea_long \
-    -f gnrt_pipeline_local_long_read_v38.py
+    -f xtea_long
