@@ -28,4 +28,7 @@ BASE_DIRECTORY="/n/data1/bch/genetics/lee/projects/SMaHT"
     -r ${BASE_DIRECTORY}/results/xTea/longread_germline \
     -c ${BASE_DIRECTORY}/benchmark/toolTest_pipeline/config \
     -x /n/data1/bch/genetics/lee/tools/xTea-longread/xtea_long \
-    -f xtea_long
+    -f xtea_long \
+    --slurm_core 16 \
+    --slurm_memory 128 \
+
