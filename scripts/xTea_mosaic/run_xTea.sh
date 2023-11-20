@@ -167,11 +167,11 @@ function run_xTea {
           -b \"${CONFIG_DIRECTORY}/xtea_bam_list.txt\" \
           -p \"${WORKING_DIRECTORY}\" \
           -o submit_jobs.sh \
-          --xtea \"${xTea_PATH}\" \ 
+          --xtea \"${xTea_PATH}\" \
           -r \"${REF_DIRECTORY}/hg38/Homo_sapiens_assembly38.fasta\" \
           --rmsk \"${REF_DIRECTORY}/rep_lib_annotation/LINE/hg38/hg38_L1_larger_500_with_all_L1HS.out\" \
-          --cns \"${REF_DIRECTORY}/rep_lib_annotation/consensus/LINE1.fa\" \ 
-          --rep  \"${REF_DIRECTORY}/rep_lib_annotation/\" \  
+          --cns \"${REF_DIRECTORY}/rep_lib_annotation/consensus/LINE1.fa\" \
+          --rep  \"${REF_DIRECTORY}/rep_lib_annotation/\" \
           -f 31 -y 15 -n ${slurm_core} -m ${slurm_memory} \
           --slurm -q ${slurm_partition} -t ${slurm_time}
           "         
