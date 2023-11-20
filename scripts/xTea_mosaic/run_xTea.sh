@@ -161,6 +161,20 @@ function run_xTea {
             -f 5907 -y 7 \
             --slurm -t ${slurm_time} -q ${slurm_partition} -n ${slurm_core} -m ${slurm_memory}
             "
+    elif [ "$xTea_scriptName" == "gnrt_pipeline_local_long_read_v38.py" ]; then
+        command="python ${xTea_PATH}/${xTea_scriptName} \
+          -i \"${CONFIG_DIRECTORY}/xtea_sample_id.txt\" \
+          -b \"${CONFIG_DIRECTORY}/xtea_bam_list.txt\" \
+          -p \"${WORKING_DIRECTORY}\" \
+          -o submit_jobs.sh \
+          --xtea \"${xTea_PATH}\" 
+          -n ${slurm_core} -m ${slurm_memory} -t ${slurm_time} 
+          -r \"${REF_DIRECTORY}/hg38/Homo_sapiens_assembly38.fasta\" \
+          --rmsk \"${REF_DIRECTORY}/rep_lib_annotation/LINE/hg38/hg38_L1_larger_500_with_all_L1HS.out\" \
+          --cns \"${REF_DIRECTORY}/rep_lib_annotation/consensus/LINE1.fa\" \ 
+          --rep  \"${REF_DIRECTORY}/rep_lib_annotation/\" \  
+          --min 4000  -f 31 -y 15 --clean
+          "
     else
         command="$command \
             -f 5907 \
@@ -175,6 +189,18 @@ function run_xTea {
     echo "$command"
 
     eval "$command"
+
+python ${XTEA}"gnrt_pipeline_local_long_read_v38.py" 
+ -i ${SAMPLE_ID} 
+ -b ${BAMS}
+  -p ${WFOLDER} 
+  -o ${OUT_SCRTP} 
+  --xtea ${XTEA} 
+  
+  -r ${REF} --rmsk ${RMSK} 
+  --cns ${CNS_L1} 
+  --rep ${REP_LIB}  
+  --min 4000  -f 31 -y 15 --clean
 
 }
 
@@ -309,6 +335,11 @@ if [ "$xtea_script_file" == "xtea" ]; then
 
     sed -i "/$start_pattern/,/$end_pattern/ { /$end_pattern/ {i\\$new_line
     }}" ${CURRENT_PWD}/sbatch_job.sh
+
+# xTea long read is only for LINE1
+elif [ "$xtea_script_file" == "gnrt_pipeline_local_long_read_v38.py" ]; then
+    sed -i "/^batch_scripts\[alu\]/d" ${CURRENT_PWD}/sbatch_job.sh
+
 fi
 
 mv ./sbatch_job.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
