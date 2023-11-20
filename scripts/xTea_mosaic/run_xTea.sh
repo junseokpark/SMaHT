@@ -37,7 +37,7 @@ slurm_time="4-12:00"
 slurm_core="8"
 slurm_memory="64"
 
-while getopts ":h:s:p:d:e:r:c:x:e:i:a:t:o:m:" opt; do
+while getopts ":h:s:p:d:e:r:c:x:f:i:a:t:o:m:" opt; do
   case $opt in
     h) echo "$usage"
         exit 0
