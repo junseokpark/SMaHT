@@ -190,18 +190,6 @@ function run_xTea {
 
     eval "$command"
 
-python ${XTEA}"gnrt_pipeline_local_long_read_v38.py" 
- -i ${SAMPLE_ID} 
- -b ${BAMS}
-  -p ${WFOLDER} 
-  -o ${OUT_SCRTP} 
-  --xtea ${XTEA} 
-  
-  -r ${REF} --rmsk ${RMSK} 
-  --cns ${CNS_L1} 
-  --rep ${REP_LIB}  
-  --min 4000  -f 31 -y 15 --clean
-
 }
 
 
