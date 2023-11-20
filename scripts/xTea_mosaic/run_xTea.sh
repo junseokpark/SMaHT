@@ -167,8 +167,8 @@ function run_xTea {
           -b \"${CONFIG_DIRECTORY}/xtea_bam_list.txt\" \
           -p \"${WORKING_DIRECTORY}\" \
           -o submit_jobs.sh \
-          --xtea \"${xTea_PATH}\" 
-          -n ${slurm_core} -m ${slurm_memory} -t ${slurm_time} 
+          --xtea \"${xTea_PATH}\" \ 
+          -n ${slurm_core} -m ${slurm_memory} -t ${slurm_time} \
           -r \"${REF_DIRECTORY}/hg38/Homo_sapiens_assembly38.fasta\" \
           --rmsk \"${REF_DIRECTORY}/rep_lib_annotation/LINE/hg38/hg38_L1_larger_500_with_all_L1HS.out\" \
           --cns \"${REF_DIRECTORY}/rep_lib_annotation/consensus/LINE1.fa\" \ 
