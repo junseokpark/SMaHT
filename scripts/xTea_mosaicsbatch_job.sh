@@ -19,15 +19,9 @@ declare -A batch_scripts
 batch_scripts[alu]="[SAMPLE_ID]/Alu/run_xTEA_pipeline.sh"
 batch_scripts[L1]="[SAMPLE_ID]/L1/run_xTEA_pipeline.sh"
 
-#BATCH_SCRIPT="/n/data1/bch/genetics/lee/projects/SMaHT/results/xTea_mosaic/TITR_1/L1/run_xTEA_pipeline.sh"
-#BATCH_SCRIPT="/n/data1/bch/genetics/lee/projects/SMaHT/results/xTea_mosaic/TITR_1/Alu/run_xTEA_pipeline.sh"
-
 for key in "${!batch_scripts[@]}"
 do
   echo "Processing '$key'"
-  #echo ${WORK_DIRECTORY}/${batch_scripts[$key]}
-  #ls -alF ${WORK_DIRECTORY}/${batch_scripts[$key]}
-   #exit
 
   chmod +x ${WORK_DIRECTORY}/${batch_scripts[$key]}
 

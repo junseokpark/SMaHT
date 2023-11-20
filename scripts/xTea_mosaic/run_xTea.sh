@@ -305,7 +305,7 @@ if [ "$xtea_script_file" == "xtea" ]; then
     start_pattern="batch_scripts\[L1\]"
     end_pattern="for"
 
-    new_line="batch_scripts\[SVA\]=\"${SAMPLE_ID}/L1/run_xTEA_pipeline.sh\""
+    new_line="batch_scripts\[SVA\]=\"${SAMPLE_ID}/SVA/run_xTEA_pipeline.sh\""
 
     sed -i "/$start_pattern/,/$end_pattern/ { /$end_pattern/ {i\\$new_line
     }}" ${CURRENT_PWD}/sbatch_job.sh
