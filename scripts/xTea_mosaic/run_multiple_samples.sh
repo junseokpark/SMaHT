@@ -20,5 +20,9 @@ for SAMPLE_ID in "${SAMPLES[@]}"; do
         -r ${RESULT_DIRECTORY} \
         -c ${CONFIG_DIRECTORY} \
         -x ${X_TEA_BIN} \
+<<<<<<< HEAD
         -f ${X_TEA_RUN_SCRIPT} 
+=======
+        -f ${X_TEA_RUN_SCRIPT}
+>>>>>>> 4d6dcf6 (updates)
 done
