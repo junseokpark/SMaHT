@@ -10,17 +10,29 @@ BASE_DIRECTORY="/n/data1/bch/genetics/lee/projects/SMaHT"
 #     -c ${BASE_DIRECTORY}/benchmark/toolTest_pipeline/config \
 #     -x /n/data1/bch/genetics/lee/tools/xTea-mosaic/xtea
 
-# Germline
+# Mosaic
 ./run_xTea.sh -s HG003 \
     -p .GRCh38.300x.bam \
     -d /n/data1/bch/genetics/lee/data/GIAB/HG003_NA24149_father/NIST_HiSeq_HG003_Homogeneity-12389378/NHGRI_Illumina300X_AJtrio_novoalign_bams \
     -e ${BASE_DIRECTORY}/refs \
-    -r ${BASE_DIRECTORY}/results/xTea/shortread/germline/GIAB/Illumina300x \
+    -r ${BASE_DIRECTORY}/results/xTea/shortread/mosaic/GIAB/Illumina300x \
     -c ${BASE_DIRECTORY}/benchmark/toolTest_pipeline/config \
-    -x /n/data1/bch/genetics/lee/tools/xTea/xtea \
-    -f xtea \
+    -x /n/data1/bch/genetics/lee/tools/xTea-mosaic/xtea \
+    -f gnrt_pipeline_local_v38.py \
     -o 16 \
     -m 128
+
+# Germline
+# ./run_xTea.sh -s HG003 \
+#     -p .GRCh38.300x.bam \
+#     -d /n/data1/bch/genetics/lee/data/GIAB/HG003_NA24149_father/NIST_HiSeq_HG003_Homogeneity-12389378/NHGRI_Illumina300X_AJtrio_novoalign_bams \
+#     -e ${BASE_DIRECTORY}/refs \
+#     -r ${BASE_DIRECTORY}/results/xTea/shortread/germline/GIAB/Illumina300x \
+#     -c ${BASE_DIRECTORY}/benchmark/toolTest_pipeline/config \
+#     -x /n/data1/bch/genetics/lee/tools/xTea/xtea \
+#     -f xtea \
+#     -o 16 \
+#     -m 128
 
 # LongRead
 # ./run_xTea.sh -s HG002 \
