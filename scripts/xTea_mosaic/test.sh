@@ -11,9 +11,9 @@ BASE_DIRECTORY="/n/data1/bch/genetics/lee/projects/SMaHT"
 #     -x /n/data1/bch/genetics/lee/tools/xTea-mosaic/xtea
 
 # Mosaic
-./run_xTea.sh -s HG003 \
+./run_xTea.sh -s HG002 \
     -p .GRCh38.300x.bam \
-    -d /n/data1/bch/genetics/lee/data/GIAB/HG003_NA24149_father/NIST_HiSeq_HG003_Homogeneity-12389378/NHGRI_Illumina300X_AJtrio_novoalign_bams \
+    -d /n/data1/bch/genetics/lee/data/GIAB/HG002_NA24385_son/NIST_HiSeq_HG002_Homogeneity-10953946/NHGRI_Illumina300X_AJtrio_novoalign_bams \
     -e ${BASE_DIRECTORY}/refs \
     -r ${BASE_DIRECTORY}/results/xTea/shortread/mosaic/GIAB/Illumina300x \
     -c ${BASE_DIRECTORY}/benchmark/toolTest_pipeline/config \
