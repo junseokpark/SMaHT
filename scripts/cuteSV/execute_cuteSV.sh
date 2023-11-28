@@ -33,7 +33,7 @@ cuteSV --thread 32 \
     $BAM_FILE \
     $REFERENCE_FILE \
     $OUTPUT_FILE \
-    $WORK_DIRECTORY 
+    $RESULT_DIRECTORY
 
 # > For PacBio CLR data:
 # 	--max_cluster_bias_INS		100
