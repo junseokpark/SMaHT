@@ -24,6 +24,10 @@
 ## swp file
 **.sh.swp
 
+## sequence file
+**.bam
+**.fastq
+
 ## nfs files
 .nfs**
 
