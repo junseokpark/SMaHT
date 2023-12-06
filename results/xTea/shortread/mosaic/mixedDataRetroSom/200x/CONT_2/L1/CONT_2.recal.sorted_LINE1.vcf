@@ -1,0 +1,88 @@
+##fileformat=VCFv4.2
+##reference=NULL
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529>
+##contig=<ID=chr3,length=198295559>
+##contig=<ID=chr4,length=190214555>
+##contig=<ID=chr5,length=181538259>
+##contig=<ID=chr6,length=170805979>
+##contig=<ID=chr7,length=159345973>
+##contig=<ID=chr8,length=145138636>
+##contig=<ID=chr9,length=138394717>
+##contig=<ID=chr10,length=133797422>
+##contig=<ID=chr11,length=135086622>
+##contig=<ID=chr12,length=133275309>
+##contig=<ID=chr13,length=114364328>
+##contig=<ID=chr14,length=107043718>
+##contig=<ID=chr15,length=101991189>
+##contig=<ID=chr16,length=90338345>
+##contig=<ID=chr17,length=83257441>
+##contig=<ID=chr18,length=80373285>
+##contig=<ID=chr19,length=58617616>
+##contig=<ID=chr20,length=64444167>
+##contig=<ID=chr21,length=46709983>
+##contig=<ID=chr22,length=50818468>
+##contig=<ID=chrX,length=156040895>
+##contig=<ID=chrY,length=57227415>
+##contig=<ID=chrM,length=16569>
+##contig=<ID=chrEBV,length=171823>
+##ALT=<ID=INS:ME:SVA,Description="Insertion of SVA element">
+##ALT=<ID=INS:ME:LINE1,Description="Insertion of LINE1 element">
+##ALT=<ID=INS:ME:ALU,Description="Insertion of ALU element">
+##ALT=<ID=INS:ME:HERV-K,Description="Insertion of HERV-K element">
+##ALT=<ID=INS:MT,Description="Mitochondrial insertion">
+##ALT=<ID=INS:PSDGN,Description="Pseudogene insertion">
+##FILTER=<ID=PASS,Description="All filters passed">
+##FILTER=<ID=LowConfident,Description="All filters passed">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Insertion length">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End coordinate of this variant">
+##INFO=<ID=TSD,Number=1,Type=String,Description="Precise Target Site Duplication for bases, if unknown, value will be NULL">
+##INFO=<ID=TSDLEN,Number=1,Type=Integer,Description="TSD (dup/del) length, if unknown, then -1">
+##INFO=<ID=SUBTYPE,Number=1,Type=String,Description="Subtype based on TSD/PolyA/side-info">
+##INFO=<ID=TD_SRC,Number=1,Type=String,Description="Transduction source">
+##INFO=<ID=STRAND,Number=1,Type=String,Description="Insertion orientation (+/- for sense/antisense)">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Estimated allele frequency in the range (0,1)">
+##INFO=<ID=LCLIP,Number=1,Type=Integer,Description="Number of left clipped reads (aligned to copies)">
+##INFO=<ID=RCLIP,Number=1,Type=Integer,Description="Number of right clipped reads (aligned to copies)">
+##INFO=<ID=LDISC,Number=1,Type=Integer,Description="Number of left discordant reads (aligned to copies)">
+##INFO=<ID=RDISC,Number=1,Type=Integer,Description="Number of right discordant reads (aligned to copies)">
+##INFO=<ID=LPOLYA,Number=1,Type=Integer,Description="Number of left polyA reads">
+##INFO=<ID=RPOLYA,Number=1,Type=Integer,Description="Number of right polyA reads">
+##INFO=<ID=LRAWCLIP,Number=1,Type=Integer,Description="Number of left raw clip reads">
+##INFO=<ID=RRAWCLIP,Number=1,Type=Integer,Description="Number of right raw clip reads">
+##INFO=<ID=AF_CLIP,Number=1,Type=Integer,Description="Number of effective clip reads (for AF)">
+##INFO=<ID=AF_FMAP,Number=1,Type=Integer,Description="Number of effective fully mapped reads (for AF)">
+##INFO=<ID=AF_DISC,Number=1,Type=Integer,Description="Number of effective discordant pairs (for AF)">
+##INFO=<ID=AF_CONCORDNT,Number=1,Type=Integer,Description="Number of effective concordant pairs (for AF)">
+##INFO=<ID=LDRC,Number=1,Type=Integer,Description="Number of left discordant reads are reverse-complementary">
+##INFO=<ID=LDNRC,Number=1,Type=Integer,Description="Number of left discordant reads are not reverse-complementary">
+##INFO=<ID=RDRC,Number=1,Type=Integer,Description="Number of right discordant reads are reverse-complementary">
+##INFO=<ID=RDNRC,Number=1,Type=Integer,Description="Number of right discordant reads are not reverse-complementary">
+##INFO=<ID=LCOV,Number=1,Type=Float,Description="Left focal coverage">
+##INFO=<ID=RCOV,Number=1,Type=Float,Description="Right focal coverage">
+##INFO=<ID=LD_AKR_RC,Number=1,Type=Integer,Description="Number of left discordant anchor reads are reverse-complementary">
+##INFO=<ID=LD_AKR_NRC,Number=1,Type=Integer,Description="Number of left discordant anchor reads are not reverse-complementary">
+##INFO=<ID=RD_AKR_RC,Number=1,Type=Integer,Description="Number of right discordant anchor reads are reverse-complementary">
+##INFO=<ID=RD_AKR_NRC,Number=1,Type=Integer,Description="Number of right discordant anchor reads are not reverse-complementary">
+##INFO=<ID=LC_CLUSTER,Number=1,Type=String,Description="Left clip formed cluster in consensus">
+##INFO=<ID=RC_CLUSTER,Number=1,Type=String,Description="Right clip formed cluster in consensus">
+##INFO=<ID=LD_CLUSTER,Number=1,Type=String,Description="Left discordant formed cluster in consensus">
+##INFO=<ID=RD_CLUSTER,Number=1,Type=String,Description="Right discordant formed cluster in consensus">
+##INFO=<ID=NINDEL,Number=1,Type=Integer,Description="Number of large indel (or with several mismatches) reads">
+##INFO=<ID=CLIP_LEN,Number=1,Type=String,Description="Clip reads length">
+##INFO=<ID=INS_INV,Number=1,Type=String,Description="5 prime inversion">
+##INFO=<ID=REF_REP,Number=1,Type=String,Description="Fall in reference repeat copy or not">
+##INFO=<ID=GENE_INFO,Number=1,Type=String,Description="Fall in gene region">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	CONT_2.recal.sorted
+chr3	59867163	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=831;END=59867177;TSD=+AATCAGCAGAACCA;TSDLEN=14;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=+;AF=0.30434782608695654;LCLIP=7;RCLIP=9;LDISC=21;RDISC=10;LPOLYA=7;RPOLYA=0;LRAWCLIP=7;RRAWCLIP=11;AF_CLIP=7;AF_FMAP=16;AF_DISC=38;AF_CONCORDNT=72;LDRC=21;LDNRC=0;RDRC=10;RDNRC=0;LCOV=51.67;RCOV=38.285;LD_AKR_RC=0;LD_AKR_NRC=21;RD_AKR_RC=10;RD_AKR_NRC=0;LC_CLUSTER=6002:6029;RC_CLUSTER=5109:5118;LD_CLUSTER=5170.0:5432.5;RD_CLUSTER=5727.5:6001.0;NINDEL=0;CLIP_LEN=21:33:16:34:75:31:18;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=intron:CHM13_T0154349:0:FHIT	GT	0/1
+chr4	85686796	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=302;END=85686803;TSD=+AAAAAAT;TSDLEN=7;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=+;AF=0.29411764705882354;LCLIP=4;RCLIP=8;LDISC=10;RDISC=5;LPOLYA=4;RPOLYA=0;LRAWCLIP=5;RRAWCLIP=8;AF_CLIP=5;AF_FMAP=12;AF_DISC=20;AF_CONCORDNT=42;LDRC=10;LDNRC=0;RDRC=5;RDNRC=0;LCOV=37.675;RCOV=25.395;LD_AKR_RC=0;LD_AKR_NRC=10;RD_AKR_RC=5;RD_AKR_NRC=0;LC_CLUSTER=6020:6032;RC_CLUSTER=5604:5648;LD_CLUSTER=5663.5:5768.0;RD_CLUSTER=5665.5:5965.5;NINDEL=0;CLIP_LEN=10:16:8:16:5;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=intron:CHM13_T0167354:0:HNRNPD	GT	0/1
+chr4	126675037	.	T	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=401;END=126675061;TSD=-TTAGAATGGCGATCATTAAAAAGT;TSDLEN=24;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=+;AF=0.19230769230769232;LCLIP=4;RCLIP=3;LDISC=6;RDISC=11;LPOLYA=4;RPOLYA=0;LRAWCLIP=6;RRAWCLIP=6;AF_CLIP=5;AF_FMAP=21;AF_DISC=25;AF_CONCORDNT=80;LDRC=6;LDNRC=0;RDRC=11;RDNRC=0;LCOV=39.135;RCOV=44.45;LD_AKR_RC=0;LD_AKR_NRC=6;RD_AKR_RC=11;RD_AKR_NRC=0;LC_CLUSTER=6015:6017;RC_CLUSTER=5585:5596;LD_CLUSTER=5621.5:5787.0;RD_CLUSTER=5817.0:6023.0;NINDEL=0;CLIP_LEN=6:34:23:20:50;INS_INV=Not-5prime-inversion;REF_REP=Fall_in_LINE1_copy;GENE_INFO=not_gene_region	GT	0/1
+chr4	146304129	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=5934;END=146304144;TSD=+AAGAAGTTAAAATAG;TSDLEN=15;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=+;AF=0.21739130434782608;LCLIP=4;RCLIP=4;LDISC=10;RDISC=8;LPOLYA=4;RPOLYA=0;LRAWCLIP=5;RRAWCLIP=4;AF_CLIP=5;AF_FMAP=18;AF_DISC=24;AF_CONCORDNT=56;LDRC=10;LDNRC=0;RDRC=8;RDNRC=0;LCOV=29.06;RCOV=35.18;LD_AKR_RC=1;LD_AKR_NRC=9;RD_AKR_RC=8;RD_AKR_NRC=0;LC_CLUSTER=5994:6005;RC_CLUSTER=36:38;LD_CLUSTER=75.0:360.0;RD_CLUSTER=5841.5:6009.5;NINDEL=1;CLIP_LEN=30:39:13:57:42;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=intron:CHM13_T0170344:1:AC104596.1	GT	0/1
+chr6	161760224	.	G	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=3859;END=161760236;TSD=+GAAAACAATGCC;TSDLEN=12;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=+;AF=0.3333333333333333;LCLIP=3;RCLIP=3;LDISC=11;RDISC=7;LPOLYA=3;RPOLYA=0;LRAWCLIP=6;RRAWCLIP=13;AF_CLIP=3;AF_FMAP=6;AF_DISC=25;AF_CONCORDNT=55;LDRC=11;LDNRC=0;RDRC=7;RDNRC=0;LCOV=38.325;RCOV=35.93;LD_AKR_RC=0;LD_AKR_NRC=11;RD_AKR_RC=7;RD_AKR_NRC=0;LC_CLUSTER=6033:6040;RC_CLUSTER=22:23;LD_CLUSTER=2176.0:2380.5;RD_CLUSTER=5850.5:6035.0;NINDEL=1;CLIP_LEN=52:27:19;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=intron:CHM13_T0193675:1:LPAL2	GT	0/1
+chr7	85415420	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=1868;END=85415435;TSD=+AAAAAGCAAATGTAT;TSDLEN=15;SUBTYPE=two_side_tprt_both;TD_SRC=chr2:87907364~sibling;STRAND=+;AF=0.18518518518518517;LCLIP=4;RCLIP=9;LDISC=14;RDISC=10;LPOLYA=4;RPOLYA=0;LRAWCLIP=5;RRAWCLIP=11;AF_CLIP=5;AF_FMAP=22;AF_DISC=30;AF_CONCORDNT=78;LDRC=0;LDNRC=14;RDRC=10;RDNRC=0;LCOV=40.365;RCOV=44.41;LD_AKR_RC=0;LD_AKR_NRC=14;RD_AKR_RC=10;RD_AKR_NRC=0;LC_CLUSTER=6017:6036;RC_CLUSTER=4363:4382;LD_CLUSTER=4147.0:4375.5;RD_CLUSTER=5835.5:6015.5;NINDEL=0;CLIP_LEN=31:6:28:46:19;INS_INV=5-prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=intron:CHM13_T0199491:2:SEMA3A	GT	0/1
+chr7	108188804	.	T	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=5883;END=108188819;TSD=+TAAATTTTAGTGGAA;TSDLEN=15;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=+;AF=0.3103448275862069;LCLIP=8;RCLIP=6;LDISC=11;RDISC=12;LPOLYA=8;RPOLYA=0;LRAWCLIP=9;RRAWCLIP=7;AF_CLIP=9;AF_FMAP=20;AF_DISC=28;AF_CONCORDNT=58;LDRC=11;LDNRC=0;RDRC=12;RDNRC=0;LCOV=31.255;RCOV=39.685;LD_AKR_RC=0;LD_AKR_NRC=11;RD_AKR_RC=12;RD_AKR_NRC=0;LC_CLUSTER=5982:5987;RC_CLUSTER=50:70;LD_CLUSTER=75.5:267.0;RD_CLUSTER=5701.5:5958.5;NINDEL=2;CLIP_LEN=71:9:37:75:70:41:74:38:35;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=CDS:CHM13_T0201605:2:PIK3CG	GT	0/1
+chr9	63898518	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=1157;END=63898533;TSD=+AGAGATGTAATTTTA;TSDLEN=15;SUBTYPE=one_half_side_tprt_both;TD_SRC=not_transduction;STRAND=-;AF=0.2702702702702703;LCLIP=19;RCLIP=2;LDISC=0;RDISC=13;LPOLYA=0;RPOLYA=2;LRAWCLIP=25;RRAWCLIP=12;AF_CLIP=10;AF_FMAP=27;AF_DISC=37;AF_CONCORDNT=165;LDRC=0;LDNRC=0;RDRC=13;RDNRC=0;LCOV=64.265;RCOV=72.675;LD_AKR_RC=0;LD_AKR_NRC=0;RD_AKR_RC=13;RD_AKR_NRC=0;LC_CLUSTER=5156:5215;RC_CLUSTER=6086:6100;LD_CLUSTER=-1:-1;RD_CLUSTER=4962.5:5131.0;NINDEL=1;CLIP_LEN=22:23:24:25:10:37:39:54:61:77;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=not_gene_region	GT	0/1
+chr11	43335390	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=161;END=43335405;TSD=+AAAACTTAATACGAG;TSDLEN=15;SUBTYPE=two_side_tprt_both;TD_SRC=chr4:46056080~sibling;STRAND=+;AF=0.23809523809523808;LCLIP=4;RCLIP=1;LDISC=7;RDISC=5;LPOLYA=4;RPOLYA=0;LRAWCLIP=8;RRAWCLIP=6;AF_CLIP=5;AF_FMAP=16;AF_DISC=21;AF_CONCORDNT=58;LDRC=7;LDNRC=0;RDRC=5;RDNRC=0;LCOV=32.62;RCOV=39.53;LD_AKR_RC=0;LD_AKR_NRC=7;RD_AKR_RC=5;RD_AKR_NRC=0;LC_CLUSTER=6030:6053;RC_CLUSTER=5939:5939;LD_CLUSTER=5912.5:6092.0;RD_CLUSTER=5952.5:6073.5;NINDEL=0;CLIP_LEN=11:24:8:67:5;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=intron:CHM13_T0032200:1:HNRNPKP3	GT	0/1
+chr15	55958936	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=5988;END=55958954;TSD=+AAAACTTTAATTGATGTC;TSDLEN=18;SUBTYPE=two_side_tprt_both;TD_SRC=chr17:70464965~sibling;STRAND=+;AF=0.32;LCLIP=6;RCLIP=7;LDISC=13;RDISC=14;LPOLYA=6;RPOLYA=0;LRAWCLIP=8;RRAWCLIP=8;AF_CLIP=8;AF_FMAP=17;AF_DISC=32;AF_CONCORDNT=62;LDRC=13;LDNRC=0;RDRC=14;RDNRC=0;LCOV=32.59;RCOV=40.185;LD_AKR_RC=0;LD_AKR_NRC=13;RD_AKR_RC=14;RD_AKR_NRC=0;LC_CLUSTER=6065:6070;RC_CLUSTER=13:47;LD_CLUSTER=75.5:411.0;RD_CLUSTER=5799.0:6063.5;NINDEL=0;CLIP_LEN=13:32:26:12:63:76:49:50;INS_INV=Not-5prime-inversion;REF_REP=Fall_in_LINE1_copy;GENE_INFO=intron:CHM13_T0071188:0:ALDH1A2/down_stream:CHM13_G0018977:MTCYBP23/intron:CHM13_T0071187:0:AQP9	GT	0/1

@@ -14,7 +14,8 @@
 **/tools/xTea-mosaic/
 
 ## ignore result directories
-**/results/
+**/results/**/**
+!**/results/**/
 !**.vcf
 
 ## ipython notebook local files
