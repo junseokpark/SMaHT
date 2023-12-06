@@ -7,6 +7,8 @@
 
 # SMaHT DAC Aleelab
 This is a benchmark pipeline for SMaHT project developed by Aleelab
+![pipeline](images/pipeline.png "``pipeline``")
+
 
 ---
 
