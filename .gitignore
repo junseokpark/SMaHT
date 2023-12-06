@@ -15,7 +15,7 @@
 
 ## ignore result directories
 **/results/
-!**/results/**/**.vcf
+!**/results/**.vcf
 
 ## ipython notebook local files
 .ipynb_checkpoints
