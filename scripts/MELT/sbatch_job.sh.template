@@ -1,0 +1,44 @@
+#!/bin/bash
+
+#SBATCH -c [SLURM_CORE]
+#SBATCH -t [SLURM_TIME]
+#SBATCH --mem=[SLURM_MEMORY]
+#SBATCH -p [SLURM_PARTITION]
+#SBATCH -J xTea-[SAMPLE_ID]
+#SBATCH -o [RESULT_DIR]/[SAMPLE_ID]/[SAMPLE_ID]_%j.out
+#SBATCH --mail-type=NONE
+#SBATCH --mail-user=junseok.park@childrens.harvard.edu
+
+module load java/jdk-1.8u112 
+
+MELT_DIR=[MELT_DIR]
+RESULT_DIR=[RESULT_DIR]/[SAMPLE_ID]
+REF_DIR=[REF_DIR]
+SAMPLE_DIR=[SAMPLE_DIR]
+SAMPLE_FILE=[SAMPLE_ID][SAMPLE_EXT]
+
+
+LANG=en_US.UTF-8
+LANGUAGE=en_US
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC=ro_RO.UTF-8
+LC_TIME=ro_RO.UTF-8
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY=ro_RO.UTF-8
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER=ro_RO.UTF-8
+LC_NAME=ro_RO.UTF-8
+LC_ADDRESS=ro_RO.UTF-8
+LC_TELEPHONE=ro_RO.UTF-8
+LC_MEASUREMENT=ro_RO.UTF-8
+LC_IDENTIFICATION=ro_RO.UTF-8
+LC_ALL=
+
+java -jar ${MELT_DIR}/MELT.jar Single \
+    -a \
+    -c [SLURM_CORE] \
+    -h $REF_DIR/Homo_sapiens_assembly38.fasta \
+    -bamfile $SAMPLE_DIR/$SAMPLE_FILE \
+    -n $MELT_DIR/add_bed_files/Hg38/Hg38.genes.bed \
+    -t mei_list.txt \
+    -w $RESULT_DIR/CONT_1
