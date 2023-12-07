@@ -6,7 +6,7 @@ RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germl
 REF_DIR=/n/data1/bch/genetics/lee/reference/hg38
 SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x
 SAMPLE_EXT_PREFIX=".recal.sorted.bam"
-SAMPLES=("CONT_2") 
+SAMPLES=("CONT_3" "CONT_4" "CONT_5" "CONT_6" "TITR_1" "TITR_2" "TITR_3" "TITR_4" "TITR_5" "TITR_6") 
 
 slurm_partition="medium"
 slurm_time="4-12:00"
@@ -47,7 +47,7 @@ for SAMPLE_ID in "${SAMPLES[@]}"; do
     "[SLURM_MEMORY]=${slurm_memory}G" 
     "[SLURM_PARTITION]=${slurm_partition}"
     "[SAMPLE_ID]=${SAMPLE_ID}"
-    "[RESULT_DIR]=${RESULT_DIRECTORY}" 
+    "[RESULT_DIR]=${RESULT_DIR}" 
     "[MELT_DIR]=${MELT_DIR}"
     "[REF_DIR]=${REF_DIR}"
     "[SAMPLE_DIR]=${SAMPLE_DIR}"
@@ -55,18 +55,20 @@ for SAMPLE_ID in "${SAMPLES[@]}"; do
     )
 
     # Create result directory if it is not existing
-    if [ ! -d "${RESULT_DIRECTORY}" ]; then
-        mkdir -p ${RESULT_DIRECTORY}
+    if [ ! -d "${RESULT_DIR}" ]; then
+        mkdir -p ${RESULT_DIR}
     fi
 
     # Create sample directory if it is not exists
-    if [ -d "${RESULT_DIRECTORY}/${SAMPLE_ID}" ]; then
+    if [ -d "${RESULT_DIR}/${SAMPLE_ID}" ]; then
         # Remove the directory and its contents
-        rm -r ${RESULT_DIRECTORY}/${SAMPLE_ID}
-        echo "Directory '${RESULT_DIRECTORY}/${SAMPLE_ID}' has been removed."
+        rm -r ${RESULT_DIR}/${SAMPLE_ID}
+        echo "Directory '${RESULT_DIR}/${SAMPLE_ID}' has been removed."
     fi
 
-    echo $SAMPLE_FILE
+    mkdir -p ${RESULT_DIR}/${SAMPLE_ID}
+
+    echo $SAMPLE_ID
 
     CURRENT_PWD=$(realpath .)
     rm -rf ${CURRENT_PWD}/sbatch_job.sh
@@ -74,8 +76,8 @@ for SAMPLE_ID in "${SAMPLES[@]}"; do
 
     changeStringFromTemplates slurm_configs[@] ${CURRENT_PWD}/sbatch_job.sh
 
-    # mv ./sbatch_job.sh ${RESULT_DIRECTORY}/${SAMPLE_ID}
-    # sbatch ${RESULT_DIRECTORY}/${SAMPLE_ID}/sbatch_job.sh
+    mv ./sbatch_job.sh ${RESULT_DIR}/${SAMPLE_ID}
+    sbatch ${RESULT_DIR}/${SAMPLE_ID}/sbatch_job.sh
 
 
 done
