@@ -1,0 +1,4 @@
+/n/data1/bch/genetics/lee/tools/MELTv2.2.2/me_refs/Hg38/ALU_MELT.zip
+/n/data1/bch/genetics/lee/tools/MELTv2.2.2/me_refs/Hg38/HERVK_MELT.zip
+/n/data1/bch/genetics/lee/tools/MELTv2.2.2/me_refs/Hg38/LINE1_MELT.zip
+/n/data1/bch/genetics/lee/tools/MELTv2.2.2/me_refs/Hg38/SVA_MELT.zip
