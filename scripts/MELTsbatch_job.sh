@@ -41,12 +41,24 @@ CONDA_HOME=$HOME/miniforge3
 . $CONDA_HOME/etc/profile.d/mamba.sh
 conda activate ${VENV}
 
+INPUT_BAM_FILE=${SAMPLE_DIR}/${SAMPLE_FILE}
+
+if samtools view -H $INPUT_BAM_FILE | grep -q "SO:coordinate"; then
+    echo "BAM file is already sorted."
+else
+    # If not sorted, run samtools sort
+
+    echo "Sorting BAM file..."
+    samtools sort -o "${SAMPLE_DIR}/[SAMPLE_ID].sorted[SAMPLE_EXT]" "$INPUT_BAM_FILE"
+    echo "BAM file sorted successfully."
+    INPUT_BAM_FILE=${SAMPLE_DIR}/[SAMPLE_ID].sorted[SAMPLE_EXT]
+fi
 
 java -jar ${MELT_DIR}/MELT.jar Single \
     -a \
     -c [SLURM_CORE] \
     -h $REF_DIR/Homo_sapiens_assembly38.fasta \
-    -bamfile $SAMPLE_DIR/$SAMPLE_FILE \
+    -bamfile $INPUT_BAM_FILE \
     -n $MELT_DIR/add_bed_files/Hg38/Hg38.genes.bed \
     -t mei_list.txt \
     -w $RESULT_DIR

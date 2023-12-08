@@ -49,7 +49,7 @@ else
     # If not sorted, run samtools sort
 
     echo "Sorting BAM file..."
-    samtools sort -o "${SAMPLE_DIR}/[SAMPLE_ID].sorted[SAMPLE_EXT]" "$INPUT_BAM_FILE"
+    samtools sort -@ [SLURM_CORE] -o "${SAMPLE_DIR}/[SAMPLE_ID].sorted[SAMPLE_EXT]" "$INPUT_BAM_FILE"
     echo "BAM file sorted successfully."
     INPUT_BAM_FILE=${SAMPLE_DIR}/[SAMPLE_ID].sorted[SAMPLE_EXT]
 fi
