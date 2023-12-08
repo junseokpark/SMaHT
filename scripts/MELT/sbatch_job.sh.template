@@ -52,6 +52,11 @@ else
     samtools sort -@ [SLURM_CORE] -o "${SAMPLE_DIR}/[SAMPLE_ID].sorted[SAMPLE_EXT]" "$INPUT_BAM_FILE"
     echo "BAM file sorted successfully."
     INPUT_BAM_FILE=${SAMPLE_DIR}/[SAMPLE_ID].sorted[SAMPLE_EXT]
+
+    # Generate index for the sorted BAM file
+    echo "Indexing sorted BAM file..."
+    samtools index -@ [SLURM_CORE] "$INPUT_BAM_FILE"
+    echo "Indexing complete."
 fi
 
 java -jar ${MELT_DIR}/MELT.jar Single \
