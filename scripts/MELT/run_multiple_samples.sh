@@ -6,7 +6,17 @@ RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germl
 REF_DIR=/n/data1/bch/genetics/lee/reference/hg38
 SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x
 SAMPLE_EXT_PREFIX=".recal.sorted.bam"
-SAMPLES=("CONT_3" "CONT_4" "CONT_5" "CONT_6" "TITR_1" "TITR_2" "TITR_3" "TITR_4" "TITR_5" "TITR_6") 
+#SAMPLES=("CONT_3" "CONT_4" "CONT_5" "CONT_6" "TITR_1" "TITR_2" "TITR_3" "TITR_4" "TITR_5" "TITR_6") 
+
+# Read array data from file
+mapfile -t SAMPLES < sampleIds.txt
+
+# Print the array elements
+for sample in "${SAMPLES[@]}"; do
+  echo "$sample is loaded"
+done
+
+exit
 
 slurm_partition="medium"
 slurm_time="4-12:00"
