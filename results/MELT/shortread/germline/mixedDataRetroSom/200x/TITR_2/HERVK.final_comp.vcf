@@ -1,0 +1,57 @@
+##fileformat=VCFv4.2
+##fileDate=Dec 7, 2023 7:54:32 PM
+##source=MELTv2.2.2
+##reference=Homo_sapiens_assembly38.fasta
+##ALT=<ID=INS:ME:HERVK,Description="Insertion of HERVK element">
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr3,length=198295559>
+##contig=<ID=chr4,length=190214555>
+##contig=<ID=chr5,length=181538259>
+##contig=<ID=chr8,length=145138636>
+##contig=<ID=chr10,length=133797422>
+##contig=<ID=chr12,length=133275309>
+##contig=<ID=chr15,length=101991189>
+##contig=<ID=chr18,length=80373285>
+##contig=<ID=chr19,length=58617616>
+##contig=<ID=chr20,length=64444167>
+##contig=<ID=chrX,length=156040895>
+##INFO=<ID=ASSESS,Number=1,Type=Integer,Description="Provides information on evidence availible to decide insertion site.0 = No overlapping reads at site;1 = Imprecise breakpoint due to greater than expected distance between evidence;2 = discordant pair evidence only -- No split read information;3 = left side TSD evidence only;4 = right side TSD evidence only;5 = TSD decided with split reads, highest possible quality">
+##INFO=<ID=TSD,Number=1,Type=String,Description="Precise Target Site Duplication for bases, if unknown, value will be NULL">
+##INFO=<ID=INTERNAL,Number=2,Type=String,Description="If insertion internal or close to a gene, listed here followed by a discriptor of the location in the gene (either INTRON, EXON_#, 5_UTR, 3_UTR, PROMOTER, or TERMINATOR). If multiple genes intersected, will be seperated by '\|'">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Difference in length between REF and ALT alleles; If unknown, will be -1">
+##INFO=<ID=MEINFO,Number=4,Type=String,Description="Mobile element info of the form NAME,START,END,POLARITY; If START or END is unknown, will be -1; If POLARITY is unknown, will be 'null'">
+##INFO=<ID=DIFF,Number=.,Type=String,Description="Coverage and Differences in relation to the HERVK reference. Form is %2XCoverage:Differences, with differences delimited by ','">
+##INFO=<ID=LP,Number=1,Type=Integer,Description="Total number of discordant pairs supporting the left side of the breakpont">
+##INFO=<ID=RP,Number=1,Type=Integer,Description="Total number of discordant pairs supporting the right side of the breakpont">
+##INFO=<ID=RA,Number=1,Type=Float,Description="Ratio between LP and RP, reported as log2(LP / RP)">
+##INFO=<ID=PRIOR,Number=1,Type=String,Description="True if this site was not discovered in this dataset, but was included on a provided priors list">
+##INFO=<ID=SR,Number=1,Type=Integer,Description="Total number of SRs at the estimated breakpoint for this site. Recomended to filter sites with <= 2 SRs">
+##FILTER=<ID=s25,Description="Greater than 25.0% of samples do not have data">
+##FILTER=<ID=rSD,Description="Ratio of LP to RP is greater than 2.0 standard deviations">
+##FILTER=<ID=hDP,Description="More than the expected number of discordant pairs at this site are also split">
+##FILTER=<ID=ac0,Description="No individuals in this VCF file were identified with this insertion">
+##FILTER=<ID=lc,Description="MEI is embeded in a low complexity region">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GL,Number=3,Type=Float,Description="Genotype likelihood">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=AD,Number=1,Type=Integer,Description="Number of ALT reads">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	TITR_2.recal
+chr1	73130124	.	C	<INS:ME:HERVK>	.	ac0	TSD=AGAGCAC;ASSESS=5;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8183;MEINFO=HERVK,575,8758,+;DIFF=0.04:n1-7741,c7785t,n7892-7976,c7982a,g7985a,t8020c,c8042t,n8120-8759;LP=10;RP=13;RA=-0.379;PRIOR=false;SR=3	GT:GL:DP:AD	0/0:-0.63,-25.89,-441.8:43:1
+chr1	111259975	.	G	<INS:ME:HERVK>	.	PASS	TSD=null;ASSESS=4;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8145;MEINFO=HERVK,614,8759,+;DIFF=0.01:n1-459,c598t,n640-8759;LP=5;RP=1;RA=2.322;PRIOR=false;SR=2	GT:GL:DP:AD	0/1:-73.5,-22.88,-360:38:8
+chr1	159768560	.	T	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=1;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8235;MEINFO=HERVK,523,8758,-;DIFF=0.01:n1-522,n640-8759;LP=7;RP=9;RA=-0.363;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-0.05,-29.5,-559.8:49:0
+chr1	224340682	.	C	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=2;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8315;MEINFO=HERVK,443,8758,+;DIFF=0.01:n1-325,a359g,a409t,c424a,t441c,t442g,g457a,g495a,n517-8759;LP=1;RP=8;RA=-3;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-1.34,-15.65,-237.7:26:0
+chr3	9848122	.	G	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=3;INTERNAL=NM_001142547,PROMOTER;SVTYPE=HERVK;SVLEN=8561;MEINFO=HERVK,198,8759,-;DIFF=0.02:n1-8028,c8042t,n8120-8217,a8250c,t8296c,c8341t,a8361g,n8386-8759;LP=3;RP=9;RA=-1.585;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-0.99,-24.08,-398.6:40:1
+chr4	174383738	.	A	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=4;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8658;MEINFO=HERVK,100,8758,+;DIFF=0.01:n1-99,a106g,n122,n129-132,c150t,c175t,g200a,a203g,a208g,g212a,a213g,g220a,c221t,a241g,c247t,n255-427,t441c,t442a,c449t,a450g,c455t,n457,g478a,t490c,a497g,a504t,a513g,n517,g518c,g526t,g527c,t529a,n535-536,t567c,a580g,c586t,c589t,t595c,t596g,c598t,a606g,g613a,n619-8759;LP=13;RP=5;RA=1.379;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-3.13,-36.12,-569.3:60:0
+chr5	65092612	.	A	<INS:ME:HERVK>	.	lc	TSD=null;ASSESS=2;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8457;MEINFO=HERVK,301,8758,+;DIFF=0.02:n1-493,n640-8759;LP=1;RP=5;RA=-2.322;PRIOR=false;SR=0	GT:GL:DP:AD	0/1:-50,-21.07,-360:35:5
+chr8	139463347	.	A	<INS:ME:HERVK>	.	hDP;lc	TSD=null;ASSESS=3;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8022;MEINFO=HERVK,736,8758,+;DIFF=0.03:n1-735,t959c,n1053-8759;LP=1;RP=12;RA=-3.585;PRIOR=false;SR=10	GT:GL:DP:AD	0/1:-80.12,-18.66,-237.6:31:7
+chr8	143000870	.	T	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=3;INTERNAL=NR_026913,INTRONIC;SVTYPE=HERVK;SVLEN=8700;MEINFO=HERVK,58,8758,-;DIFF=0.03:n1-57,a109t,d127,n129,n132,n150,a151t,a162c,t163a,t178c,c186a,t189c,g190t,n219-8759;LP=2;RP=5;RA=-1.322;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-0.3,-25.89,-486:43:0
+chr10	99256377	.	G	<INS:ME:HERVK>	.	PASS	TSD=TGTGTAGGGG;ASSESS=5;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8264;MEINFO=HERVK,494,8758,-;DIFF=0.03:n1-493,g644a,n647-8759;LP=22;RP=15;RA=0.553;PRIOR=false;SR=16	GT:GL:DP:AD	1/1:-453.81,-27.69,-1.81:46:43
+chr12	43919859	.	T	<INS:ME:HERVK>	.	hDP	TSD=GTGGTT;ASSESS=5;INTERNAL=NM_001286212,INTRONIC;SVTYPE=HERVK;SVLEN=8389;MEINFO=HERVK,369,8758,+;DIFF=0.05:n1-8344,n8498-8575,t8693c,a8699c,g8719c,n8753-8759;LP=1;RP=11;RA=-3.459;PRIOR=false;SR=3	GT:GL:DP:AD	0/1:-124,-22.28,-300:37:12
+chr15	28184935	.	T	<INS:ME:HERVK>	.	PASS	TSD=null;ASSESS=3;INTERNAL=NM_004667,INTRONIC;SVTYPE=HERVK;SVLEN=8175;MEINFO=HERVK,584,8759,-;DIFF=0.03:n1-493,n640-8759;LP=9;RP=11;RA=-0.29;PRIOR=false;SR=7	GT:GL:DP:AD	0/1:-214,-15.05,-60:25:20
+chr15	63082400	.	A	<INS:ME:HERVK>	.	lc	TSD=null;ASSESS=4;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8411;MEINFO=HERVK,347,8758,-;DIFF=0.05:n1-8119,n8245-8362,t8403c,a8425g,a8486c,a8564g,c8613g,g8648t,a8747c,n8759;LP=14;RP=1;RA=3.807;PRIOR=false;SR=2	GT:GL:DP:AD	0/1:-164,-19.87,-204:33:16
+chr18	68942850	.	T	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=2;INTERNAL=NM_024781,INTRONIC;SVTYPE=HERVK;SVLEN=637;MEINFO=HERVK,8121,8758,-;DIFF=0.01:g13a,g48a,n73-8759;LP=6;RP=1;RA=2.585;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-1.17,-14.45,-204:24:0
+chr19	386996	.	G	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=2;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8677;MEINFO=HERVK,81,8758,-;DIFF=0.03:n1-8119,a8123c,t8149g,t8161c,g8175c,g8181c,a8239t,a8250c,t8296c,g8297c,g8320a,t8339c,c8341t,n8355-8759;LP=5;RP=1;RA=2.322;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-0.13,-23.48,-396.2:39:0
+chr19	29364877	.	T	<INS:ME:HERVK>	.	PASS	TSD=null;ASSESS=4;INTERNAL=NR_040029,INTRONIC;SVTYPE=HERVK;SVLEN=8170;MEINFO=HERVK,589,8759,+;DIFF=0.05:n1-8353,c8510t,t8562c,t8649g,t8655g,t8673c,n8682-8683,t8686a,n8698-8759;LP=11;RP=1;RA=3.459;PRIOR=false;SR=2	GT:GL:DP:AD	0/1:-158,-31.91,-455.5:53:15
+chr20	29884109	.	G	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=3;INTERNAL=NR_039688,PROMOTER;SVTYPE=HERVK;SVLEN=177;MEINFO=HERVK,8581,8758,+;DIFF=0:n1-460,g478a,t490c,a497g,a504t,a513g,n517,g518c,g526t,g527c,t529a,n535-536,t567c,n577-8759;LP=56;RP=4;RA=3.807;PRIOR=false;SR=2	GT:GL:DP:AD	0/0:-2.86,-46.96,-646.1:78:0
+chrX	57335516	.	C	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=1;INTERNAL=NM_174912,INTRONIC;SVTYPE=HERVK;SVLEN=215;MEINFO=HERVK,8543,8758,+;DIFF=0.01:n1-422,a427c,t441c,t442a,c449t,a450g,c453g,c455t,n457,g478a,g488a,c493t,a497g,a504g,a513g,n517,g518c,g519a,t529c,c532a,n535-536,n573-8759;LP=1;RP=4;RA=-2;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-0.1,-19.27,-364.6:32:0

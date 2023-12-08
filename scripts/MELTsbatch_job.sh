@@ -34,6 +34,14 @@ LC_MEASUREMENT=ro_RO.UTF-8
 LC_IDENTIFICATION=ro_RO.UTF-8
 LC_ALL=
 
+VENV="SMaTH"
+CONDA_HOME=$HOME/miniforge3
+
+. $CONDA_HOME/etc/profile.d/conda.sh
+. $CONDA_HOME/etc/profile.d/mamba.sh
+conda activate ${VENV}
+
+
 java -jar ${MELT_DIR}/MELT.jar Single \
     -a \
     -c [SLURM_CORE] \
