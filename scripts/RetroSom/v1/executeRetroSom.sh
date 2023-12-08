@@ -52,12 +52,18 @@ if [ $isInFile -eq 0 ]; then
    echo $SAMPLE_ID >> $RESULT_PATH/list.txt
 fi
 
-./RetroSomV1.sh -o $RESULT_PATH \
--i "HG00514" \
+RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v1
+SAMPLE_ID="CONT_1"
+RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSom
+BAMFILE_PATH=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x/CONT_1.recal.sorted.bam
+SLURM_PARTITION=medium
+
+${RETROPATH}/RetroSomV1.sh -o $RESULT_PATH \
+-i $SAMPLE_ID \
 -m $RetroPath \
 -g hg38 \
--t 2 \
--c $RetroPath/samples/HG00514.alt_bwamem_GRCh38DH.20150715.CHS.high_coverage.chr21.bam \
+-t 3 \
+-c $BAMFILE_PATH \
 -r 1
 
 
