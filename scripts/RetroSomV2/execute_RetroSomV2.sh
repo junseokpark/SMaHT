@@ -32,15 +32,21 @@ BAMFILE_PATH=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x/CONT_1.recal.so
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 SLURM_PARTITION=medium
 
+if [ -d "${RESULT_PATH}/${SAMPLE_ID}" ]; then
+    rm -r ${RESULT_PATH}/${SAMPLE_ID}
+    echo "Directory ${RESULT_PATH}/${SAMPLE_ID} has been removed."
+fi
 
-command="./Singularity_Slurm_RetroSomV2.5.sh -o $RESULT_PATH \
+command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5.sh -o $RESULT_PATH \
     -i $SAMPLE_ID \
     -m $RETROPATH \
     -r 1
     -g hg38 \
-    -t 2 \
+    -t 3 \
     -c $BAMFILE_PATH \
     -s $SINGULARITY_IMAGE 
     "
 
 echo $command
+
+eval $command
