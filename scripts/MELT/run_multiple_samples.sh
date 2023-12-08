@@ -2,10 +2,11 @@
 
 
 MELT_DIR=/n/data1/bch/genetics/lee/tools/MELTv2.2.2
-RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/mixedDataRetroSom/200x
+RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/GIAB/Illumina300x
 REF_DIR=/n/data1/bch/genetics/lee/reference/hg38
-SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x
-SAMPLE_EXT_PREFIX=".recal.sorted.bam"
+#SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x
+SAMPLE_DIR=/n/data1/bch/genetics/lee/data/GIAB/HG003_NA24149_father/NIST_HiSeq_HG003_Homogeneity-12389378/NHGRI_Illumina300X_AJtrio_novoalign_bams
+SAMPLE_EXT_PREFIX=".GRCh38.300x.bam"
 #SAMPLES=("CONT_3" "CONT_4" "CONT_5" "CONT_6" "TITR_1" "TITR_2" "TITR_3" "TITR_4" "TITR_5" "TITR_6") 
 
 # Read array data from file
@@ -15,8 +16,6 @@ mapfile -t SAMPLES < sampleIds.txt
 for sample in "${SAMPLES[@]}"; do
   echo "$sample is loaded"
 done
-
-exit
 
 slurm_partition="medium"
 slurm_time="4-12:00"
