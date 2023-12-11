@@ -6,7 +6,7 @@
 # ignore reference directories
 **/refs/
 **/refs/hg38
-!**/refs/1000genomes_integrated_sv_map/ALL.autosomes.pindel.20130502.complexindex.low_coverage.genotypes.vcf.gz
+!refs/1000genomes_integrated_sv_map/ALL.autosomes.pindel.20130502.complexindex.low_coverage.genotypes.vcf.gz
 
 ## ignore tool directories
 **/tools/
