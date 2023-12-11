@@ -1,0 +1,61 @@
+##fileformat=VCFv4.2
+##fileDate=Dec 8, 2023 5:31:29 PM
+##source=MELTv2.2.2
+##reference=Homo_sapiens_assembly38.fasta
+##ALT=<ID=INS:ME:HERVK,Description="Insertion of HERVK element">
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529>
+##contig=<ID=chr3,length=198295559>
+##contig=<ID=chr4,length=190214555>
+##contig=<ID=chr6,length=170805979>
+##contig=<ID=chr8,length=145138636>
+##contig=<ID=chr10,length=133797422>
+##contig=<ID=chr12,length=133275309>
+##contig=<ID=chr15,length=101991189>
+##contig=<ID=chr18,length=80373285>
+##contig=<ID=chr19,length=58617616>
+##contig=<ID=chr20,length=64444167>
+##INFO=<ID=ASSESS,Number=1,Type=Integer,Description="Provides information on evidence availible to decide insertion site.0 = No overlapping reads at site;1 = Imprecise breakpoint due to greater than expected distance between evidence;2 = discordant pair evidence only -- No split read information;3 = left side TSD evidence only;4 = right side TSD evidence only;5 = TSD decided with split reads, highest possible quality">
+##INFO=<ID=TSD,Number=1,Type=String,Description="Precise Target Site Duplication for bases, if unknown, value will be NULL">
+##INFO=<ID=INTERNAL,Number=2,Type=String,Description="If insertion internal or close to a gene, listed here followed by a discriptor of the location in the gene (either INTRON, EXON_#, 5_UTR, 3_UTR, PROMOTER, or TERMINATOR). If multiple genes intersected, will be seperated by '\|'">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Difference in length between REF and ALT alleles; If unknown, will be -1">
+##INFO=<ID=MEINFO,Number=4,Type=String,Description="Mobile element info of the form NAME,START,END,POLARITY; If START or END is unknown, will be -1; If POLARITY is unknown, will be 'null'">
+##INFO=<ID=DIFF,Number=.,Type=String,Description="Coverage and Differences in relation to the HERVK reference. Form is %2XCoverage:Differences, with differences delimited by ','">
+##INFO=<ID=LP,Number=1,Type=Integer,Description="Total number of discordant pairs supporting the left side of the breakpont">
+##INFO=<ID=RP,Number=1,Type=Integer,Description="Total number of discordant pairs supporting the right side of the breakpont">
+##INFO=<ID=RA,Number=1,Type=Float,Description="Ratio between LP and RP, reported as log2(LP / RP)">
+##INFO=<ID=PRIOR,Number=1,Type=String,Description="True if this site was not discovered in this dataset, but was included on a provided priors list">
+##INFO=<ID=SR,Number=1,Type=Integer,Description="Total number of SRs at the estimated breakpoint for this site. Recomended to filter sites with <= 2 SRs">
+##FILTER=<ID=s25,Description="Greater than 25.0% of samples do not have data">
+##FILTER=<ID=rSD,Description="Ratio of LP to RP is greater than 2.0 standard deviations">
+##FILTER=<ID=hDP,Description="More than the expected number of discordant pairs at this site are also split">
+##FILTER=<ID=ac0,Description="No individuals in this VCF file were identified with this insertion">
+##FILTER=<ID=lc,Description="MEI is embeded in a low complexity region">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GL,Number=3,Type=Float,Description="Genotype likelihood">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=AD,Number=1,Type=Integer,Description="Number of ALT reads">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	CONT_7.recal
+chr1	73129297	.	G	<INS:ME:HERVK>	.	PASS	TSD=null;ASSESS=3;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8119;MEINFO=HERVK,640,8759,-;DIFF=0.04:n1-525,a580g,g587a,c589t,t595c,t596a,t619g,a637t,c685a,g686c,g729a,c741t,t781c,n794-799,t805c,c821t,a841c,a868g,n876-8759;LP=8;RP=27;RA=-1.755;PRIOR=false;SR=3	GT:GL:DP:AD	0/1:-174.41,-51.18,-646.77:85:28
+chr1	111259975	.	G	<INS:ME:HERVK>	.	PASS	TSD=null;ASSESS=4;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8184;MEINFO=HERVK,575,8759,+;DIFF=0.06:n1-8132,n8136,n8138,n8140,n8142,t8144g,n8150,t8152g,a8160c,n8161,n8164,n8166,n8169-8170,n8173,t8191g,c8196a,a8267c,n8284-8392,t8428g,t8434g,n8447,g8489t,a8576g,c8718t;LP=19;RP=1;RA=4.248;PRIOR=false;SR=1	GT:GL:DP:AD	0/1:-174.7,-34.32,-432.33:57:21
+chr1	159768432	.	C	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=1;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8214;MEINFO=HERVK,544,8758,-;DIFF=0.04:n1-8221,t8339c,c8367t,c8393t,a8479g,n8504-8629;LP=14;RP=10;RA=0.485;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-0.02,-34.92,-619.1:58:0
+chr1	224340592	.	C	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=0;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=269;MEINFO=HERVK,8489,8758,+;DIFF=0.02:n1-368,a409t,c424a,t441c,t442g,g457a,g495a,n587-8759;LP=1;RP=16;RA=-4;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-1.6,-19.27,-272:32:1
+chr2	94718	.	A	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=1;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8217;MEINFO=HERVK,541,8758,-;DIFF=0.02:n1-8119,g8132a,g8168a,g8171a,a8174t,g8176a,c8189t,a8211t,a8229t,n8248-8759;LP=4;RP=3;RA=0.415;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-0.1,-27.69,-538.6:46:0
+chr3	7942453	.	A	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=2;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8217;MEINFO=HERVK,541,8758,-;DIFF=0:n1-540,c577t,a578t,a580g,g587a,n593-8759;LP=12;RP=1;RA=3.585;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-0.95,-34.32,-566.2:57:0
+chr3	9848122	.	G	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=4;INTERNAL=NM_001142547,PROMOTER;SVTYPE=HERVK;SVLEN=8660;MEINFO=HERVK,98,8758,+;DIFF=0.04:n1-8001,t8020c,a8038c,c8042t,n8120-8232,a8250c,i8258t,t8296c,c8341t,a8361g,n8384-8759;LP=2;RP=20;RA=-3.322;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-1.07,-33.11,-570.8:55:0
+chr4	3926568	.	C	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=3;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8221;MEINFO=HERVK,537,8758,-;DIFF=0.01:n1-493,a497g,a504g,n517,g518c,g519c,n529-530,t535a,a536t,t567c,a579g,a580g,g587a,c589t,c593t,c594g,t596a,c598g,t619g,n637-8759;LP=7;RP=3;RA=1.222;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-0.49,-39.74,-674.8:66:0
+chr4	174383469	.	G	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=4;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8409;MEINFO=HERVK,349,8758,-;DIFF=0.04:n1-348,a352c,c357t,a367g,c372a,c381t,g382a,g388t,t389c,c399t,c404t,a409t,g413c,c415a,n420-422,a427c,c433a,t441c,a450g,c453g,c455t,n457,c483g,g488a,a497g,a504t,a513g,g515a,n517,g518c,g526t,t529c,c532a,n535-536,t567c,n577-8759;LP=39;RP=13;RA=1.585;PRIOR=false;SR=4	GT:GL:DP:AD	0/0:-6.37,-78.27,-1067.61:130:3
+chr6	32537548	.	A	<INS:ME:HERVK>	.	hDP;ac0	TSD=null;ASSESS=4;INTERNAL=NM_002125,PROMOTER;SVTYPE=HERVK;SVLEN=8756;MEINFO=HERVK,2,8758,-;DIFF=0.01:n1,c81t,n114-372,c381t,g388a,t389c,c397t,c399t,c404t,a409t,g413a,n420-422,a427c,c430t,t441c,t442c,a444g,a450g,c455t,n457,a497g,a504g,t517c,n520,g526t,t529g,c533a,n536,t567c,a580g,n587,c589t,c591t,t596g,c598t,n602-8759;LP=2;RP=3;RA=-0.585;PRIOR=false;SR=3	GT:GL:DP:AD	0/0:-1.89,-15.65,-266.5:26:2
+chr8	139463332	.	A	<INS:ME:HERVK>	.	hDP;lc	TSD=dAAAAAAAAAAAAAAA;ASSESS=5;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8024;MEINFO=HERVK,734,8758,+;DIFF=0.03:n1-733,n1039-8759;LP=1;RP=16;RA=-4;PRIOR=false;SR=15	GT:GL:DP:AD	0/1:-136.39,-28.9,-351.31:48:12
+chr8	143001193	.	T	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=3;INTERNAL=NR_026913,INTRONIC;SVTYPE=HERVK;SVLEN=8717;MEINFO=HERVK,41,8758,-;DIFF=0.04:n1-40,a54t,g56a,a109t,d127,n129,n132,n150,a151t,a162c,t163a,t178c,c186a,g190t,n219-8759;LP=9;RP=5;RA=0.848;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-0.22,-40.34,-632.3:67:0
+chr10	43337495	.	G	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=3;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=638;MEINFO=HERVK,8120,8758,-;DIFF=0.01:n1-8119,c8189t,n8210-8759;LP=6;RP=8;RA=-0.415;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-2.37,-31.91,-370.3:53:0
+chr10	96403342	.	G	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=3;INTERNAL=NM_012465,INTRONIC;SVTYPE=HERVK;SVLEN=8648;MEINFO=HERVK,110,8758,-;DIFF=0.01:n1-163,t178c,c186a,a188c,g190t,g191a,c221t,c224a,n227,n229,a237g,t251c,a253g,g254t,t258g,t264c,g266a,c270a,c273t,g274t,g275t,a284g,n294-8759;LP=8;RP=5;RA=0.678;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-0.7,-37.93,-726.6:63:0
+chr10	97700152	.	A	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=0;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8742;MEINFO=HERVK,16,8758,+;DIFF=0.02:n1-15,a54t,g56a,c69t,a109t,n128-129,n132,n150,a151t,a162c,t163a,n173-8759;LP=6;RP=8;RA=-0.415;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-0.31,-28.3,-482.9:47:0
+chr10	99256377	.	G	<INS:ME:HERVK>	.	PASS	TSD=TGTGTAGGGG;ASSESS=5;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8264;MEINFO=HERVK,494,8758,+;DIFF=0.03:n1-493,n640-8759;LP=20;RP=17;RA=0.234;PRIOR=false;SR=22	GT:GL:DP:AD	1/1:-517.2,-30.1,-1.21:50:48
+chr12	43919853	.	T	<INS:ME:HERVK>	.	PASS	TSD=null;ASSESS=3;INTERNAL=NM_001286212,INTRONIC;SVTYPE=HERVK;SVLEN=8171;MEINFO=HERVK,588,8759,-;DIFF=0.05:n1-315,c339g,c371a,t442c,g443a,c455g,t573c,a579c,n641,n646-8759;LP=1;RP=23;RA=-4.524;PRIOR=false;SR=5	GT:GL:DP:AD	0/1:-260,-34.92,-396:58:25
+chr15	28184935	.	T	<INS:ME:HERVK>	.	PASS	TSD=null;ASSESS=3;INTERNAL=NM_004667,INTRONIC;SVTYPE=HERVK;SVLEN=8184;MEINFO=HERVK,575,8759,-;DIFF=0.03:n1-493,n640-8759;LP=10;RP=15;RA=-0.585;PRIOR=false;SR=8	GT:GL:DP:AD	1/1:-296.91,-18.06,-1.81:30:27
+chr15	63082400	.	A	<INS:ME:HERVK>	.	lc	TSD=AGAAAAA;ASSESS=5;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8739;MEINFO=HERVK,19,8758,+;DIFF=0.05:n1-18,n30,t34g,n39-40,n46-47,n164-348,a366c,a444g,c493g,g528t,n641-8759;LP=14;RP=1;RA=3.807;PRIOR=false;SR=4	GT:GL:DP:AD	0/1:-173.7,-36.12,-516:60:17
+chr18	68942823	.	T	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=2;INTERNAL=NM_024781,INTRONIC;SVTYPE=HERVK;SVLEN=8757;MEINFO=HERVK,1,8758,-;DIFF=0.01:g13a,g48a,n71-8759;LP=6;RP=1;RA=2.585;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-1.33,-23.48,-355.8:39:0
+chr19	386998	.	C	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=2;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8754;MEINFO=HERVK,4,8758,-;DIFF=0.03:n1-8119,n8136,t8149g,t8161c,g8175c,a8239t,a8250c,t8296c,g8297c,g8320a,t8339c,c8341t,n8356-8759;LP=5;RP=1;RA=2.322;PRIOR=false;SR=0	GT:GL:DP:AD	0/0:-0.69,-35.52,-566.9:59:0
+chr20	30850029	.	C	<INS:ME:HERVK>	.	ac0	TSD=null;ASSESS=3;INTERNAL=null,null;SVTYPE=HERVK;SVLEN=8217;MEINFO=HERVK,542,8759,-;DIFF=0.07:n1-8119,c8189t,c8201t,c8208g,g8209a,g8222t,a8226g,i8258t,c8270t,c8295t,g8320a,a8323g,a8328g,g8332a,a8333g,g8340a,c8341t,a8361g,c8367t,g8387a,c8389t,c8390a,g8394t,g8399a,t8410c,g8412t,a8416g,g8435a,n8440-8611,n8617,a8624t,a8633g,n8637,g8638c,g8646t,g8647c,t8649g,n8655-8656,t8687c,a8700g,c8706t,c8709t,t8715c,t8716g,c8718t,g8733a,t8739g,a8747g,c8748g,a8757t;LP=20;RP=5;RA=2;PRIOR=false;SR=1	GT:GL:DP:AD	0/0:-1.22,-38.53,-714.5:64:2

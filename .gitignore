@@ -17,6 +17,8 @@
 **/results/**/**
 !**/results/**/
 !**.vcf
+#!**.bed
+!**/results/RetroSom/**/**.bed
 
 ## ipython notebook local files
 .ipynb_checkpoints

@@ -25,22 +25,29 @@ export R_LIBS_USER="~/R-"${R_VERSION}
 
 module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
-RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x
+RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2
 SAMPLE_ID="CONT_1"
 RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
-BAMFILE_PATH=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x/CONT_1.recal.sorted.bam
+BAMFILE_PATH=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x/CONT_2.recal.sorted.bam
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 SLURM_PARTITION=medium
 
+if [ -d "${RESULT_PATH}/${SAMPLE_ID}" ]; then
+    #rm -r ${RESULT_PATH}/${SAMPLE_ID}
+    echo "Directory ${RESULT_PATH}/${SAMPLE_ID} has been removed."
+fi
 
-command="./Singularity_Slurm_RetroSomV2.5.sh -o $RESULT_PATH \
+command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5_test.sh -o $RESULT_PATH \
     -i $SAMPLE_ID \
+    -e $SAMPLE_ID \
     -m $RETROPATH \
     -r 1
     -g hg38 \
-    -t 2 \
+    -t 3 \
     -c $BAMFILE_PATH \
     -s $SINGULARITY_IMAGE 
     "
 
 echo $command
+
+eval $command
