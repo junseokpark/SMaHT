@@ -25,29 +25,49 @@ export R_LIBS_USER="~/R-"${R_VERSION}
 
 module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
-RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2
-SAMPLE_ID="CONT_1"
+RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2
 RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
-BAMFILE_PATH=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x/CONT_2.recal.sorted.bam
+SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 SLURM_PARTITION=medium
 
-if [ -d "${RESULT_PATH}/${SAMPLE_ID}" ]; then
-    #rm -r ${RESULT_PATH}/${SAMPLE_ID}
-    echo "Directory ${RESULT_PATH}/${SAMPLE_ID} has been removed."
+# Create result directory if it is not existing
+if [ ! -d "${RESULT_PATH}" ]; then
+    mkdir -p ${RESULT_PATH}
 fi
 
-command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5_test.sh -o $RESULT_PATH \
-    -i $SAMPLE_ID \
-    -e $SAMPLE_ID \
-    -m $RETROPATH \
-    -r 1
-    -g hg38 \
-    -t 3 \
-    -c $BAMFILE_PATH \
-    -s $SINGULARITY_IMAGE 
-    "
+# Print the array elements
+while IFS= read -r line; do
 
-echo $command
+    IFS=' ' read -ra array <<< "$line"
+    SAMPLE_ID=${array[0]}
+    CONT_ID=${array[1]}
 
-eval $command
+    echo "$SAMPLE_ID is loaded"
+    # Create sample directory if it is not exists
+    if [ -d "${RESULT_PATH}/${SAMPLE_ID}" ]; then
+        rm -r ${RESULT_PATH}/${SAMPLE_ID}
+        echo "Directory ${RESULT_PATH}/${SAMPLE_ID} has been removed."
+    fi
+
+    BAMFILE_PATH=$SAMPLE_DIR/$SAMPLE_ID.recal.sorted.bam
+
+    command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5_test.sh -o $RESULT_PATH \
+        -i $SAMPLE_ID \
+        -e $SAMPLE_ID \
+        -m $RETROPATH \
+        -r 1
+        -g hg38 \
+        -t 3 \
+        -c $BAMFILE_PATH \
+        -s $SINGULARITY_IMAGE 
+        "
+
+    echo $command
+
+    eval $command
+
+done < "sampleIds.txt"
+
+
+
