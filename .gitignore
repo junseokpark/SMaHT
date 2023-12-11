@@ -19,6 +19,7 @@
 !**.vcf
 #!**.bed
 !**/results/RetroSom/**/**.bed
+!**.calls
 
 ## ipython notebook local files
 .ipynb_checkpoints
