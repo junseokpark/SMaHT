@@ -6,6 +6,7 @@
 # ignore reference directories
 **/refs/
 **/refs/hg38
+!**.vcf.gz
 
 ## ignore tool directories
 **/tools/
