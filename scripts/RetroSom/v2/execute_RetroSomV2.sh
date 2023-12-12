@@ -25,9 +25,9 @@ export R_LIBS_USER="~/R-"${R_VERSION}
 
 module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
-RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2
+RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2
 RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
-SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x
+SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 SLURM_PARTITION=medium
 
@@ -54,7 +54,7 @@ while IFS= read -r line; do
 
     command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5_test.sh -o $RESULT_PATH \
         -i $SAMPLE_ID \
-        -e $SAMPLE_ID \
+        -e $CONT_ID \
         -m $RETROPATH \
         -r 1
         -g hg38 \
