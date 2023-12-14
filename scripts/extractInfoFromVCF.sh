@@ -5,3 +5,4 @@
 
 # (4) Control VCF File (NA12878)
 # bcftools view -s NA12878 -i 'ALT="<INS:ME:ALU>"' ALL.wgs.mergedSV.v8.20130502.svs.genotypes.GRCh38.vcf.gz -Oz | zcat | awk '$1 ~ /^#/ {print $0;next} {if ($10 == "0|1" ) print }' | bgzip > NA12878.vcf.gz
+bcftools view -s NA12878 -i 'ALT="<INS:ME:LINE1>"' ALL.wgs.mergedSV.v8.20130502.svs.genotypes.GRCh38.vcf.gz -Oz | zcat | awk '$1 ~ /^#/ {print $0;next} {if ($10 == "0|1" ) print }' | bgzip > NA12878.LINE.vcf.gz
