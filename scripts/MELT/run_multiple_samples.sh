@@ -1,13 +1,16 @@
 #!/bin/bash
 
 MELT_DIR=/n/data1/bch/genetics/lee/tools/MELTv2.2.2
-RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/GoldStandards
+#RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/GoldStandards
+RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/mixedDataRetroSom/Simul400x
 REF_DIR=/n/data1/bch/genetics/lee/reference/hg38
 #SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x
-SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/GoldStandards
+#SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/GoldStandards
+#SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x
+SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x/CONT
 
 #SAMPLE_DIR=/n/data1/bch/genetics/lee/data/GIAB/HG002_NA24385_son/NIST_HiSeq_HG002_Homogeneity-10953946/NHGRI_Illumina300X_AJtrio_novoalign_bams
-SAMPLE_EXT_PREFIX=".final.bam"
+SAMPLE_EXT_PREFIX=".bam"
 
 # Read array data from file
 mapfile -t SAMPLES < sampleIds.txt

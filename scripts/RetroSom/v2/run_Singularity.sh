@@ -16,6 +16,6 @@ CONFIG_DIRECTORY=${BASE_DIRECTORY}/projects/SMaHT/benchmark/toolTest_pipeline/co
 ## omitted --fakeroot
 singularity shell \
     -B /n/data1/bch/genetics/lee/:/n/data1/bch/genetics/lee/ \
-    -B /n/scratch3/users/j/jp394/:/n/scratch3/users/j/jp394/ \
+    -B /n/scratch/users/j/jp394/:/n/scratch/users/j/jp394/ \
     -B /n/no_backup2/bch/lee/data/:/n/no_backup2/bch/lee/data/ \
     /n/app/singularity/containers/jp394/RetroSomV2.5.sif

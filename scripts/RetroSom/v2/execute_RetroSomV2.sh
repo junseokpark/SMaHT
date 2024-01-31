@@ -25,11 +25,12 @@ export R_LIBS_USER="~/R-"${R_VERSION}
 
 module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
-RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul100x/v2
+RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2
 RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
-SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x
+SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x/CONT
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 SLURM_PARTITION=medium
+SAMPLE_PREFIX=.bam
 
 # Create result directory if it is not existing
 if [ ! -d "${RESULT_PATH}" ]; then
@@ -50,7 +51,7 @@ while IFS= read -r line; do
         echo "Directory ${RESULT_PATH}/${SAMPLE_ID} has been removed."
     fi
 
-    BAMFILE_PATH=$SAMPLE_DIR/$SAMPLE_ID.recal.sorted.bam
+    BAMFILE_PATH=$SAMPLE_DIR/${SAMPLE_ID}${SAMPLE_PREFIX}
 
     command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5_test.sh -o $RESULT_PATH \
         -i $SAMPLE_ID \
