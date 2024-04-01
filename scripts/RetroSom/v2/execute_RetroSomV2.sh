@@ -27,7 +27,7 @@ module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
 RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2
 RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
-SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMATH_DAC_downSampled/COLO829T
+SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMATH_DAC_downSampled/COLO829T/splittedSamples
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 SLURM_PARTITION=medium
 SAMPLE_PREFIX=.bam
@@ -53,22 +53,25 @@ while IFS= read -r line; do
 
     BAMFILE_PATH=$SAMPLE_DIR/${SAMPLE_ID}${SAMPLE_PREFIX}
 
-    command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5_test.sh -o $RESULT_PATH \
-        -i $SAMPLE_ID \
-        -e $CONT_ID \
-        -m $RETROPATH \
-        -r 1
-        -g hg38 \
-        -t 3 \
-        -c $BAMFILE_PATH \
-        -s $SINGULARITY_IMAGE 
-        "
+    if [ -e "$BAMFILE_PATH" ]; then
+        command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5_test.sh -o $RESULT_PATH \
+            -i $SAMPLE_ID \
+            -e $CONT_ID \
+            -m $RETROPATH \
+            -r 1
+            -g hg38 \
+            -t 3 \
+            -c $BAMFILE_PATH \
+            -s $SINGULARITY_IMAGE 
+            "
 
-    echo $command
+        echo $command
 
-    eval $command
+        eval $command
+    else
+        echo "$BAMFILE_PATH is not existing"
+    fi
 
 done < "sampleIds.txt"
-
 
 

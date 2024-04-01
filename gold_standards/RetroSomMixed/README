@@ -1,0 +1,2 @@
+MEIs within 600bp (+/- 600bp) on the same strand is considered to the same
+HG00514>=10 or HG00733>=10 or NA19240>=10 or NA12877>=10 or ((bulk1>=5) && (bulk2>=5) && (bulk3>=5)) or ((Astro_1>=5) && (Neuron_1>=5) && (Heart_1>=5))

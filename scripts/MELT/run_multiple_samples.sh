@@ -2,12 +2,12 @@
 
 MELT_DIR=/n/data1/bch/genetics/lee/tools/MELTv2.2.2
 #RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/GoldStandards
-RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/mixedDataRetroSom/Simul400x
+RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/COLO829
 REF_DIR=/n/data1/bch/genetics/lee/reference/hg38
 #SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x
 #SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/GoldStandards
 #SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x
-SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x/CONT
+SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMATH_DAC_downSampled/COLO829T
 
 #SAMPLE_DIR=/n/data1/bch/genetics/lee/data/GIAB/HG002_NA24385_son/NIST_HiSeq_HG002_Homogeneity-10953946/NHGRI_Illumina300X_AJtrio_novoalign_bams
 SAMPLE_EXT_PREFIX=".bam"
@@ -20,10 +20,10 @@ for sample in "${SAMPLES[@]}"; do
   echo "$sample is loaded"
 done
 
-slurm_partition="medium"
-slurm_time="4-12:00"
-slurm_core="8"
-slurm_memory="32"
+slurm_partition="long"
+slurm_time="12-12:00"
+slurm_core="16"
+slurm_memory="64"
 
 function check_directory() {
     local dir="$1"
