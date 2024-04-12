@@ -29,6 +29,7 @@ do
     -B /n/data1/bch/genetics/lee/:/n/data1/bch/genetics/lee/ \
     -B /n/scratch/users/j/jp394/:/n/scratch/users/j/jp394/ \
     -B /n/no_backup2/bch/lee/data/:/n/no_backup2/bch/lee/data/ \
+    -B /n/data1/hms/dbmi/park-smaht_dac:/n/data1/hms/dbmi/park-smaht_dac \
     /n/app/singularity/containers/jp394/xtea-mosaic.sif ${WORK_DIRECTORY}/${batch_scripts[$key]}
 
 done

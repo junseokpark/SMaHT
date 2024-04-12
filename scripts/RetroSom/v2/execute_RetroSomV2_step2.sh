@@ -25,12 +25,34 @@ export R_LIBS_USER="~/R-"${R_VERSION}
 
 module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
-RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2
+RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2
+BAMFILE_PATH=/n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x
 RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 
+
 SAMPLE_ID="TITR"
 CONT_ID="CONT"
+
+: '
+-o  output folder path
+-i  subject ID
+-m  masterpath
+-r  version control for RetroSom (default 1)
+-g  reference genome (default hg38, supporting hg38, hg19 and b37)
+-t  type of input (1=raw_sequencing_reads;2=BAM_to_be_realigned; 3=BAM_to_be_cleaned; 4=cleaned_BAM) 
+-n  maximum number of supporting reads to be considered as a putative soamtic insertion (default 100)
+-p  p_value cutoff (default p<0.1)
+-e  control/normal tissue
+-c  input BAM file (input==2 or 3)
+-l  number of sequencing datasets
+-s  singularity image file path including image file name
+'
+
+if [ -d "${RESULT_PATH}/${SAMPLE_ID}_NoModel" ]; then
+        rm -r ${RESULT_PATH}/${SAMPLE_ID}_NoModel
+        echo "Directory ${RESULT_PATH}/${SAMPLE_ID}_NoModel has been removed."
+fi
 
 
 command="${RETROPATH}/Singularity_Slurm_RetroSom.step2.sh
@@ -38,13 +60,17 @@ command="${RETROPATH}/Singularity_Slurm_RetroSom.step2.sh
         -i $SAMPLE_ID \
         -e $CONT_ID \
         -m $RETROPATH \
-        -r 1
+        -r 1 \
         -g hg38 \
         -t 0 \
-        -150 \
+        -n 150 \
         -p 0.1 \
         -e CONT \
-        -l 6  
+        -l 1 \
         -c $BAMFILE_PATH \
         -s $SINGULARITY_IMAGE 
         "
+
+echo $command
+
+eval $command

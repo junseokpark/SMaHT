@@ -2,6 +2,8 @@
 **/data/
 **/data/GIAB/
 **/data/mixedDataRetroSom
+**/data/park-smaht_dac 
+**/data/SMATH_DAC_downSampled
 
 # ignore reference directories
 **/refs/

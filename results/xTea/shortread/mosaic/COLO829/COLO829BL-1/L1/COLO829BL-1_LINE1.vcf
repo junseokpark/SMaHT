@@ -1,0 +1,85 @@
+##fileformat=VCFv4.2
+##reference=NULL
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529>
+##contig=<ID=chr3,length=198295559>
+##contig=<ID=chr4,length=190214555>
+##contig=<ID=chr5,length=181538259>
+##contig=<ID=chr6,length=170805979>
+##contig=<ID=chr7,length=159345973>
+##contig=<ID=chr8,length=145138636>
+##contig=<ID=chr9,length=138394717>
+##contig=<ID=chr10,length=133797422>
+##contig=<ID=chr11,length=135086622>
+##contig=<ID=chr12,length=133275309>
+##contig=<ID=chr13,length=114364328>
+##contig=<ID=chr14,length=107043718>
+##contig=<ID=chr15,length=101991189>
+##contig=<ID=chr16,length=90338345>
+##contig=<ID=chr17,length=83257441>
+##contig=<ID=chr18,length=80373285>
+##contig=<ID=chr19,length=58617616>
+##contig=<ID=chr20,length=64444167>
+##contig=<ID=chr21,length=46709983>
+##contig=<ID=chr22,length=50818468>
+##contig=<ID=chrX,length=156040895>
+##contig=<ID=chrY,length=57227415>
+##contig=<ID=chrM,length=16569>
+##contig=<ID=chrEBV,length=171823>
+##ALT=<ID=INS:ME:SVA,Description="Insertion of SVA element">
+##ALT=<ID=INS:ME:LINE1,Description="Insertion of LINE1 element">
+##ALT=<ID=INS:ME:ALU,Description="Insertion of ALU element">
+##ALT=<ID=INS:ME:HERV-K,Description="Insertion of HERV-K element">
+##ALT=<ID=INS:MT,Description="Mitochondrial insertion">
+##ALT=<ID=INS:PSDGN,Description="Pseudogene insertion">
+##FILTER=<ID=PASS,Description="All filters passed">
+##FILTER=<ID=LowConfident,Description="All filters passed">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Insertion length">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End coordinate of this variant">
+##INFO=<ID=TSD,Number=1,Type=String,Description="Precise Target Site Duplication for bases, if unknown, value will be NULL">
+##INFO=<ID=TSDLEN,Number=1,Type=Integer,Description="TSD (dup/del) length, if unknown, then -1">
+##INFO=<ID=SUBTYPE,Number=1,Type=String,Description="Subtype based on TSD/PolyA/side-info">
+##INFO=<ID=TD_SRC,Number=1,Type=String,Description="Transduction source">
+##INFO=<ID=STRAND,Number=1,Type=String,Description="Insertion orientation (+/- for sense/antisense)">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Estimated allele frequency in the range (0,1)">
+##INFO=<ID=LCLIP,Number=1,Type=Integer,Description="Number of left clipped reads (aligned to copies)">
+##INFO=<ID=RCLIP,Number=1,Type=Integer,Description="Number of right clipped reads (aligned to copies)">
+##INFO=<ID=LDISC,Number=1,Type=Integer,Description="Number of left discordant reads (aligned to copies)">
+##INFO=<ID=RDISC,Number=1,Type=Integer,Description="Number of right discordant reads (aligned to copies)">
+##INFO=<ID=LPOLYA,Number=1,Type=Integer,Description="Number of left polyA reads">
+##INFO=<ID=RPOLYA,Number=1,Type=Integer,Description="Number of right polyA reads">
+##INFO=<ID=LRAWCLIP,Number=1,Type=Integer,Description="Number of left raw clip reads">
+##INFO=<ID=RRAWCLIP,Number=1,Type=Integer,Description="Number of right raw clip reads">
+##INFO=<ID=AF_CLIP,Number=1,Type=Integer,Description="Number of effective clip reads (for AF)">
+##INFO=<ID=AF_FMAP,Number=1,Type=Integer,Description="Number of effective fully mapped reads (for AF)">
+##INFO=<ID=AF_DISC,Number=1,Type=Integer,Description="Number of effective discordant pairs (for AF)">
+##INFO=<ID=AF_CONCORDNT,Number=1,Type=Integer,Description="Number of effective concordant pairs (for AF)">
+##INFO=<ID=LDRC,Number=1,Type=Integer,Description="Number of left discordant reads are reverse-complementary">
+##INFO=<ID=LDNRC,Number=1,Type=Integer,Description="Number of left discordant reads are not reverse-complementary">
+##INFO=<ID=RDRC,Number=1,Type=Integer,Description="Number of right discordant reads are reverse-complementary">
+##INFO=<ID=RDNRC,Number=1,Type=Integer,Description="Number of right discordant reads are not reverse-complementary">
+##INFO=<ID=LCOV,Number=1,Type=Float,Description="Left focal coverage">
+##INFO=<ID=RCOV,Number=1,Type=Float,Description="Right focal coverage">
+##INFO=<ID=LD_AKR_RC,Number=1,Type=Integer,Description="Number of left discordant anchor reads are reverse-complementary">
+##INFO=<ID=LD_AKR_NRC,Number=1,Type=Integer,Description="Number of left discordant anchor reads are not reverse-complementary">
+##INFO=<ID=RD_AKR_RC,Number=1,Type=Integer,Description="Number of right discordant anchor reads are reverse-complementary">
+##INFO=<ID=RD_AKR_NRC,Number=1,Type=Integer,Description="Number of right discordant anchor reads are not reverse-complementary">
+##INFO=<ID=LC_CLUSTER,Number=1,Type=String,Description="Left clip formed cluster in consensus">
+##INFO=<ID=RC_CLUSTER,Number=1,Type=String,Description="Right clip formed cluster in consensus">
+##INFO=<ID=LD_CLUSTER,Number=1,Type=String,Description="Left discordant formed cluster in consensus">
+##INFO=<ID=RD_CLUSTER,Number=1,Type=String,Description="Right discordant formed cluster in consensus">
+##INFO=<ID=NINDEL,Number=1,Type=Integer,Description="Number of large indel (or with several mismatches) reads">
+##INFO=<ID=CLIP_LEN,Number=1,Type=String,Description="Clip reads length">
+##INFO=<ID=INS_INV,Number=1,Type=String,Description="5 prime inversion">
+##INFO=<ID=REF_REP,Number=1,Type=String,Description="Fall in reference repeat copy or not">
+##INFO=<ID=GENE_INFO,Number=1,Type=String,Description="Fall in gene region">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	COLO829BL-1
+chr1	55939713	.	T	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=1580;END=55939725;TSD=+TGGCACCTGTTA;TSDLEN=12;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=-;AF=0.4146341463414634;LCLIP=63;RCLIP=52;LDISC=32;RDISC=12;LPOLYA=0;RPOLYA=52;LRAWCLIP=70;RRAWCLIP=74;AF_CLIP=68;AF_FMAP=96;AF_DISC=251;AF_CONCORDNT=187;LDRC=0;LDNRC=32;RDRC=12;RDNRC=0;LCOV=283.17;RCOV=252.64;LD_AKR_RC=0;LD_AKR_NRC=32;RD_AKR_RC=12;RD_AKR_NRC=0;LC_CLUSTER=4464:4523;RC_CLUSTER=5958:6044;LD_CLUSTER=5673.5:6020.5;RD_CLUSTER=4387.5:4511.5;NINDEL=17;CLIP_LEN=23:7:51:20:26:36:23:56:28:25:10:14:33:54:39:27:30:16:25:23:6:25:21:18:66:57:64:27:12:29:39:33:37:16:18:27:22:51:65:47:17:37:24:61:44:11:54:62:61:68:58:42:21:44:12:44:47:21:51:8:8:7:36:65:69:19:37:17;INS_INV=5-prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=intron:CHM13_T0006992:5:AL603840.1	GT	0/1
+chr1	221654461	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=355;END=221654479;TSD=+AACCAATCCAATCTTTTT;TSDLEN=18;SUBTYPE=two_side_tprt_both;TD_SRC=chrX:139720585~sibling;STRAND=-;AF=0.4778761061946903;LCLIP=5;RCLIP=46;LDISC=47;RDISC=8;LPOLYA=0;RPOLYA=46;LRAWCLIP=114;RRAWCLIP=66;AF_CLIP=108;AF_FMAP=118;AF_DISC=268;AF_CONCORDNT=250;LDRC=0;LDNRC=47;RDRC=0;RDNRC=8;LCOV=315.885;RCOV=361.8;LD_AKR_RC=1;LD_AKR_NRC=46;RD_AKR_RC=8;RD_AKR_NRC=0;LC_CLUSTER=6024:6032;RC_CLUSTER=5966:6017;LD_CLUSTER=5696.5:6032.5;RD_CLUSTER=5695.5:5725.5;NINDEL=0;CLIP_LEN=46:6:42:68:17:55:38:18:30:23:9:66:19:26:43:82:82:28:58:43:58:71:25:23:53:48:23:38:26:76:53:38:25:76:23:51:74:73:40:18:49:53:18:70:7:56:72:38:70:56:75:11:89:21:10:23:8:50:25:10:45:20:77:18:83:40:83:33:84:87:81:50:35:59:39:76:48:55:18:66:39:67:60:6:77:11:76:9:36:61:68:53:74:4:26:48:81:2:47:10:2:37:23:81:88:84:90:85;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=not_gene_region	GT	0/1
+chr2	36343099	.	T	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=6009;END=36343116;TSD=+TGCACAGTTCTTTTTTT;TSDLEN=17;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=-;AF=0.9256756756756757;LCLIP=71;RCLIP=57;LDISC=34;RDISC=11;LPOLYA=0;RPOLYA=57;LRAWCLIP=139;RRAWCLIP=102;AF_CLIP=137;AF_FMAP=11;AF_DISC=508;AF_CONCORDNT=36;LDRC=0;LDNRC=34;RDRC=0;RDNRC=11;LCOV=264.61;RCOV=304.045;LD_AKR_RC=0;LD_AKR_NRC=34;RD_AKR_RC=11;RD_AKR_NRC=0;LC_CLUSTER=27:66;RC_CLUSTER=5971:6036;LD_CLUSTER=5582.5:6002.5;RD_CLUSTER=80.5:510.5;NINDEL=3;CLIP_LEN=34:58:66:79:35:58:26:22:68:42:59:11:73:73:16:27:28:67:25:31:65:72:72:42:29:55:6:66:53:8:48:27:35:10:51:7:9:63:73:65:15:67:6:38:20:22:30:17:58:64:78:68:49:77:52:73:65:33:18:46:31:57:44:12:42:70:35:54:25:29:63:26:10:42:21:32:16:68:29:46:34:72:78:70:60:75:73:76:36:39:9:32:74:7:68:74:58:56:66:52:13:70:69:12:37:59:40:65:35:71:56:28:32:6:39:21:72:48:20:23:44:9:67:25:37:39:81:67:79:34:17:16:55:20:58:7:11;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=not_gene_region	GT	1/1
+chr2	125306971	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=319;END=125306986;TSD=+AAGAAAAAGGTTCTG;TSDLEN=15;SUBTYPE=two_side_tprt_both;TD_SRC=chr1:80939094~sibling;STRAND=+;AF=0.35294117647058826;LCLIP=24;RCLIP=47;LDISC=19;RDISC=25;LPOLYA=24;RPOLYA=0;LRAWCLIP=69;RRAWCLIP=67;AF_CLIP=60;AF_FMAP=110;AF_DISC=185;AF_CONCORDNT=155;LDRC=19;LDNRC=0;RDRC=25;RDNRC=0;LCOV=263.465;RCOV=244.515;LD_AKR_RC=0;LD_AKR_NRC=19;RD_AKR_RC=25;RD_AKR_NRC=0;LC_CLUSTER=6017:6049;RC_CLUSTER=5669:5727;LD_CLUSTER=5731.5:6016.5;RD_CLUSTER=5731.5:6056.5;NINDEL=0;CLIP_LEN=9:41:24:49:11:45:6:36:39:61:25:28:86:34:58:14:21:82:11:37:101:69:34:21:42:47:45:39:37:39:62:33:28:19:101:101:101:83:79:10:42:52:113:9:17:59:66:16:67:96:83:7:48:79:9:100:74:69:56:11;INS_INV=Not-5prime-inversion;REF_REP=Fall_in_LINE1_copy_21.8;GENE_INFO=intron:CHM13_T0127409:19:CNTNAP5	GT	0/1
+chr2	141095338	.	G	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=103;END=141095338;TSD=NULL;TSDLEN=-1;SUBTYPE=one_side_and_half_transduction;TD_SRC=chr1:118858405~sibling;STRAND=+;AF=0.43820224719101125;LCLIP=53;RCLIP=0;LDISC=14;RDISC=64;LPOLYA=25;RPOLYA=0;LRAWCLIP=80;RRAWCLIP=69;AF_CLIP=78;AF_FMAP=100;AF_DISC=206;AF_CONCORDNT=167;LDRC=0;LDNRC=0;RDRC=0;RDNRC=0;LCOV=266.59;RCOV=270.31;LD_AKR_RC=0;LD_AKR_NRC=0;RD_AKR_RC=0;RD_AKR_NRC=0;LC_CLUSTER=-1:-1;RC_CLUSTER=-1:-1;LD_CLUSTER=5947.5:6052.5;RD_CLUSTER=-1:-1;NINDEL=0;CLIP_LEN=36:25:78:17:33:44:22:78:51:4:2:76:50:49:42:57:19:26:58:11:47:25:46:79:13:45:67:27:35:24:49:56:50:13:24:59:37:25:17:28:42:65:7:47:19:24:7:20:64:70:79:40:31:53:64:20:65:55:11:29:31:80:78:41:80:40:51:59:34:37:58:42:36:7:68:18:69:82;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=intron:CHM13_T0128255:49:LRP1B	GT	0/1
+chr2	146263357	.	G	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=1525;END=146263358;TSD=+G;TSDLEN=1;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=+;AF=0.9874213836477987;LCLIP=142;RCLIP=129;LDISC=35;RDISC=14;LPOLYA=142;RPOLYA=0;LRAWCLIP=169;RRAWCLIP=143;AF_CLIP=157;AF_FMAP=2;AF_DISC=458;AF_CONCORDNT=12;LDRC=35;LDNRC=0;RDRC=14;RDNRC=0;LCOV=273.82;RCOV=275.72;LD_AKR_RC=0;LD_AKR_NRC=35;RD_AKR_RC=14;RD_AKR_NRC=0;LC_CLUSTER=5979:6099;RC_CLUSTER=4574:4639;LD_CLUSTER=4638.5:4843.5;RD_CLUSTER=5757.5:5928.5;NINDEL=55;CLIP_LEN=30:7:21:90:74:6:11:73:60:6:17:18:64:50:7:54:92:2:28:4:58:41:38:57:64:21:81:39:96:48:39:31:70:41:18:29:22:69:34:18:34:10:71:3:39:44:48:34:47:46:38:61:52:11:56:18:62:93:19:15:15:54:49:27:21:21:37:47:77:43:81:94:18:7:35:4:23:19:85:72:57:58:59:43:7:71:15:56:76:81:23:62:59:59:95:15:51:36:51:10:30:49:15:100:109:95:6:11:15:46:6:8:79:35:29:80:80:18:44:2:4:94:11:95:84:91:23:76:67:76:63:48:70:52:82:99:107:74:28:87:77:69:80:19:60:7:43:3:109:65:38:18:92:59:33:26:52;INS_INV=Not-5prime-inversion;REF_REP=not_in_LINE1_copy;GENE_INFO=not_gene_region	GT	1/1
+chr2	234611149	.	A	<INS:ME:LINE1>	.	PASS	SVTYPE=INS:ME:LINE1;SVLEN=1095;END=234611166;TSD=+ATAAAATGTGCCAGGAT;TSDLEN=17;SUBTYPE=two_side_tprt_both;TD_SRC=not_transduction;STRAND=+;AF=0.9433962264150944;LCLIP=33;RCLIP=114;LDISC=22;RDISC=51;LPOLYA=33;RPOLYA=0;LRAWCLIP=165;RRAWCLIP=149;AF_CLIP=150;AF_FMAP=9;AF_DISC=476;AF_CONCORDNT=11;LDRC=22;LDNRC=0;RDRC=51;RDNRC=0;LCOV=287.285;RCOV=299.855;LD_AKR_RC=4;LD_AKR_NRC=18;RD_AKR_RC=51;RD_AKR_NRC=0;LC_CLUSTER=6017:6067;RC_CLUSTER=4972:5034;LD_CLUSTER=5036.5:5236.5;RD_CLUSTER=5691.5:6034.5;NINDEL=0;CLIP_LEN=52:15:51:50:57:32:64:48:5:58:17:8:40:86:98:80:63:49:10:98:2:61:17:25:61:41:31:35:80:77:46:4:79:87:24:31:90:48:24:33:83:79:50:81:46:78:42:17:45:83:92:6:60:71:25:3:89:19:95:71:19:5:57:70:57:81:49:106:45:104:109:29:53:8:94:66:51:59:96:93:37:30:52:52:52:85:44:106:90:37:110:61:73:5:78:13:15:117:26:8:100:106:32:32:66:54:86:81:102:20:7:58:83:77:112:22:22:4:82:70:44:47:107:86:100:70:70:37:82:107:2:44:89:25:69:34:79:25:100:95:46:90:77:63:55:104:50:98:57:75;INS_INV=Not-5prime-inversion;REF_REP=Right_is_LINE1_copy_19.1;GENE_INFO=not_gene_region	GT	1/1
