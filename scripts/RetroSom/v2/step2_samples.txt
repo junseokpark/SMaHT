@@ -1,0 +1,1 @@
+COLO829T,COLO829BL,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2,/n/data1/bch/genetics/lee/projects/SMaHT/data/SMATH_DAC_downSampled/COLO829T/splittedSamples,6
