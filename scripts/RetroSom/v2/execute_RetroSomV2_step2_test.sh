@@ -34,14 +34,17 @@ export R_LIBS_USER="~/R-"${R_VERSION}
 
 module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
-RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2
-BAMFILE_PATH=/n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x
+#RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2
+RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/200x
+#BAMFILE_PATH=/n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x
+BAMFILE_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/200x
 RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 
 
-SAMPLE_ID="TITR"
-CONT_ID="CONT"
+SAMPLE_ID="HapMapMix"
+CONT_ID="HG005"
+NUMBER_OF_SAMPLES=4
 
 : '
 -o  output folder path
@@ -74,7 +77,7 @@ command="${RETROPATH}/Singularity_Slurm_RetroSom.step2.withoutSlurm.sh
         -t 0 \
         -n 150 \
         -p 0.1 \
-        -l 1 \
+        -l $NUMBER_OF_SAMPLES \
         -c $BAMFILE_PATH \
         -s $SINGULARITY_IMAGE 
         "

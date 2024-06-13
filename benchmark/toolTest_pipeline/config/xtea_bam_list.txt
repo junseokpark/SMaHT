@@ -1,1 +1,1 @@
-COLO829BL_Ill_230X	/n/data1/bch/genetics/lee/projects/SMaHT/data/SMATH_DAC_downSampled/COLO829T/COLO829BL_Ill_230X.bam
+HapMapMix	/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/500x_WashU/HapMapMix.bam

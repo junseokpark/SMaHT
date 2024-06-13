@@ -2,14 +2,16 @@
 
 MELT_DIR=/n/data1/bch/genetics/lee/tools/MELTv2.2.2
 #RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/GoldStandards
-RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/COLO829
+#RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/COLO829
+RESULT_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/results/MELT/shortread/germline/HapMap/500x_WashU
 REF_DIR=/n/data1/bch/genetics/lee/reference/hg38
-#SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x
+SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/500x_WashU
 #SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/GoldStandards
 #SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x
-SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMATH_DAC_downSampled/COLO829T
+#SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMATH_DAC_downSampled/COLO829T
 
 #SAMPLE_DIR=/n/data1/bch/genetics/lee/data/GIAB/HG002_NA24385_son/NIST_HiSeq_HG002_Homogeneity-10953946/NHGRI_Illumina300X_AJtrio_novoalign_bams
+#SAMPLE_EXT_PREFIX=".bam"
 SAMPLE_EXT_PREFIX=".bam"
 
 # Read array data from file
@@ -21,7 +23,7 @@ for sample in "${SAMPLES[@]}"; do
 done
 
 slurm_partition="long"
-slurm_time="12-12:00"
+slurm_time="20-12:00"
 slurm_core="16"
 slurm_memory="64"
 
@@ -82,14 +84,20 @@ for SAMPLE_ID in "${SAMPLES[@]}"; do
 
     echo $SAMPLE_ID
 
-    CURRENT_PWD=$(realpath .)
-    rm -rf ${CURRENT_PWD}/sbatch_job.sh
-    cp ${CURRENT_PWD}/sbatch_job.sh.template ${CURRENT_PWD}sbatch_job.sh
+    SAMPLE_FILE=${SAMPLE_DIR}/${SAMPLE_ID}${SAMPLE_EXT_PREFIX}
 
-    changeStringFromTemplates slurm_configs[@] ${CURRENT_PWD}/sbatch_job.sh
+    if [ -e "$SAMPLE_FILE" ]; then
+        CURRENT_PWD=$(realpath .)
+        rm -rf ${CURRENT_PWD}/sbatch_job.sh
+        cp ${CURRENT_PWD}/sbatch_job.sh.template ${CURRENT_PWD}sbatch_job.sh
 
-    mv ./sbatch_job.sh ${RESULT_DIR}/${SAMPLE_ID}
-    sbatch ${RESULT_DIR}/${SAMPLE_ID}/sbatch_job.sh
+        changeStringFromTemplates slurm_configs[@] ${CURRENT_PWD}/sbatch_job.sh
 
+        mv ./sbatch_job.sh ${RESULT_DIR}/${SAMPLE_ID}
+        sbatch ${RESULT_DIR}/${SAMPLE_ID}/sbatch_job.sh
+
+    else 
+        echo "$SAMPLE_FILE is not existing"
+    fi
 
 done

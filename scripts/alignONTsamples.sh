@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH -c 8                               # Request one core
-#SBATCH -t 50:00:00                         # Runtime in D-HH:MM format
-#SBATCH -p medium
+#SBATCH -t 25-00:00                         # Runtime in D-HH:MM format
+#SBATCH -p long
 #SBATCH -J ONT-align
 #SBATCH -A lee_el114                       # Partition to run in
 #SBATCH --mem=32G                          # Memory total in MiB (for all cores)
@@ -21,7 +21,8 @@ PATH=/n/data1/bch/genetics/lee/tools/minimap2:$PATH
 SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_COLO829/ontUl_r9_r10
 REF_FASTA=/n/data1/bch/genetics/lee/reference/hg38/Homo_sapiens_assembly38
 
-SAMPLES=("COLO829BL_ontUL" "COLO829T_ontUL")
+SAMPLES=("COLO829BL_ontUL")
+#SAMPLES=("COLO829T_ontUL")
 
 if [ ! -e "${REF_FASTA}-ONT.mmi" ]; then
     echo "ONT Index does not exist."
@@ -33,9 +34,11 @@ cd $SAMPLE_DIR
 
 for SAMPLE in "${SAMPLES[@]}"
 do
-    samtools fasta -@ 8 ${SAMPLE_DIR}/${SAMPLE}.bam > ${SAMPLE_DIR}/${SAMPLE}.fasta
+    #samtools fasta -@ 8 ${SAMPLE_DIR}/${SAMPLE}.bam > ${SAMPLE_DIR}/${SAMPLE}.fasta
     minimap2 -a ${REF_FASTA}-ONT.mmi ${SAMPLE_DIR}/${SAMPLE}.fasta > ${SAMPLE_DIR}/${SAMPLE}.aligned.sam  # alignment
+    rm -rf ${SAMPLE_DIR}/${SAMPLE}.fasta
     samtools view -@ 8 -bS ${SAMPLE_DIR}/${SAMPLE}.aligned.sam > ${SAMPLE_DIR}/${SAMPLE}.aligned.bam
+    rm -rf ${SAMPLE_DIR}/${SAMPLE}.aligned.sam
     samtools index -@ 8 ${SAMPLE_DIR}/${SAMPLE}.aligned.bam
 
 done

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# ENV = SMaHT-3.9
 
 # 
 G_PATH="/n/data1/bch/genetics/lee/projects/SMaHT/gold_standards/RetroSomMixed/Alu/paperData"
@@ -18,10 +19,15 @@ cat strand0/BSMN.heter.bed strand1/BSMN.heter.bed | sort -k1,1V -k1,1 -k2,2n | c
 
 # bedtools slop -i MELT.bed -g ../../../../../refs/hg38/hg38.chrom.sizes  -b 600  | sort -k1,1V -k1,1 -k2,2n > MELT_E.bed
 
+# Add chr
+# sed -i 's/^\(.*\)/chr\1/' gnomad_v2.1_sv.sites.LINE1.bed
+
+
 # # Step #2 - Sort
 # #  sort -k1,1 -k2,2n xTea_mosaic_E.bed
 
 # # Step #3 - Venn 
+
 
 intervene venn -i RetroSom_v2_E.bed MELT_E.bed xTea_mosaic_E.bed --bedtools-options f=0.5,r --filenames --title Alu_200x
 

@@ -28,10 +28,11 @@ fi
 
 if [ -d "./$newname" ]; then
     echo "./$newname does exist"
-    exit 0 
+    #exit 0 
+else
+    ln -s ./$oldname ./$newname
 fi
 
-ln -s ./$oldname ./$newname
 
 if [ -e "./$newname/insert.$oldname.txt" ]; then
 
