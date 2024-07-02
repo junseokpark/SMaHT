@@ -3,7 +3,7 @@
 #SBATCH -c 8                               # Request one core
 #SBATCH -t 50:00:00                         # Runtime in D-HH:MM format
 #SBATCH -p medium
-#SBATCH -J merge-SMAFI
+#SBATCH -J merge-200x
 #SBATCH -A lee_el114                       # Partition to run in
 #SBATCH --mem=40G                          # Memory total in MiB (for all cores)
 #SBATCH -o hostname_%j.out                 # File to which STDOUT will be written, including job ID (%j)
@@ -22,22 +22,22 @@ conda activate ${VENV}
 
 #DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x
 #DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/500x_WashU
-DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x
+DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x
 
 #FILE_NAME_ARRAY=("TITR")
-FILE_NAME_ARRAY=("CONT")
+FILE_NAME_ARRAY=("TITR")
 
 cd $DIR
 
 # Iterate over the array elements
 for FILE_NAME in "${FILE_NAME_ARRAY[@]}"
 do
-    BAM1=$DIR/${FILE_NAME}_9.recal.sorted.bam
-    BAM2=$DIR/${FILE_NAME}_10.recal.sorted.bam
-    BAM3=$DIR/${FILE_NAME}_11.recal.sorted.bam
-    BAM4=$DIR/${FILE_NAME}_12.recal.sorted.bam
-    BAM5=$DIR/${FILE_NAME}_13.recal.sorted.bam
-    BAM6=$DIR/${FILE_NAME}_14.recal.sorted.bam
+    BAM1=$DIR/${FILE_NAME}_1.recal.sorted.bam
+    BAM2=$DIR/${FILE_NAME}_2.recal.sorted.bam
+    BAM3=$DIR/${FILE_NAME}_3.recal.sorted.bam
+    BAM4=$DIR/${FILE_NAME}_4.recal.sorted.bam
+    BAM5=$DIR/${FILE_NAME}_5.recal.sorted.bam
+    BAM6=$DIR/${FILE_NAME}_6.recal.sorted.bam
 
     # for i in {0..0};
     # do
@@ -50,7 +50,7 @@ do
     $BAM3 \
     $BAM4 \
     $BAM5 \
-    $BAM6 \    
+    $BAM6 \
     -o $DIR/${FILE_NAME}.bam 
 
     samtools index $DIR/${FILE_NAME}.bam

@@ -25,13 +25,13 @@ export R_LIBS_USER="~/R-"${R_VERSION}
 
 module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
-RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/300x
+RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2
 
 RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
-SAMPLE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/300x/HG005-split #/HapMapMix-split
+SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x-T #/HapMapMix-split
 SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
 SLURM_PARTITION=medium
-SAMPLE_PREFIX=.bam
+SAMPLE_PREFIX=.recal.sorted.bam
 
 # Create result directory if it is not existing
 if [ ! -d "${RESULT_PATH}" ]; then
@@ -59,7 +59,7 @@ while IFS= read -r line; do
             -i $SAMPLE_ID \
             -e $CONT_ID \
             -m $RETROPATH \
-            -r 1
+            -r 1 \
             -g hg38 \
             -t 3 \
             -c $BAMFILE_PATH \

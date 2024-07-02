@@ -1,1 +1,1 @@
-HapMapMix	/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/500x_WashU/HapMapMix.bam
+TITR	/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x/TITR.bam
