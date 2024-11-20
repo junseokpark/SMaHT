@@ -9,7 +9,7 @@
 #SBATCH --mail-user=junseok.park@childrens.harvard.edu
 
 numThreads=8
-fractionOfReads=0.17 #300X: 0.75 # 200X: 0.5 100X: 0.25
+fractionOfReads=0.17 #300X: 0.75 # 200X: 0.5 100X: 0.25 # 50x: 0.13
 seed=12345
 
 numberOfSplit=8
@@ -38,8 +38,8 @@ if [ -f "$sample_file" ]; then
 
     cd $result_dir;
 
-    # samtools view -b --threads $numThreads --subsample $fractionOfReads --subsample-seed $seed $sample_file > ${result_dir}/${OUTPUT_FILE_NAME}.bam
-    # samtools index --threads $numThreads ${result_dir}/${OUTPUT_FILE_NAME}.bam
+    samtools view -b --threads $numThreads --subsample $fractionOfReads --subsample-seed $seed $sample_file > ${result_dir}/${OUTPUT_FILE_NAME}.bam
+    samtools index --threads $numThreads ${result_dir}/${OUTPUT_FILE_NAME}.bam
 
     INPUT_BAM=${result_dir}/${OUTPUT_FILE_NAME}.bam
 

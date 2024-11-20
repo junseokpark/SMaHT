@@ -25,27 +25,42 @@ export R_LIBS_USER="~/R-"${R_VERSION}
 
 module load bedtools/2.27.1 picard/2.27.5 samtools/1.15.1
 
-RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2
+#RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
+RETROPATH=/n/data1/bch/genetics/lee/projects/SMaHT/tools/RetroSomV2-Zhuofu
+#SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
+SINGULARITY_IMAGE=/n/app/singularity/containers/shared/lee/RetroSomV2.6.sif
 
-RETROPATH=/n/data1/bch/genetics/lee/jun/RetroSomV2
-SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x-T #/HapMapMix-split
-SINGULARITY_IMAGE=/n/app/singularity/containers/jp394/RetroSomV2.5.sif
-SLURM_PARTITION=medium
-SAMPLE_PREFIX=.recal.sorted.bam
-
-# Create result directory if it is not existing
-if [ ! -d "${RESULT_PATH}" ]; then
-    mkdir -p ${RESULT_PATH}
-fi
+TMP_PATH=/n/scratch/users/j/jp394
+SLURM_SHORT_ARGS="\"-p medium --mem=50gb --time=3-23:00\""
+SLURM_LONG_ARGS="\"-p medium --time=3-23:00 --ntasks=1 --cpus-per-task=10 --mem-per-cpu=25gb\""
 
 # Print the array elements
-while IFS= read -r line; do
+#while IFS= read -r line; do
+#RESULT_PATH=/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2
+#SAMPLE_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x-T #/HapMapMix-split
+#SAMPLE_PREFIX=.recal.sorted.bam
 
-    IFS=' ' read -ra array <<< "$line"
-    SAMPLE_ID=${array[0]}
-    CONT_ID=${array[1]}
 
-    echo "$SAMPLE_ID is loaded"
+while IFS=, read -r SAMPLE_ID CONT_ID RESULT_PATH SAMPLE_DIR SAMPLE_PREFIX; do
+
+    #IFS=' ' read -ra array <<< "$line"
+    #SAMPLE_ID=${array[0]}
+    #CONT_ID=${array[1]}
+    #echo "$SAMPLE_ID is loaded"
+
+    # Process each column
+    echo "SAMPLE_ID: $SAMPLE_ID"
+    echo "CONT_ID: $CONT_ID"
+    echo "RESULT_PATH: $RESULT_PATH"
+    echo "SAMPLE_DIR: $SAMPLE_DIR"
+    echo "SAMPLE_PREFIX: $SAMPLE_PREFIX"
+ 
+    # Create result directory if it is not existing
+    if [ ! -d "${RESULT_PATH}" ]; then
+        mkdir -p ${RESULT_PATH}
+    fi
+
+
     # Create sample directory if it is not exists
     if [ -d "${RESULT_PATH}/${SAMPLE_ID}" ]; then
         rm -r ${RESULT_PATH}/${SAMPLE_ID}
@@ -55,17 +70,22 @@ while IFS= read -r line; do
     BAMFILE_PATH=$SAMPLE_DIR/${SAMPLE_ID}${SAMPLE_PREFIX}
 
     if [ -e "$BAMFILE_PATH" ]; then
-        command="${RETROPATH}/Singularity_Slurm_RetroSomV2.5_test.sh -o $RESULT_PATH \
+        command="${RETROPATH}/Singularity_Slurm_RetroSomV2.6.sh \
+            -o $RESULT_PATH \
             -i $SAMPLE_ID \
-            -e $CONT_ID \
             -m $RETROPATH \
             -r 1 \
             -g hg38 \
             -t 3 \
+            -n 150 \
+            -p 0.1 \
             -c $BAMFILE_PATH \
-            -s $SINGULARITY_IMAGE 
+            -e $CONT_ID \
+            -s $SINGULARITY_IMAGE \
+            -f $TMP_PATH \
+            -u $SLURM_SHORT_ARGS \
+            -l $SLURM_LONG_ARGS
             "
-
         echo $command
 
         eval $command

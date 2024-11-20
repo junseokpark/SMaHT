@@ -1,0 +1,1 @@
+HG005-1,HG005-1,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/50x,/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/50x,.bam

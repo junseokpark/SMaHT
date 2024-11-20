@@ -1,1 +1,12 @@
-HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/100x,/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/100x,2
+TITR,CONT,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/v2/Simul50x,1
+TITR,CONT,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/v2/Simul100x,2
+TITR,CONT,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/v2/200x,6
+TITR,CONT,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/v2/Simul400x,6
+HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/50x,1
+HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/100x,2
+HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/200x,4
+HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/200x_NYGC,4
+HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/200x_UW,4
+HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/300x,6
+HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/400x,8
+HapMapMix,HG005,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU,10

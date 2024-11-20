@@ -1,0 +1,14 @@
+TITR-2,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x,.bam
+TITR-3,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x,.bam
+TITR-4,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x,.bam
+TITR-5,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x,.bam
+TITR-6,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x,.bam
+TITR-1,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/D_Simul50x,.bam
+TITR-1,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul100x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x,.bam
+TITR-2,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul100x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/B_Simul100x,.bam
+TITR-1,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x,.recal.sorted.bam
+TITR-2,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x,.recal.sorted.bam
+TITR-3,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x,.recal.sorted.bam
+TITR-4,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x,.recal.sorted.bam
+TITR-5,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x,.recal.sorted.bam
+TITR-6,CONT_NoModel,/n/data1/bch/genetics/lee/projects/SMaHT/results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul400x/v2,/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x,.recal.sorted.bam

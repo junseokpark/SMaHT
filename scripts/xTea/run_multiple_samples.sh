@@ -4,7 +4,7 @@ BASE_DIRECTORY="/n/data1/bch/genetics/lee/projects/SMaHT"
 REF_DIRECTORY=${BASE_DIRECTORY}/refs
 #RESULT_DIRECTORY=${BASE_DIRECTORY}/results/xTea/shortread/germline/HapMap/500x_WashU
 #RESULT_DIRECTORY=${BASE_DIRECTORY}/results/xTea/shortread/mosaic/HapMap/500x_WashU
-RESULT_DIRECTORY=${BASE_DIRECTORY}/results/xTea/shortread/mosaic/mixedDataRetroSom/Simul400x
+RESULT_DIRECTORY=${BASE_DIRECTORY}/results/xTea/shortread/germline/mixedDataRetroSom/Simul400x
 #RESULT_DIRECTORY=${BASE_DIRECTORY}/results/xTea/shortread/germline/mixedDataRetroSom/200x
 
 #RESULT_DIRECTORY=${BASE_DIRECTORY}/results/xTea/shortread/germline/GIAB
@@ -29,8 +29,8 @@ for sample in "${SAMPLES[@]}"; do
 done
 
 X_TEA_BIN=/n/data1/bch/genetics/lee/tools/xTea-mosaic/xtea
-X_TEA_RUN_SCRIPT=gnrt_pipeline_local_v38.py
-#X_TEA_RUN_SCRIPT=xtea
+#X_TEA_RUN_SCRIPT=gnrt_pipeline_local_v38.py
+X_TEA_RUN_SCRIPT=xtea
 
 # Loop through the array and process each value
 for SAMPLE_ID in "${SAMPLES[@]}"; do

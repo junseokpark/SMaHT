@@ -29,7 +29,8 @@ for file in "${vcf_files[@]}"; do
     rm -rf temp.vcf
     bcftools view -i 'FILTER="PASS"' $file > temp.vcf
 
-    vcf2bed < temp.vcf > ${SAMPLE_ID}_${TE_TYPE}.bed
+    # Sort
+    vcf2bed < temp.vcf | sort -k1,1V -k1,1 -k2,2n > ${SAMPLE_ID}_${TE_TYPE}.bed
 
      # Append the generated BED file to the array
     bed_files+=("${SAMPLE_ID}_${TE_TYPE}.bed")

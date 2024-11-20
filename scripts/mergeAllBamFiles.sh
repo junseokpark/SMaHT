@@ -22,7 +22,9 @@ conda activate ${VENV}
 
 #DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/C_Simul400x
 #DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_HapMap/illuminaNovaseq_bulkWgs_400x/500x_WashU
-DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x
+
+SOURCE_DIR=/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_ST/BCC_illuminaNovaseq_bulkWgs
+TARGET_DIR=/n/no_backup2/bch/lee/data/mixedDataRetroSom/A_200x
 
 #FILE_NAME_ARRAY=("TITR")
 FILE_NAME_ARRAY=("TITR")

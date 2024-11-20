@@ -1,9 +1,0 @@
-[ERROR] unknown preset 'map-out'
-/var/spool/slurmd/job37850320/slurm_script: line 36: samtols: command not found
-[ERROR] failed to open file '/n/data1/bch/genetics/lee/reference/hg38/Homo_sapiens_assembly38-ONT.mmi': No such file or directory
-[main_samview] fail to read the header from "/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_COLO829/ontUl_r9_r10/COLO829BL_ontUL.aligned.sam".
-samtools index: "/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_COLO829/ontUl_r9_r10/COLO829BL_ontUL.aligned.bam" is in a format that cannot be usefully indexed
-/var/spool/slurmd/job37850320/slurm_script: line 36: samtols: command not found
-[ERROR] failed to open file '/n/data1/bch/genetics/lee/reference/hg38/Homo_sapiens_assembly38-ONT.mmi': No such file or directory
-[main_samview] fail to read the header from "/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_COLO829/ontUl_r9_r10/COLO829T_ontUL.aligned.sam".
-samtools index: "/n/data1/bch/genetics/lee/projects/SMaHT/data/SMaHT_DAC_COLO829/ontUl_r9_r10/COLO829T_ontUL.aligned.bam" is in a format that cannot be usefully indexed
