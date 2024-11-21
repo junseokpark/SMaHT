@@ -1,6 +1,6 @@
 Executing in the current directory: /home/jp394/lee/projects/SMaHT
-total 1594
-drwxrwxr-x 2 jp394 lee     4096 Nov 20 17:35 .
+total 1692
+drwxrwxr-x 2 jp394 lee     4096 Nov 20 19:14 .
 drwxr-xr-x 2 jp394 lee     4096 Sep 17 16:52 ..
 drwxrwxr-x 2 jp394 lee     4096 Aug 26 20:13 analysis
 drwxrwxr-x 2 jp394 lee     4096 Oct 25  2023 benchmark
@@ -8,17 +8,17 @@ drwxrwxr-x 2 jp394 lee     4096 Nov  5 15:39 data
 drwxrwxr-x 2 jp394 jp394   4096 Jul  5 20:59 developments
 drwxrwxr-x 2 jp394 lee     4096 Oct 17  2023 figures
 -rw-rw-r-- 1 jp394 jp394 635280 Nov 20 16:43 fileSize.txt
-drwxrwxr-x 2 jp394 lee     4096 Nov 20 17:35 .git
--rw-rw-r-- 1 jp394 lee     1710 Nov 20 16:44 .gitignore
+drwxrwxr-x 2 jp394 lee     4096 Nov 20 19:14 .git
+-rw-rw-r-- 1 jp394 lee   102499 Nov 20 17:36 .gitignore
 -rw-rw-r-- 1 jp394 jp394 352690 Jun 17 19:09 .gitignore-size-100M
 drwxrwxr-x 2 jp394 lee     4096 May 28 10:56 gold_standards
 drwxrwxr-x 2 jp394 lee     4096 Dec  7  2023 images
--rw-rw-r-- 1 jp394 jp394 635213 Nov 20 17:33 listOfLargeFiles.txt
+-rw-rw-r-- 1 jp394 jp394 635213 Nov 20 17:35 listOfLargeFiles.txt
 -rw-rw-r-- 1 jp394 jp394    177 Jul  8 14:53 .RData
 -rw-rw-r-- 1 jp394 lee     1124 Dec  7  2023 README.md
 drwxrwxr-x 2 jp394 lee     4096 Dec 12  2023 refs
 drwxrwxr-x 2 jp394 lee     4096 May 28 10:46 results
--rw-rw-r-- 1 jp394 jp394     67 Nov 20 17:35 results.txt
+-rw-rw-r-- 1 jp394 jp394     67 Nov 20 19:14 results.txt
 -rw------- 1 jp394 jp394    342 Jul  8 14:53 .Rhistory
 drwxrwxr-x 2 jp394 lee     4096 Nov 20 16:15 scripts
 drwxrwxr-x 2 jp394 jp394   4096 Jul 29 14:53 temp
@@ -571,6 +571,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  4.6MiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HG005-3/retro_v1_0/ALU/HG005-3.ALU.PE.calls
 100644 blob  4.6MiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HG005-3/retro_v1_1/ALU/HG005-3.ALU.PE.refine.calls
 100644 blob  4.6MiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HG005-4/retro_v1_0/ALU/HG005-4.ALU.PE.calls
+100644 blob  4.6MiB analysis/RetroSom-ResultCollectionAndAnalysis.ipynb
 100644 blob  4.6MiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HG005-3/retro_v1_1/ALU/HG005-3.ALU.PE.calls
 100644 blob  4.5MiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HG005-4/retro_v1_1/ALU/HG005-4.ALU.PE.calls
 100644 blob  4.5MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2/CONT_NoModel/retro_v1_0/ALU/CONT_NoModel.ALU.SR.PE.calls
@@ -1220,6 +1221,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  2.3MiB results/RetroSom/shortread/mosaic/HapMap/v2/100x/HG005-2/retro_v1_1/ALU/HG005-2.ALU.novel.calls
 100644 blob  2.3MiB results/RetroSom/shortread/mosaic/HapMap/v2/200x_NYGC/HapMapMix-3/retro_v1_0/ALU/HapMapMix-3.ALU.PE.refine.calls
 100644 blob  2.3MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_3/retro_v1_1/ALU/TITR_3.ALU.PE.refine.calls
+100644 blob  2.3MiB developments/IGV-image-Generator.ipynb
 100644 blob  2.3MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_3/retro_v1_0/ALU/TITR_3.ALU.PE.refine.calls
 100644 blob  2.3MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2/CONT_15/retro_v1_0/ALU/CONT_15.ALU.PE.nodup.calls
 100644 blob  2.3MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2/CONT_NoModel/retro_v1_0/ALU/CONT_NoModel.ALU.PE.nodup.calls
@@ -1845,6 +1847,8 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.3MiB results/RetroSom/shortread/mosaic/HapMap/v2/200x_NYGC/HapMapMix-4/retro_v1_1/LINE/HapMapMix-4.LINE.noref.calls
 100644 blob  1.3MiB gold_standards/RetroSomMixed/L1/paperData/strand0/TITR_3.LINE.SR.PE.calls
 100644 blob  1.3MiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-2/retro_v1_1/ALU/HapMapMix-2.ALU.SR.PE.calls
+100644 blob  1.3MiB results/xTea/shortread/germline/mixedDataRetroSom/200x/TITR/Alu/TITR_ALU.vcf
+100644 blob  1.3MiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/TITR/Alu/TITR_ALU.vcf
 100644 blob  1.3MiB results/RetroSom/shortread/mosaic/HapMap/v2/100x/HG005-1/retro_v1_1/LINE/HG005-1.LINE.SR.calls
 100644 blob  1.3MiB gold_standards/RetroSomMixed/L1/paperData/strand1/bulk2.LINE.SR.PE.calls
 100644 blob  1.3MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829T_Ill_50x/retro_v1_0/LINE/COLO829T_Ill_50x.LINE.PE.calls
@@ -1923,6 +1927,8 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.2MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2/CONT_NoModel/retro_v1_0/ALU/CONT_NoModel.ALU.SR.calls
 100644 blob  1.2MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2/TITR_NoModel/retro_v1_0/ALU/TITR_NoModel.ALU.SR.calls
 100644 blob  1.2MiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-5/retro_v1_0/ALU/HapMapMix-5.ALU.novel.calls
+100644 blob  1.2MiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul400x/TITR/Alu/TITR_ALU.vcf
+100644 blob  1.2MiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/TITR/Alu/TITR_ALU.vcf
 100644 blob  1.2MiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HG005-5/retro_v1_1/ALU/HG005-5.ALU.novel.calls
 100644 blob  1.2MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_6/retro_v1_1/LINE/TITR_6.LINE.PE.refine.calls
 100644 blob  1.2MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/CONT_3/retro_v1_0/LINE/CONT_3.LINE.SR.PE.calls
@@ -2124,6 +2130,8 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.0MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/CONT_3/retro_v1_1/ALU/CONT_3.ALU.noref.calls
 100644 blob  1.0MiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829T-5/retro_v1_0/ALU/COLO829T-5.ALU.PE.refine.calls
 100644 blob  1.0MiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-5/retro_v1_0/ALU/COLO829T-5.ALU.PE.refine.calls
+100644 blob  1.0MiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul400x/CONT/Alu/CONT_ALU.vcf
+100644 blob  1.0MiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/CONT/Alu/CONT_ALU.vcf
 100644 blob  1.0MiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HG005-2/retro_v1_1/ALU/HG005-2.ALU.novel.calls
 100644 blob  1.0MiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul100x/TITR-1/Alu/TITR-1.recal.sorted_ALU.vcf
 100644 blob  1.0MiB results/xTea/shortread/germline/mixedDataRetroSom/Simul100x/TITR-1/Alu/TITR-1.recal.sorted_ALU.vcf
@@ -2550,6 +2558,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  722KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_1/retro_v1_0/LINE/TITR_1.LINE.PE.nodup.calls
 100644 blob  721KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_5/retro_v1_1/LINE/TITR_5.LINE.PE.nodup.calls
 100644 blob  721KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_1/retro_v1_1/LINE/TITR_1.LINE.PE.nodup.calls
+100644 blob  720KiB results.txt
 100644 blob  719KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-6/retro_v1_1/LINE/HapMapMix-6.LINE.SR.PE.calls
 100644 blob  719KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul100x/v2/CONT_NoModel/retro_v1_0/LINE/CONT_NoModel.LINE.SR.calls
 100644 blob  719KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/CONT_5/retro_v1_0/ALU/CONT_5.ALU.SR.calls
@@ -2715,6 +2724,8 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  627KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_6/retro_v1_1/LINE/TITR_6.LINE.PE.calls
 100644 blob  627KiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-4/retro_v1_1/LINE/HapMapMix-4.LINE.novel.calls
 100644 blob  623KiB results/RetroSom/shortread/mosaic/HapMap/v2/400x/HapMapMix-7/retro_v1_0/ALU/HapMapMix-7.ALU.noref.calls
+100644 blob  620KiB fileSize.txt
+100644 blob  620KiB listOfLargeFiles.txt
 100644 blob  619KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HapMapMix-3/retro_v1_1/LINE/HapMapMix-3.LINE.noref.calls
 100644 blob  619KiB results/RetroSom/shortread/mosaic/HapMap/v2/400x/HapMapMix-4/retro_v1_0/ALU/HapMapMix-4.ALU.noref.calls
 100644 blob  619KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HapMapMix-4/retro_v1_0/LINE/HapMapMix-4.LINE.SR.PE.calls
@@ -3009,6 +3020,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  445KiB results/RetroSom/shortread/mosaic/HapMap/v2/400x/HapMapMix-5/retro_v1_0/LINE/HapMapMix-5.LINE.PE.refine.calls
 100644 blob  444KiB results/MELT/shortread/germline/HapMap/50x/HapMapMix/ALU.final_comp.vcf
 100644 blob  444KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-9/retro_v1_0/LINE/HapMapMix-9.LINE.SR.PE.calls
+100644 blob  443KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/TITR-1/ALU.final_comp.vcf
 100644 blob  443KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-3/retro_v1_0/LINE/HapMapMix-3.LINE.SR.calls
 100644 blob  442KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HapMapMix-3/retro_v1_0/LINE/HapMapMix-3.LINE.PE.calls
 100644 blob  441KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HapMapMix-3/retro_v1_1/LINE/HapMapMix-3.LINE.PE.calls
@@ -3023,6 +3035,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  440KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-1/retro_v1_1/ALU/cutoff0.1.candidate.calls
 100644 blob  439KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-5/retro_v1_1/ALU/HapMapMix-5.ALU.PE.calls
 100644 blob  439KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HapMapMix-1/retro_v1_0/LINE/HapMapMix-1.LINE.PE.calls
+100644 blob  438KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/TITR/ALU.final_comp.vcf
 100644 blob  437KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829BL-1/retro_v1_0/ALU/COLO829BL-1.ALU.novel.calls
 100644 blob  437KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829BL-1/retro_v1_0/ALU/COLO829BL-1.ALU.novel.calls
 100644 blob  437KiB results/RetroSom/shortread/mosaic/HapMap/v2/100x/HapMapMix_NoModel/retro_v1_0/LINE/HapMapMix_NoModel.LINE.SR.calls
@@ -3102,6 +3115,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  405KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829T-5/retro_v1_1/LINE/COLO829T-5.LINE.SR.PE.calls
 100644 blob  405KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-5/retro_v1_1/LINE/COLO829T-5.LINE.SR.PE.calls
 100644 blob  404KiB results/RetroSom/shortread/mosaic/HapMap/v2/400x/HapMapMix-8/retro_v1_0/LINE/HapMapMix-8.LINE.SR.PE.calls
+100644 blob  404KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR/ALU.final_comp.vcf
 100644 blob  404KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul50x/TITR_15/ALU.final_comp.vcf
 100644 blob  403KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-3/retro_v1_0/LINE/HapMapMix-3.LINE.PE.nodup.calls
 100644 blob  402KiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-2/retro_v1_1/ALU/HapMapMix-2.ALU.PE.calls
@@ -3411,6 +3425,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  291KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-5/retro_v1_1/LINE/HapMapMix-5.LINE.noref.calls
 100644 blob  291KiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-1/retro_v1_0/LINE/HapMapMix-1.LINE.PE.calls
 100644 blob  290KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-2/retro_v1_0/LINE/HapMapMix-2.LINE.PE.calls
+100644 blob  290KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/CONT-1/ALU.final_comp.vcf
 100644 blob  290KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/TITR.ALU.vcf
 100644 blob  290KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul50x/TITR.ALU.vcf
 100644 blob  287KiB results/MELT/shortread/germline/HapMap/100x/HG005/ALU.final_comp.vcf
@@ -3500,6 +3515,8 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  253KiB scripts/COLO829-Analysis/L1/xTea-mosaic-COLO829T_LINE1.raw.bed
 100644 blob  253KiB scripts/COLO829-Analysis/L1/xTea-mosaic-COLO829T_LINE1_E.bed
 100644 blob  253KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-9/retro_v1_0/LINE/HapMapMix-9.LINE.PE.refine.calls
+100644 blob  252KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/TITR/L1/TITR_LINE1.vcf
+100644 blob  252KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul400x/TITR/L1/TITR_LINE1.vcf
 100644 blob  252KiB results/RetroSom/shortread/mosaic/HapMap/v2/50x/HapMapMix/retro_v1_1/LINE/HapMapMix.LINE.SR.calls
 100644 blob  251KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829T-4/retro_v1_1/LINE/COLO829T-4.LINE.SR.calls
 100644 blob  251KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-4/retro_v1_1/LINE/COLO829T-4.LINE.SR.calls
@@ -3571,6 +3588,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  232KiB results/RetroSom/shortread/mosaic/HapMap/v2/400x/HapMapMix-8/retro_v1_1/LINE/HapMapMix-8.LINE.noref.calls
 100644 blob  232KiB results/RetroSom/shortread/mosaic/HapMap/v2/400x/HapMapMix-6/retro_v1_1/LINE/HapMapMix-6.LINE.PE.calls
 100644 blob  232KiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-5/retro_v1_1/LINE/HapMapMix-5.LINE.PE.calls
+100644 blob  231KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/CONT/ALU.final_comp.vcf
 100644 blob  231KiB results/xTea/shortread/germline/GIAB/HG004.GRCh38.300x/L1/HG004.GRCh38.300x_LINE1.vcf
 100644 blob  231KiB results/xTea/shortread/mosaic/GIAB/Illumina300x/HG004.GRCh38.300x/L1/HG004.GRCh38.300x_LINE1.vcf
 100644 blob  230KiB results/RetroSom/shortread/mosaic/HapMap/v2/400x/HapMapMix-6/retro_v1_0/LINE/HapMapMix-6.LINE.PE.calls
@@ -3616,6 +3634,8 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  215KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-2/retro_v1_0/LINE/COLO829T-2.LINE.SR.calls
 100644 blob  214KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829T-4/retro_v1_1/LINE/COLO829T-4.LINE.PE.nodup.calls
 100644 blob  214KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-4/retro_v1_1/LINE/COLO829T-4.LINE.PE.nodup.calls
+100644 blob  213KiB results/xTea/shortread/germline/mixedDataRetroSom/200x/TITR/L1/TITR_LINE1.vcf
+100644 blob  213KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/TITR/L1/TITR_LINE1.vcf
 100644 blob  211KiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-6/retro_v1_0/LINE/HapMapMix-6.LINE.PE.calls
 100644 blob  211KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x/HapMapMix-2/retro_v1_1/LINE/HapMapMix-2.LINE.SR.calls
 100644 blob  210KiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-6/retro_v1_1/LINE/HapMapMix-6.LINE.PE.calls
@@ -3687,8 +3707,11 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  189KiB gold_standards/HapMapMix/Alu/Alu_concat_tier3.txt
 100644 blob  188KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829T-6/retro_v1_0/LINE/COLO829T-6.LINE.noref.calls
 100644 blob  188KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-6/retro_v1_0/LINE/COLO829T-6.LINE.noref.calls
+100644 blob  188KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul400x/CONT/L1/CONT_LINE1.vcf
 100644 blob  188KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829T-4/retro_v1_1/LINE/COLO829T-4.LINE.PE.calls
 100644 blob  188KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-4/retro_v1_1/LINE/COLO829T-4.LINE.PE.calls
+100644 blob  188KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/CONT/L1/CONT_LINE1.vcf
+100644 blob  188KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/CONT/ALU.final_comp.vcf
 100644 blob  186KiB results/RetroSom/shortread/mosaic/HapMap/v2/100x/HapMapMix-2/retro_v1_0/LINE/HapMapMix-2.LINE.SR.calls
 100644 blob  186KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix-9/retro_v1_1/LINE/HapMapMix-9.LINE.noref.calls
 100644 blob  186KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul400x/TITR_12/Alu/TITR_12.recal.sorted_ALU.vcf
@@ -3935,6 +3958,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  101KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul100x/CONT_7/Alu/CONT_7.recal.sorted_ALU.vcf
 100644 blob  100KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829T-6/retro_v1_1/LINE/COLO829T-6.LINE.PE.calls
 100644 blob  100KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-6/retro_v1_1/LINE/COLO829T-6.LINE.PE.calls
+100644 blob  100KiB .gitignore
 100644 blob  100KiB analysis/resultStatistics.ipynb
 100644 blob  100KiB analysis/resultStatistics.ipynb
 100644 blob  100KiB analysis/1.resultStatistics.ipynb
@@ -3956,6 +3980,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   89KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/COLO829/v2/COLO829BL-6/retro_v1_0/LINE/COLO829BL-6.LINE.PE.calls
 100644 blob   89KiB results/RetroSom/shortread/mosaic/COLO829/v2/COLO829BL-6/retro_v1_0/LINE/COLO829BL-6.LINE.PE.calls
 100644 blob   89KiB results/xTea/shortread/germline/COLO829/COLO829BL_Ill_230X/SVA/COLO829BL_Ill_230X_SVA.vcf
+100644 blob   88KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/TITR/LINE1.final_comp.vcf
 100644 blob   87KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul100x/CONT_8/Alu/CONT_8.recal.sorted_ALU.vcf
 100644 blob   87KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul100x/CONT.ALU.vcf
 100644 blob   86KiB results/MELT/shortread/germline/GIAB/Illumina300x/HG003/LINE1.final_comp.vcf
@@ -3970,12 +3995,17 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   84KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/CONT_2/Alu/CONT_2.recal.sorted_ALU.vcf
 100644 blob   83KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/CONT.ALU.vcf
 100644 blob   83KiB results/xTea/shortread/mosaic/COLO829/COLO829BL-1/Alu/COLO829BL-1_ALU.vcf
+100644 blob   83KiB results/xTea/shortread/germline/mixedDataRetroSom/200x/TITR/SVA/TITR_SVA.vcf
 100644 blob   82KiB results/xTea/shortread/mosaic/COLO829/COLO829BL-4/Alu/COLO829BL-4_ALU.vcf
 100644 blob   82KiB results/MELT/shortread/germline/HapMap/50x/HapMapMix/LINE1.final_comp.vcf
 100644 blob   82KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/CONT_3/Alu/CONT_3.recal.sorted_ALU.vcf
+100644 blob   81KiB analysis/downSampledFileCheck.ipynb
+100644 blob   81KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR/LINE1.final_comp.vcf
 100644 blob   77KiB results/xTea/shortread/mosaic/COLO829/COLO829BL-5/Alu/COLO829BL-5_ALU.vcf
+100644 blob   76KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/TITR-1/LINE1.final_comp.vcf
 100644 blob   75KiB results/xTea/shortread/germline/HapMap/200x_UW/HapMapMix/SVA/HapMapMix_SVA.vcf
 100644 blob   75KiB results/MELT/shortread/germline/HapMap/200x_NYGC/HapMapMix/SVA.final_comp.vcf
+100644 blob   75KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/TITR/SVA/TITR_SVA.vcf
 100644 blob   73KiB results/xTea/shortread/germline/HapMap/100x/HG005/Alu/HG005_ALU.vcf
 100644 blob   72KiB results/xTea/shortread/mosaic/HapMap/100x/HG005/Alu/HG005_ALU.vcf
 100644 blob   70KiB analysis/exampleData/NIHMS1648953-supplement-1648953_Sup_tab.xlsx
@@ -4005,6 +4035,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   62KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul100x/TITR_8/SVA/TITR_8.recal.sorted_SVA.vcf
 100644 blob   62KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul100x/TITR_8/L1/TITR_8.recal.sorted_LINE1.vcf
 100644 blob   62KiB results/xTea/shortread/mosaic/COLO829/COLO829BL-6/Alu/COLO829BL-6_ALU.vcf
+100644 blob   62KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/CONT/SVA/CONT_SVA.vcf
 100644 blob   61KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR_6/LINE1.final_comp.vcf
 100644 blob   60KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR_2/LINE1.final_comp.vcf
 100644 blob   59KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/TITR_6/L1/TITR_6.recal.sorted_LINE1.vcf
@@ -4015,6 +4046,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   58KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR_5/LINE1.final_comp.vcf
 100644 blob   58KiB results/xTea/shortread/germline/HapMap/50x/HapMapMix/SVA/HapMapMix_SVA.vcf
 100644 blob   58KiB results/xTea/shortread/germline/HapMap/50x/HG005/Alu/HG005_ALU.vcf
+100644 blob   58KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/CONT-1/LINE1.final_comp.vcf
 100644 blob   57KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR_3/LINE1.final_comp.vcf
 100644 blob   57KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/TITR_4/L1/TITR_4.recal.sorted_LINE1.vcf
 100644 blob   57KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul50x/TITR_15/SVA/TITR_15.recal.sorted_SVA.vcf
@@ -4043,6 +4075,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   52KiB scripts/COLO829-Analysis/L1/xTea-COLO829T_LINE1.unique.bed
 100644 blob   52KiB scripts/COLO829-Analysis/L1/xTea-COLO829-L1/sets/01_xTea-COLO829T_LINE1.bed
 100644 blob   52KiB results/xTea/shortread/germline/mixedDataRetroSom/200x/CONT_3/SVA/CONT_3.recal.sorted_SVA.vcf
+100644 blob   51KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/TITR/SVA.final_comp.vcf
 100644 blob   51KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/CONT_6/LINE1.final_comp.vcf
 100644 blob   51KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/TITR_14/SVA/TITR_14.recal.sorted_SVA.vcf
 100644 blob   51KiB results/xTea/shortread/germline/GIAB/HG004.GRCh38.300x/SVA/HG004.GRCh38.300x_SVA.vcf
@@ -4057,11 +4090,13 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   49KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/TITR_10/SVA/TITR_10.recal.sorted_SVA.vcf
 100644 blob   49KiB results/MELT/shortread/germline/COLO829/COLO829BL_Ill_230X/LINE1.final_comp.vcf
 100644 blob   48KiB results/xTea/shortread/germline/mixedDataRetroSom/200x/TITR_3/SVA/TITR_3.recal.sorted_SVA.vcf
+100644 blob   48KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/CONT/LINE1.final_comp.vcf
 100644 blob   48KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/TITR_13/SVA/TITR_13.recal.sorted_SVA.vcf
 100644 blob   48KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/TITR_9/SVA/TITR_9.recal.sorted_SVA.vcf
 100644 blob   48KiB results/MELT/shortread/germline/HapMap/300x/HG005/LINE1.final_comp.vcf
 100644 blob   48KiB results/MELT/shortread/germline/HapMap/200x/HG005/LINE1.final_comp.vcf
 100644 blob   47KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/TITR_1/L1/TITR_1.recal.sorted_LINE1.vcf
+100644 blob   47KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR/SVA.final_comp.vcf
 100644 blob   47KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/CONT_1/LINE1.final_comp.vcf
 100644 blob   47KiB results/xTea/shortread/germline/mixedDataRetroSom/200x/CONT_1/SVA/CONT_1.recal.sorted_SVA.vcf
 100644 blob   47KiB scripts/COLO829-Analysis/L1/xTea-COLO829-L1/sets/10_xTea-COLO829BL_LINE1.bed
@@ -4069,6 +4104,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   46KiB results/MELT/shortread/germline/GIAB/Illumina300x/HG002/SVA.final_comp.vcf
 100644 blob   46KiB gold_standards/HapMapMix/Alu/HG02257-tier1.bed
 100644 blob   46KiB results/xTea/shortread/germline/mixedDataRetroSom/200x/CONT_5/SVA/CONT_5.recal.sorted_SVA.vcf
+100644 blob   46KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/CONT/LINE1.final_comp.vcf
 100644 blob   45KiB results/xTea/shortread/mosaic/HapMap/50x/HG005/L1/HG005_LINE1.vcf
 100644 blob   45KiB gold_standards/HapMapMix/L1/L1_concat_tier1.txt
 100644 blob   45KiB results/xTea/shortread/germline/mixedDataRetroSom/Simul400x/TITR_11/SVA/TITR_11.recal.sorted_SVA.vcf
@@ -4080,6 +4116,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   42KiB results/MELT/shortread/germline/HapMap/200x/HG005/SVA.final_comp.vcf
 100644 blob   42KiB gold_standards/HapMapMix/Alu/HG02257-tier2.bed
 100644 blob   42KiB images/pipeline.png
+100644 blob   41KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/TITR-1/SVA.final_comp.vcf
 100644 blob   41KiB gold_standards/HapMapMix/Alu/HG02486-tier2.bed
 100644 blob   41KiB results/MELT/shortread/germline/HapMap/50x/HapMapMix/SVA.final_comp.vcf
 100644 blob   40KiB results/MELT/shortread/germline/GoldStandards/HG00514/SVA.final_comp.vcf
@@ -4127,6 +4164,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   32KiB gold_standards/RetroSomMixed/L1/Z
 100644 blob   32KiB results/xTea/shortread/mosaic/COLO829/COLO829T-3/L1/COLO829T-3_LINE1.vcf
 100644 blob   31KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/TITR_14/SVA.final_comp.vcf
+100644 blob   31KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/CONT-1/SVA.final_comp.vcf
 100644 blob   31KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/TITR_8/SVA.final_comp.vcf
 100644 blob   31KiB results/xTea/shortread/mosaic/COLO829/COLO829T-2/L1/COLO829T-2_LINE1.vcf
 100644 blob   31KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR_4/SVA.final_comp.vcf
@@ -4136,6 +4174,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   30KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/TITR_7/SVA.final_comp.vcf
 100644 blob   30KiB gold_standards/HapMapMix/Alu/HG005-tier3.bed
 100644 blob   30KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul50x/CONT_15/SVA.final_comp.vcf
+100644 blob   30KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/CONT/SVA.final_comp.vcf
 100644 blob   30KiB results/xTea/shortread/mosaic/HapMap/500x_WashU_Corrine/HapMapMix/Alu/HapMapMix_ALU.vcf
 100644 blob   30KiB results/MELT/shortread/germline/COLO829/COLO829BL_Ill_230X/SVA.final_comp.vcf
 100644 blob   29KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/CONT_8/SVA.final_comp.vcf
@@ -4148,6 +4187,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   28KiB analysis/exampleData/NIHMS1648953-supplement-1648953_SD_ED_Fig_2.xlsx
 100644 blob   28KiB analysis/exampleData/NIHMS1648953-supplement-1648953_SD_Fig_2.xlsx
 100644 blob   27KiB scripts/ONT-align_37978930.err
+100644 blob   27KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/CONT/SVA.final_comp.vcf
 100644 blob   27KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/CONT_3/SVA.final_comp.vcf
 100644 blob   27KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/CONT_5/SVA.final_comp.vcf
 100644 blob   27KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR_2/SVA.final_comp.vcf
@@ -4189,6 +4229,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   19KiB analysis/generateSimulatedData.ipynb
 100644 blob   19KiB results/MELT/shortread/germline/HapMap/200x_UW/HapMapMix/HERVK.final_comp.vcf
 100644 blob   19KiB results/MELT/shortread/germline/HapMap/100x/HG005/HERVK.final_comp.vcf
+100644 blob   19KiB analysis/libs/dataManage.py
 100644 blob   19KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul50x/CONT_15/L1/CONT_15.recal.sorted_LINE1.vcf
 100644 blob   19KiB results/MELT/shortread/germline/HapMap/50x/HG005/LINE1.final_comp.vcf
 100644 blob   19KiB analysis/performanceCheck.ipynb
@@ -4210,18 +4251,23 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   16KiB scripts/ONT-align_37978858.err
 100644 blob   16KiB results/MELT/shortread/germline/GoldStandards/HG00514/HERVK.final_comp.vcf
 100644 blob   16KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/CONT_3/L1/CONT_3.recal.sorted_LINE1.vcf
+100644 blob   16KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/TITR/HERVK.final_comp.vcf
 100644 blob   16KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/CONT_4/L1/CONT_4.recal.sorted_LINE1.vcf
 100644 blob   16KiB results/xTea/shortread/mosaic/mixedDataRetroSom/Simul100x/CONT_7/L1/CONT_7.recal.sorted_LINE1.vcf
 100644 blob   15KiB results/MELT/shortread/germline/HapMap/50x/HG005/SVA.final_comp.vcf
+100644 blob   15KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/TITR/HERVK.final_comp.vcf
 100644 blob   15KiB results/xTea/shortread/mosaic/HapMap/200x_NYGC_Corrine/HapMapMix/Alu/HapMapMix_ALU.vcf
 100644 blob   14KiB results/xTea/shortread/germline/HapMap/50x/HG005/SVA/HG005_SVA.vcf
 100644 blob   14KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/CONT_1/L1/CONT_1.recal.sorted_LINE1.vcf
+100644 blob   14KiB results/MELT/shortread/germline/mixedDataRetroSom/200x/CONT/HERVK.final_comp.vcf
 100644 blob   14KiB analysis/2.performanceCheck.ipynb
 100644 blob   14KiB results/CuteSV/germline/GIAB/HG002/HG002-cutesv.vcf
 100644 blob   14KiB results/CuteSV/germline/GIAB/HG002/HG002-cutesv-backup.vcf
 100644 blob   14KiB gold_standards/RetroSomMixed/Alu/paperData/0.2_NA19240_C.bed
 100644 blob   14KiB results/MELT/shortread/germline/GoldStandards/NA12877/HERVK.final_comp.vcf
 100644 blob   13KiB results/MELT/shortread/germline/HapMap/50x/HG005/HERVK.final_comp.vcf
+100644 blob   13KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/CONT-1/HERVK.final_comp.vcf
+100644 blob   13KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/TITR-1/HERVK.final_comp.vcf
 100644 blob   12KiB results/xTea/shortread/mosaic/mixedDataRetroSom/200x/CONT.LINE1.vcf
 100644 blob   12KiB scripts/.containerTest.sh.swp
 100644 blob   12KiB results/xTea/shortread/mosaic/HapMap/500x_WashU_Corrine/HapMapMix/L1/HapMapMix_LINE1.vcf
@@ -4230,6 +4276,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob   12KiB analysis/temp.csv
 100644 blob   11KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul50x/CONT_15/HERVK.final_comp.vcf
 100644 blob   11KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/TITR_8/HERVK.final_comp.vcf
+100644 blob   11KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul400x/CONT/HERVK.final_comp.vcf
 100644 blob   10KiB results/MELT/shortread/germline/mixedDataRetroSom/Simul100x/CONT_8/HERVK.final_comp.vcf
 100755 blob   10KiB scripts/xTea_mosaic/run_xTea.sh
 100755 blob   10KiB scripts/xTea_mosaic/run_xTea.sh
@@ -4292,6 +4339,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100755 blob  6.4KiB scripts/xTea_mosaic/run_xTea.sh
 100755 blob  6.3KiB scripts/xTea_mosaic/run_xTea.sh
 100644 blob  6.2KiB gold_standards/HapMapMix/L1/HG02622-tier3.bed
+100644 blob  6.2KiB gold_standards/RetroSomMixed/Alu/temp.vcf
 100644 blob  6.0KiB results/xTea/shortread/mosaic/HapMap/200x_NYGC_Corrine/HapMapMix/L1/HapMapMix_LINE1.vcf
 100755 blob  6.0KiB scripts/xTea_mosaic/run_xTea.sh
 100755 blob  6.0KiB scripts/xTea_mosaic/.nfs0000001228fc88a0000003ee
@@ -4309,6 +4357,8 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  5.4KiB results/xTea/shortread/mosaic/HapMap/200x_UW_Corrine/HapMapMix/L1/HapMapMix_LINE1.vcf
 100644 blob  5.4KiB gold_standards/RetroSomMixed/Alu/paperData/Unique/ALU/strand1/HG00514.heter.bed
 100644 blob  5.4KiB gold_standards/RetroSomMixed/Alu/paperData/strand1/HG00514.heter.bed
+100644 blob  5.3KiB gold_standards/RetroSomMixed/L1/temp.vcf
+100644 blob  5.2KiB scripts/RetroSom/RandomSelection.ipynb
 100644 blob  5.1KiB analysis/generateSimulatedData.ipynb
 100644 blob  4.7KiB gold_standards/HapMapMix/L1/HG005-tier3.bed
 100644 blob  4.7KiB GoldStandards/RetroSomMixed/L1/NA12878.L1.vcf
@@ -4323,27 +4373,36 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  3.9KiB gold_standards/RetroSomMixed/Alu/paperData/Unique/ALU/strand1/NA12877.heter.bed
 100644 blob  3.9KiB gold_standards/RetroSomMixed/Alu/paperData/strand1/NA12877.heter.bed
 100644 blob  3.8KiB benchmark/toolTest_pipeline/workflow/rules/common.smk
+100644 blob  3.7KiB scripts/downsample_long_read.sh
 100644 blob  3.7KiB gold_standards/RetroSomMixed/Alu/paperData/Unique/ALU/strand0/Heart.heter.bed
 100644 blob  3.7KiB gold_standards/RetroSomMixed/Alu/paperData/Unique/ALU/strand0/NA12877.heter.bed
 100644 blob  3.7KiB gold_standards/RetroSomMixed/Alu/paperData/strand0/NA12877.heter.bed
 100644 blob  3.5KiB gold_standards/RetroSomMixed/Alu/paperData/Unique/ALU/strand1/BSMN.heter.bed
 100644 blob  3.5KiB gold_standards/RetroSomMixed/Alu/paperData/strand1/BSMN.heter.bed
 100644 blob  3.4KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x_NYGC/HapMapMix_NoModel/retro_v1_1/LINE/noCONT.cutoff0.1.calls
+100644 blob  3.4KiB scripts/downsample_bam.py
+100755 blob  3.3KiB scripts/MELT/run_multiple_samples.sh
 100644 blob  3.2KiB gold_standards/RetroSomMixed/Alu/paperData/1_HG00514_C.bed
 100755 blob  3.2KiB scripts/MELT/run_multiple_samples.sh
 100644 blob  3.1KiB gold_standards/RetroSomMixed/Alu/paperData/Unique/ALU/strand0/HG00514.heter.bed
 100644 blob  3.1KiB gold_standards/RetroSomMixed/Alu/paperData/strand0/HG00514.heter.bed
 100755 blob  3.1KiB scripts/MELT/run_multiple_samples.sh
+100644 blob  3.1KiB analysis/libs/groupFunctions.py
 100644 blob  3.1KiB developments/IGV-image-Generation.ipynb
 100644 blob  3.0KiB gold_standards/RetroSomMixed/Alu/paperData/Unique/ALU/strand0/BSMN.heter.bed
 100644 blob  3.0KiB gold_standards/RetroSomMixed/Alu/paperData/strand0/BSMN.heter.bed
 100644 blob  3.0KiB gold_standards/RetroSomMixed/Alu/paperData/1_HG00733_C.bed
+100644 blob  2.8KiB scripts/RetroSom/v2/LoadRetroSomV2Results.sh
 100644 blob  2.8KiB gold_standards/RetroSomMixed/Alu/paperData/25_NA12877_C.bed
 100755 blob  2.8KiB scripts/MELT/run_multiple_samples.sh
 100755 blob  2.8KiB scripts/MELT/run_multiple_samples.sh
+100755 blob  2.7KiB scripts/RetroSom/v2/execute_RetroSomV2.sh
 100644 blob  2.7KiB gold_standards/RetroSomMixed/L1/paperData/strand0/NA19240.heter.bed
 100644 blob  2.7KiB gold_standards/RetroSomMixed/Alu/paperData/Unique/LINE/strand0/NA19240.heter.bed
+100644 blob  2.6KiB scripts/RetroSom/v2/sampleIds.txt
+100644 blob  2.6KiB scripts/RetroSom/v2/sampleIds-RetroSomMix.txt
 100755 blob  2.6KiB scripts/MELT/run_multiple_samples.sh
+100644 blob  2.6KiB test.txt
 100755 blob  2.5KiB scripts/MELT/run_multiple_samples.sh
 100644 blob  2.5KiB results/RetroSom/shortread/mosaic/HapMap/v2/50x/HapMapMix/retro_v1_0/ALU/noCONT.cutoff0.1.calls
 100755 blob  2.5KiB scripts/MELT/run_multiple_samples.sh
@@ -4356,15 +4415,20 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  2.5KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x_NYGC/HapMapMix_NoModel/retro_v1_0/LINE/noCONT.cutoff0.1.calls
 100755 blob  2.5KiB scripts/xTea_mosaic/run_xTea.sh
 100755 blob  2.5KiB scripts/MELT/run_multiple_samples.sh
+100755 blob  2.4KiB scripts/RetroSom/v2/execute_RetroSomV2_step2.sh.template
+100644 blob  2.4KiB scripts/RetroSom/v3/execute_RetroSomV3_step2.sh.template
 100755 blob  2.4KiB scripts/RetroSom/v2/execute_RetroSomV2_step2_test.sh
 100644 blob  2.4KiB gold_standards/RetroSomMixed/Alu/paperData/5_BSMN_C.bed
 100755 blob  2.3KiB scripts/RetroSom/v2/execute_RetroSomV2_step2.sh.template
 100644 blob  2.3KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix_NoModel/retro_v1_1/LINE/noCONT.cutoff0.1.calls
 100755 blob  2.3KiB scripts/MELT/run_multiple_samples.sh
 100644 blob  2.3KiB results/RetroSom/shortread/mosaic/HapMap/v2/100x/HapMapMix-1/retro_v1_1/ALU/noCONT.cutoff0.1.calls
+100644 blob  2.2KiB scripts/RetroSom/v2/sampleIds.bak.txt
 100644 blob  2.2KiB scripts/MELT/run_multiple_samples.sh
 100755 blob  2.2KiB scripts/RetroSom/v2/execute_RetroSomV2_step2.sh.bak
 100755 blob  2.2KiB scripts/RetroSom/v2/execute_RetroSomV2_step2_test.sh
+100644 blob  2.1KiB scripts/RetroSom/v2/loadRetroSomV2Results.py
+100644 blob  2.1KiB scripts/RetroSom/v3/execute_multipleSamples_step1.sh
 100755 blob  2.0KiB scripts/RetroSom/v2/rename.sh
 100755 blob  2.0KiB scripts/RetroSom/v2/rename.sh
 100755 blob  2.0KiB scripts/RetroSom/v2/execute_RetroSomV2_step2.sh
@@ -4375,6 +4439,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.9KiB scripts/createFigures.sh
 100644 blob  1.9KiB analysis/intersection.bed
 100755 blob  1.9KiB scripts/xTea/run_multiple_samples.sh
+100755 blob  1.9KiB scripts/xTea/run_multiple_samples.sh
 100755 blob  1.8KiB scripts/xTea/run_multiple_samples.sh
 100644 blob  1.8KiB scripts/createFigures.sh
 100755 blob  1.8KiB scripts/RetroSom/v2/execute_RetroSomV2.sh
@@ -4382,9 +4447,11 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100755 blob  1.8KiB scripts/xTea_mosaic/test.sh
 100755 blob  1.8KiB scripts/xTea_mosaic/test.sh
 100755 blob  1.8KiB scripts/RetroSom/v2/execute_RetroSomV2.sh
+100644 blob  1.8KiB scripts/mergeAllBamFiles.sh
 100644 blob  1.8KiB gold_standards/HapMapMix/readme.txt
 100755 blob  1.8KiB scripts/RetroSom/v2/execute_RetroSomV2.sh
 100755 blob  1.8KiB scripts/cutRegionForDiscordantReads.sh
+100755 blob  1.8KiB scripts/RetroSom/v2/deleteNonEssentialFiles.sh
 100644 blob  1.8KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul100x/v2/TITR_8/retro_v1_1/ALU/noCONT.cutoff0.1.calls
 100644 blob  1.8KiB results/RetroSom/shortread/mosaic/HapMap/v2/500x_WashU/HapMapMix_NoModel/retro_v1_0/LINE/noCONT.cutoff0.1.calls
 100755 blob  1.8KiB scripts/RetroSom/v2/execute_RetroSomV2.sh
@@ -4395,6 +4462,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.7KiB results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix_NoModel/retro_v1_1/LINE/noCONT.cutoff0.1.calls
 100755 blob  1.7KiB scripts/xTea_mosaic/checkResults.sh
 100755 blob  1.7KiB scripts/xTea/checkResults.sh
+100755 blob  1.7KiB scripts/copyFilesFromLeeToPark.sh
 100644 blob  1.7KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_4/retro_v1_1/ALU/noCONT.cutoff0.1.calls
 100644 blob  1.7KiB scripts/mergeAllBamFiles.sh
 100755 blob  1.7KiB scripts/alignONTsamples.sh
@@ -4403,9 +4471,11 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.7KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul100x/v2/TITR_7/retro_v1_1/ALU/noCONT.cutoff0.1.calls
 100644 blob  1.7KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2/TITR_15/retro_v1_1/ALU/noCONT.cutoff0.1.calls
 100755 blob  1.7KiB scripts/RetroSom/v2/run_multiple_samples_step2.sh
+100644 blob  1.7KiB scripts/RetroSom/v3/execute_multipleSamples_step2.sh
 100755 blob  1.6KiB scripts/xTea_mosaic/checkResults.sh
 100755 blob  1.6KiB scripts/convertVCFtoBedThenExpand.sh
 100644 blob  1.6KiB scripts/cuteSV/execute_cuteSV.sh
+100755 blob  1.6KiB scripts/downSampleAndSplitting.sh
 100644 blob  1.6KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_6/retro_v1_1/ALU/noCONT.cutoff0.1.calls
 100755 blob  1.6KiB scripts/downSampleAndSplitting.sh
 100644 blob  1.6KiB scripts/cuteSV/execute_cuteSV.sh
@@ -4413,6 +4483,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.6KiB results/RetroSom/shortread/mosaic/HapMap/v2/200x_UW/HapMapMix_NoModel/retro_v1_1/LINE/noCONT.cutoff0.1.calls
 100755 blob  1.6KiB scripts/alignONTsamples.sh
 100644 blob  1.6KiB benchmark/toolTest_pipeline/workflow/schemas/config.schema.yaml
+100755 blob  1.6KiB scripts/RetroSom/v2/run_multiple_samples_step2_with_Slurm.sh
 100755 blob  1.6KiB scripts/xTea/run_multiple_samples.sh
 100755 blob  1.6KiB scripts/MELT/sbatch_job.sh.template
 100755 blob  1.6KiB scripts/COLO829-Analysis/generateFigures.sh
@@ -4427,6 +4498,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.5KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_2/retro_v1_1/ALU/noCONT.cutoff0.1.calls
 100644 blob  1.5KiB scripts/mergeAllBamFiles.sh
 100755 blob  1.5KiB scripts/xTea/test.sh
+100644 blob  1.5KiB gold_standards/RetroSomMixed/Alu/NA12878_C.bed
 100755 blob  1.4KiB scripts/depthCalculation.sh
 100644 blob  1.4KiB .gitignore
 100644 blob  1.4KiB .gitignore
@@ -4448,6 +4520,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100755 blob  1.3KiB scripts/xTea_mosaic/sbatch_job.sh.template
 100755 blob  1.3KiB scripts/xTea_mosaic/sbatch_job.sh
 100644 blob  1.3KiB .gitignore
+100644 blob  1.3KiB scripts/RetroSom/v2/step2_samples.txt
 100755 blob  1.3KiB scripts/RetroSom/v2/execute_RetroSomV2.sh
 100755 blob  1.3KiB scripts/xTea_mosaic/test.sh
 100755 blob  1.3KiB scripts/xTea_mosaic/test.sh
@@ -4465,6 +4538,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.3KiB .gitignore
 100644 blob  1.2KiB .gitignore
 100644 blob  1.2KiB .gitignore
+100755 blob  1.2KiB scripts/checkGitFileSize.sh
 100644 blob  1.2KiB .gitignore
 100644 blob  1.2KiB .gitignore
 100644 blob  1.2KiB results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_NoModel/retro_v1_1/LINE/noCONT.cutoff0.1.calls
@@ -4495,6 +4569,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob  1.1KiB README.md
 100644 blob  1.1KiB results/RetroSom/shortread/mosaic/HapMap/v2/50x/HapMapMix/retro_v1_0/LINE/noCONT.cutoff0.1.calls
 100644 blob  1.1KiB scripts/ONT-align_37850320.err
+100644 blob  1.1KiB scripts/transferxTeaResultsToOtherLab.sh
 100644 blob  1.1KiB benchmark/toolTest_pipeline/workflow/report/workflow.rst
 100644 blob  1.0KiB README.md
 100644 blob  1.0KiB .gitignore
@@ -4516,6 +4591,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob    988B results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T_NoModel-bak/retro_v1_1/LINE/noCONT.cutoff0.1.calls
 100755 blob    975B scripts/xTea_mosaic/run_multiple_samples.sh
 100755 blob    971B scripts/xTea_mosaic/run_multiple_samples.sh
+100755 blob    956B scripts/combineAllVCFResultsToBed.sh
 100644 blob    947B results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul100x/v2/TITR_NoModel/retro_v1_1/LINE/noCONT.cutoff0.1.calls
 100755 blob    934B scripts/xTea_mosaic_sbatch_test.sh
 100644 blob    933B scripts/cuteSV/install.sh
@@ -4602,6 +4678,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob    522B scripts/TITR_1_20899632.out
 100644 blob    515B results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_5/retro_v1_0/LINE/noCONT.cutoff0.1.calls
 100755 blob    507B scripts/containerTest.sh
+100644 blob    501B gold_standards/RetroSomMixed/L1/NA12878_C.bed
 100644 blob    483B gold_standards/RetroSomMixed/L1/paperData/strand0/BSMN.heter.bed
 100644 blob    483B gold_standards/RetroSomMixed/Alu/paperData/Unique/LINE/strand0/BSMN.heter.bed
 100644 blob    465B results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul100x/v2/TITR_8/retro_v1_0/LINE/noCONT.cutoff0.1.calls
@@ -4625,6 +4702,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob    361B results/RetroSom/shortread/mosaic/mixedDataRetroSom/200x/v2/TITR_1/retro_v1_0/LINE/noCONT.cutoff0.1.calls
 100644 blob    354B gold_standards/RetroSomMixed/Alu/paperData/Unique/LINE/strand1/Heart.heter.bed
 100644 blob    352B benchmark/toolTest_pipeline/workflow/Snakefile
+100644 blob    342B .Rhistory
 100644 blob    335B results/RetroSom/shortread/mosaic/HapMap/v2/300x/HapMapMix-6/retro_v1_0/LINE/noCONT.cutoff0.1.calls
 100644 blob    315B =4.2.0
 100644 blob    305B scripts/cuteSV/install.sh
@@ -4647,9 +4725,11 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob    216B benchmark/toolTest_pipeline/config/submit_jobs.sh
 100644 blob    216B benchmark/toolTest_pipeline/temp/submit_jobs.sh
 100644 blob    215B benchmark/toolTest_pipeline/workflow/rules/retrosom_v2.smk
+100644 blob    206B scripts/RetroSom/v3/sampleIds_step1.sh
 100644 blob    205B scripts/RetroSom/v2/step2_samples.txt
 100755 blob    197B scripts/gitForceUpdate.sh
 100644 blob    197B scripts/gitForceUpdate.sh
+100644 blob    184B analysis/exampleData/testBedFiles/case.bed
 100644 blob    181B analysis/exampleData/testA.bed
 100644 blob    181B analysis/exampleData/testB.bed
 100644 blob    177B .RData
@@ -4726,6 +4806,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob    134B results/RetroSom/shortread/mosaic/COLO829/v2/COLO829BL-1/retro_v1_1/ALU/cutoff0.1.candidate.calls
 100644 blob    132B benchmark/toolTest_pipeline/config/xtea_bam_list.txt
 120000 blob    131B scripts/COLO829-Analysis/L1/COLO829BL_Ill_230X_LINE1.bed
+100644 blob    129B analysis/exampleData/testBedFiles/answer2.bed
 100644 blob    127B benchmark/toolTest_pipeline/config/xtea_bam_list.txt
 120000 blob    122B scripts/COLO829-Analysis/L1/ALL.wgs.mergedSV.v8.20130502.svs.genotypes.bed
 120000 blob    119B scripts/COLO829-Analysis/L1/COLO829T_Ill_LINE1.bed
@@ -4739,6 +4820,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 120000 blob    115B results/resultComparisons/HapMapMix/xTea-Mosaic/xTeaMosaic-HapMapMix_300x_L1.vcf
 100644 blob    115B scripts/RetroSom/v2/sampleIds.txt
 120000 blob    114B results/resultComparisons/HapMapMix/xTea-Mosaic/xTeaMosaic-HapMapMix_50x_L1.vcf
+100644 blob    106B analysis/exampleData/testBedFiles/answer1.bed
 120000 blob    105B gold_standards/RetroSomMixed/Alu/HG00733.lcl.ALU.vcf
 120000 blob    105B GoldStandards/RetroSomMixed/Alu/NA19240.lcl.ALU.vcf
 120000 blob    105B gold_standards/RetroSomMixed/Alu/NA19240.lcl.ALU.vcf
@@ -4781,6 +4863,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 120000 blob     48B analysis/exampleData/SD_ED_Fig_6.xlsx
 120000 blob     48B analysis/exampleData/SD_ED_Fig_1.xlsx
 120000 blob     48B analysis/exampleData/SD_ED_Fig_3.xlsx
+100644 blob     46B scripts/test.sh
 120000 blob     45B analysis/exampleData/SD_Fig_4.xlsx
 120000 blob     45B analysis/exampleData/SD_Fig_3.xlsx
 120000 blob     45B analysis/exampleData/SD_Fig_1.xlsx
@@ -4792,11 +4875,29 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 120000 blob     32B scripts/COLO829-Analysis/L1/gnomAD_LINE1.bed
 100644 blob     32B scripts/xTea/sample_id.list
 100644 blob     32B scripts/MELT/sampleIds.txt
+120000 blob     30B results/xTea/shortread/mosaic/mixedDataRetroSom/Simul50x/TITR_15/L1/TITR_LINE1.vcf
+120000 blob     30B results/xTea/shortread/germline/mixedDataRetroSom/Simul50x/TITR_15/L1/TITR_LINE1.vcf
 120000 blob     30B scripts/COLO829-Analysis/L1/RetroSom-COLO829T_LINE1.bed
 120000 blob     30B scripts/COLO829-Analysis/L1/xTea-COLO829BL_LINE1.bed
+120000 blob     29B gold_standards/RetroSomMixed/L1/NA19240_C.bed
+120000 blob     29B gold_standards/RetroSomMixed/Alu/NA19240_C.bed
+120000 blob     29B results/xTea/shortread/mosaic/mixedDataRetroSom/Simul100x/TITR-1/L1/TITR_LINE1.vcf
+120000 blob     29B results/xTea/shortread/germline/mixedDataRetroSom/Simul100x/TITR-1/L1/TITR_LINE1.vcf
+120000 blob     29B results/xTea/shortread/germline/mixedDataRetroSom/200x/CONT_1/L1/CONT.LINE1.vcf
+120000 blob     28B results/xTea/shortread/mosaic/mixedDataRetroSom/Simul50x/TITR_15/Alu/TITR_ALU.vcf
+120000 blob     28B results/xTea/shortread/germline/mixedDataRetroSom/Simul50x/TITR_15/Alu/TITR_ALU.vcf
+120000 blob     28B gold_standards/RetroSomMixed/L1/NA12877_C.bed
+120000 blob     28B gold_standards/RetroSomMixed/Alu/NA12877_C.bed
 100644 blob     28B benchmark/toolTest_pipeline/config/xtea_bam_list.txt.template
 100644 blob     28B scripts/MELT/sampleIds.txt
 100644 blob     28B scripts/RetroSom/v2/sampleIds.txt
+120000 blob     27B results/xTea/shortread/germline/mixedDataRetroSom/200x/CONT_1/Alu/CONT.ALU.vcf
+120000 blob     27B gold_standards/RetroSomMixed/L1/HG00514_C.bed
+120000 blob     27B gold_standards/RetroSomMixed/Alu/HG00514_C.bed
+120000 blob     27B results/xTea/shortread/germline/mixedDataRetroSom/Simul100x/TITR-1/Alu/TITR_ALU.vcf
+120000 blob     27B gold_standards/RetroSomMixed/L1/HG00733_C.bed
+120000 blob     27B gold_standards/RetroSomMixed/Alu/HG00733_C.bed
+100644 blob     27B analysis/exampleData/testBedFiles/control.bed
 100644 blob     27B scripts/TITR_1_20899623.out
 100644 blob     27B scripts/xTea/sample_id.list
 100644 blob     27B scripts/xTea_mosaic/sample_id.list
@@ -4810,6 +4911,8 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob     26B results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T-1/retro_v1_1/LINE/noCONT.cutoff0.1.calls
 100644 blob     26B benchmark/toolTest_pipeline/config/xtea_bam_list.txt.template
 100644 blob     26B benchmark/toolTest_pipeline/config/xtea_bam_list.txt
+120000 blob     24B gold_standards/RetroSomMixed/L1/BSMN_C.bed
+120000 blob     24B gold_standards/RetroSomMixed/Alu/BSMN_C.bed
 120000 blob     24B scripts/COLO829-Analysis/L1/xTea-COLO829T_LINE1.bed
 100644 blob     19B benchmark/toolTest_pipeline/config/xtea_sample_id.txt
 100644 blob     18B scripts/xTea/sample_id.list
@@ -4818,6 +4921,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob     16B scripts/RetroSom/v2/sampleIds.txt
 100644 blob     14B benchmark/toolTest_pipeline/config/samples.tsv
 100644 blob     14B scripts/xTea/sample_id.list
+100644 blob     14B scripts/MELT/sampleIds.txt
 100644 blob     14B scripts/RetroSom/v2/sampleIds.txt
 100644 blob     14B scripts/RetroSom/v2/sampleIds.txt
 120000 blob     13B scripts/COLO829-Analysis/L1/refs
@@ -4836,6 +4940,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob      8B scripts/MELT/sampleIds.txt
 100644 blob      8B benchmark/toolTest_pipeline/config/xtea_sample_id.txt
 100644 blob      8B benchmark/toolTest_pipeline/config/xtea_sample_id.txt
+120000 blob      7B developments/data
 100644 blob      7B benchmark/toolTest_pipeline/config/xtea_sample_id.txt
 100644 blob      7B benchmark/toolTest_pipeline/README.md
 100644 blob      7B benchmark/mixedData_pipline/README.md
@@ -4850,6 +4955,18 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob      5B scripts/xTea/sample_id.list
 100644 blob      5B benchmark/toolTest_pipeline/config/xtea_sample_id.txt
 100644 blob      0B scripts/retro_alu_ex1.umc.fasta
+100644 blob      0B scripts/ONT-downsample_43319826.err
+100644 blob      0B scripts/ONT-downsample_43319825.err
+100644 blob      0B scripts/ONT-downsample_43319823.err
+100644 blob      0B scripts/ONT-downsample_43319822.err
+100644 blob      0B scripts/ONT-downsample_43319821.err
+100644 blob      0B scripts/ONT-downsample_43319820.err
+100644 blob      0B scripts/ONT-downsample_43277733.err
+100644 blob      0B scripts/ONT-downsample_43277730.err
+100644 blob      0B scripts/ONT-downsample_43205632.err
+100644 blob      0B scripts/ONT-downsample_43205631.err
+100644 blob      0B scripts/ONT-downsample_43140286.err
+100644 blob      0B scripts/ONT-downsample_43137644.err
 100644 blob      0B scripts/ONT-align_37857731.err
 100644 blob      0B scripts/hostname_41144867.err
 100644 blob      0B scripts/hostname_41139315.err
@@ -5343,6 +5460,7 @@ drwxrwxr-x 2 jp394 jp394   4096 Jul 12 11:17 .vscode
 100644 blob      0B results/RetroSom/shortread/mosaic/COLO829/v2/COLO829BL-1/retro_v1_0/LINE/noCONT.cutoff0.1.calls
 100644 blob      0B results/RetroSom/shortread/mosaic/COLO829/v2/COLO829BL-1/retro_v1_0/ALU/noCONT.cutoff0.1.calls
 100644 blob      0B analysis/test-Notebook.ipynb
+100644 blob      0B analysis/libs/__init__.py
 Filtered file names (>= 2MiB):
 scripts/MELT/NA12878.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
 results/RetroSom/shortread/mosaic/HapMap/v2/200x_UW/HapMapMix_NoModel/retro_v1_0/ALU/HapMapMix_NoModel.ALU.SR.PE.calls
@@ -5889,6 +6007,7 @@ results/RetroSom/shortread/mosaic/COLO829/v2/COLO829T_Ill_50x/retro_v1_0/ALU/COL
 results/RetroSom/shortread/mosaic/HapMap/v2/200x/HG005-3/retro_v1_0/ALU/HG005-3.ALU.PE.calls
 results/RetroSom/shortread/mosaic/HapMap/v2/300x/HG005-3/retro_v1_1/ALU/HG005-3.ALU.PE.refine.calls
 results/RetroSom/shortread/mosaic/HapMap/v2/200x/HG005-4/retro_v1_0/ALU/HG005-4.ALU.PE.calls
+analysis/RetroSom-ResultCollectionAndAnalysis.ipynb
 results/RetroSom/shortread/mosaic/HapMap/v2/200x/HG005-3/retro_v1_1/ALU/HG005-3.ALU.PE.calls
 results/RetroSom/shortread/mosaic/HapMap/v2/200x/HG005-4/retro_v1_1/ALU/HG005-4.ALU.PE.calls
 results/RetroSom/shortread/mosaic/mixedDataRetroSom/Simul50x/v2/CONT_NoModel/retro_v1_0/ALU/CONT_NoModel.ALU.SR.PE.calls
